@@ -63,10 +63,13 @@ Wisdom Tree.txt - Provided by Benjamin E
 ## REVISION HISTORY
 
 v1.8 Rev 1.2 (29 September 2022) by WodoWiesel
-- configuration for new Arduino Nano
+- adapted pin configuration for new Arduino Nano
+- added reset pin interrupt
+- added audio/Vin pin support for cartridges
 
 v1.8 Rev 1.1 (11 March 2022) by WodoWiesel
 - Optimized & detailed Makefile
+- added pull-up active low resistors
 
 v1.8 Rev 1 (28 May 2016)
 - Re-add checking for non-printable ASCII characters code that was removed when cleaning up code
