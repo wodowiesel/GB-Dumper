@@ -1,0 +1,211 @@
+Cmp-Mod V01 Created by PcbNew   date = 03.10.2022 14:35:09
+
+BeginCmp
+TimeStamp = 0239a7dc-4f11-4dd5-9564-b10e3cb51ffa
+Path = /34bb2d5a-a1fd-4187-b623-25a5b805199b
+Reference = J1;
+ValeurCmp = GameBoy_Cartridge_MountingPin;
+IdModule  = Button_Switch_Keyboard:GameBoy_Cartridge_AGS_1x32-1MP_P1.50mm_Socket_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 1971fd4b-902b-4a27-beb1-a55d067593ca
+Path = /baccc23b-52bc-4efd-b225-48d6918d9eaa
+Reference = J3;
+ValeurCmp = Conn_01x02_Male;
+IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 19e58e7b-ed74-4c77-83e6-76ef2769a3b9
+Path = 
+Reference = REF3;
+ValeurCmp = CE-Logo_8.5x6mm_SilkScreen;
+IdModule  = Symbol:CE-Logo_8.5x6mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = 285f779b-7fb1-4cc3-8b29-1a1639b5d4d6
+Path = 
+Reference = G1;
+ValeurCmp = LOGO;
+IdModule  = theBrutzler:thebrutzler_approved_small02;
+EndCmp
+
+BeginCmp
+TimeStamp = 28b61970-be32-4027-a006-7ee2adc035c1
+Path = /d5cdb44b-d3b4-4210-b5d7-d91741b1e421
+Reference = U2;
+ValeurCmp = 74HC595;
+IdModule  = Package_DIP:DIP-16_W7.62mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 2effc2af-dfae-4ee1-9f01-384f8d2f9678
+Path = /c693858a-1129-4736-ab51-d45f0fe1bbc8
+Reference = R1;
+ValeurCmp = 470;
+IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 34d0cf70-6e1b-4ca8-bf5e-b6b0c9bfbc3e
+Path = 
+Reference = REF4;
+ValeurCmp = RoHS-Logo_6mm_SilkScreen;
+IdModule  = Symbol:RoHS-Logo_6mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = 4b134ca8-8963-4dae-9208-bbed3e241058
+Path = /f0172b04-3281-4d5a-a911-69e210ac9ebd
+Reference = J4;
+ValeurCmp = Conn_01x04_Female;
+IdModule  = Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 5a397f61-35c4-4c18-9dcd-73a2d44cc9af
+Path = /65a8895e-60d4-4e2b-8fd2-f734af690ffa
+Reference = A1;
+ValeurCmp = Arduino_Nano_v3.x;
+IdModule  = Module:Arduino_Nano;
+EndCmp
+
+BeginCmp
+TimeStamp = 6a99a2d4-9439-43ca-91a6-a33a4600a6a5
+Path = /e267c532-9ee2-484f-8167-bdfdae44cb51
+Reference = R3;
+ValeurCmp = 470;
+IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 6c573f75-8d5c-41f4-b30b-873b39ae4876
+Path = 
+Reference = REF0;
+ValeurCmp = OSHW-Logo_5.7x6mm_SilkScreen;
+IdModule  = Symbol:OSHW-Logo_5.7x6mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = 7813b372-135c-4554-8bda-8f8d0900a309
+Path = /161a0297-a52b-49d1-8ab2-281352eaf1e4
+Reference = R5;
+ValeurCmp = 470;
+IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 9b5e6f27-b156-47f9-a2dc-2654fc3d78f8
+Path = /d5224b3b-c216-4c3d-a93d-c943ade0e499
+Reference = R4;
+ValeurCmp = 470;
+IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = aed26b28-68b6-455b-aa7d-055d3d65bae9
+Path = /c5314997-4479-47c7-aebc-e9f9fd7ef59f
+Reference = J2;
+ValeurCmp = Conn_01x03_Male;
+IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = c63dd883-01bd-4ebb-ac52-93aa4fc06c8f
+Path = 
+Reference = REF7;
+ValeurCmp = MountingHole_3.2mm_M3_Pad_Via;
+IdModule  = MountingHole:MountingHole_3.2mm_M3_Pad_Via;
+EndCmp
+
+BeginCmp
+TimeStamp = d6371195-a98c-4851-98f2-131ee8feffde
+Path = /6c0814d8-589e-4385-a695-7b08edb63c30
+Reference = R2;
+ValeurCmp = 470;
+IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = dec486c2-e638-4b07-bbaf-b064ca66c15e
+Path = 
+Reference = REF5;
+ValeurCmp = WEEE-Logo_5.6x8mm_SilkScreen;
+IdModule  = Symbol:WEEE-Logo_5.6x8mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = f20f43f4-28d6-44a7-875c-6a77c4633e89
+Path = 
+Reference = REF2;
+ValeurCmp = KiCad-Logo2_5mm_SilkScreen;
+IdModule  = Symbol:KiCad-Logo2_5mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = f5e1fb03-1db6-452a-8441-188986ada38e
+Path = 
+Reference = REF6;
+ValeurCmp = MountingHole_3.2mm_M3_Pad_Via;
+IdModule  = MountingHole:MountingHole_3.2mm_M3_Pad_Via;
+EndCmp
+
+BeginCmp
+TimeStamp = fe58da8d-70f0-4c3c-ba33-1942b951f5f5
+Path = /c65ba2c9-dffe-4f00-a051-423e57562a1d
+Reference = U1;
+ValeurCmp = 74HC595;
+IdModule  = Package_DIP:DIP-16_W7.62mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 0668a3cd-9d26-46b5-8b3b-9f75c0dc4f0d
+Path = 
+Reference = G2;
+ValeurCmp = LOGO;
+IdModule  = theBrutzler:thebrutzler_approved_small02;
+EndCmp
+
+BeginCmp
+TimeStamp = 2c78139e-dec0-4021-8d68-72daf6ccc3aa
+Path = 
+Reference = REF0*;
+ValeurCmp = OSHW-Logo_5.7x6mm_SilkScreen;
+IdModule  = Symbol:OSHW-Logo_5.7x6mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = 7e09c0d9-ef64-40db-b92d-fc5bdac8207e
+Path = 
+Reference = REF2*;
+ValeurCmp = CE-Logo_8.5x6mm_SilkScreen;
+IdModule  = Symbol:CE-Logo_8.5x6mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = bd12ed10-2b96-410d-a232-74b44acefeb6
+Path = 
+Reference = REF4*;
+ValeurCmp = WEEE-Logo_5.6x8mm_SilkScreen;
+IdModule  = Symbol:WEEE-Logo_5.6x8mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = cc5e2450-fcfa-4edd-a220-2c102decb9f6
+Path = 
+Reference = REF3*;
+ValeurCmp = RoHS-Logo_6mm_SilkScreen;
+IdModule  = Symbol:RoHS-Logo_6mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = d68a5731-af55-448a-81b2-089e7ee503f5
+Path = 
+Reference = REF1*;
+ValeurCmp = KiCad-Logo2_5mm_SilkScreen;
+IdModule  = Symbol:KiCad-Logo2_5mm_SilkScreen;
+EndCmp
+
+EndListe
