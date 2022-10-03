@@ -1,16 +1,12 @@
 # GB-Dumper
-===============
+
 GB-Dumper is a PCB project for Gameboy cartridge dumps and backups via Arduino Nano &amp; USB-connection.
 The new configured software and custom PCB is compatible with +5V (mostly USB) Arduino Nano or similar.
 
-The new optimized PCB was designed with KiCAD (https://www.kicad.org/) by WodoWiesel (https://ww.twitch.com/wodowiesel/).
-The design was checked by the electrical engineer TheBrutzler (https://ww.twitch.com/thebrutzler/).
-
 # REQUIREMENTS
-===============
 
 ## HARDWARE
-=============
+
 - 1x Custom PCB for Arduino Nano by WodoWiesel (abx@gmx.de)
   (or from orig. GBCartReader for Uno)
 - 1x Arduino Nano (or Uno for old versions)
@@ -19,7 +15,7 @@ The design was checked by the electrical engineer TheBrutzler (https://ww.twitch
 - 1x Gameboy Cartridge 32-Pin Slot
 
 ## SOFTWARE
-==============
+
 GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader
 by insideGadgets (https://www.insidegadgets.com) / support@insidegadgets.com
 
@@ -29,7 +25,7 @@ Works with Arduino Duemilanove and Uno, but requires wiring & code definition ch
 Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 
 ## HOW TO USE
-=================================
+
 1. Open the \GBCartRead_v(xxx)_Arduino\GBCartRead_v(xxx).ino file and program it to your Arduino.
    Note down the COM port number in use; you can find this out from the Arduino software by going to Tools -> Serial port.
 2. There are two choices to communicate with the Arduino – using the C program or the Python program.
@@ -58,27 +54,27 @@ found in the project called "ASMotor" (we've included it). It’s a good idea to
 running the ROM when the save file is present in BGB.
 
 ## SPECIAL CASES
-=================================
+
 There are some cartridges which don't quite conform to cartridge header standards or require something out of the ordinary.
 List can be found in the documentations!
 
 Wisdom Tree.txt - Provided by Benjamin E
 
 ## REVISION HISTORY
-=================================
+
 v1.8 Rev 1.2 (29 September 2022) by WodoWiesel
 - configuration for new Arduino Nano
 
 v1.8 Rev 1.1 (11 March 2022) by WodoWiesel
-- Optimized Makefile
+- Optimized & detailed Makefile
 
 v1.8 Rev 1 (28 May 2016)
 - Re-add checking for non-printable ASCII characters code that was removed when cleaning up code
 - Added custom cartridge files for Wisdom Tree games (thanks Benjamin E)
 
 v1.8 (21 March 2016)
-- Added Nintendo Logo check and compare so you can tell if the cartridge is being read correctly (sometimes the title
-  was read ok but the ROM dump wasn't correct)
+- Added Nintendo Logo check and compare so you can tell if the cartridge is being read correctly
+ (sometimes the title was read ok but the ROM dump wasn't correct)
 - Added missing cartridge RAM support
 - Cleaned up code
 
@@ -93,7 +89,7 @@ v1.7 (7 February 2015) *Only compatible with Gameboy Cart Shield v1.3*
 - Changed so at startup it doesn't display the Game Cartridge header
 
 v1.6 (3 January 2015)
-- Speed increase by using a higher baud rate (400Kbit from 57.6Kbit) and using hardware SPI (thanks David R)
+- Speed increase by using a higher baud rate (400Kbit from 57.6Kbit) and using hardware SPI (thanks David R.)
 - Changed SCK from pin 12 to pin 13 for SPI
 - RAM writing speed increase by continually sending 64bytes data from PC and pausing for 5 ms in-between
 (Compatible with Gameboy Cart Shield v1.2 if you connect pins 12 and 13 together)
@@ -138,11 +134,14 @@ v1.0 (19 March 2011)
 - Reading ROM only, user to change the maximum ROM bank to read
 
 ## CREDITS
-===========
+
 Original: (c) 2011-2016 by insideGadgets (http://www.insidegadgets.com)
 
+The new optimized PCB was designed with KiCAD (https://www.kicad.org/) by WodoWiesel (https://ww.twitch.com/wodowiesel/)
+
+The design was checked by the electrical engineer TheBrutzler (https://ww.twitch.com/thebrutzler/)
 
 ## LICENCES
-============
+
 This work is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License.
 (http://creativecommons.org/licenses/by-nc/3.0/)
