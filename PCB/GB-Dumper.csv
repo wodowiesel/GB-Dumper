@@ -1,0 +1,9 @@
+"ID";"Bezeichner";"Gehäuse";"Stückzahl";"Bezeichnung";"Anbieter und Referenz";
+1;"J1";"GameBoy_Cartridge_AGS_1x32-1MP_P1.50mm_Socket_Horizontal";1;"GameBoy_Cartridge_MountingPin";;;
+2;"J3";"PinHeader_1x02_P2.54mm_Vertical";1;"Conn_01x02_Male";;;
+3;"G1,G2";"thebrutzler_approved_small02";2;"LOGO";;;
+4;"U2,U1";"DIP-16_W7.62mm";2;"74HC595";;;
+5;"R1,R3,R5,R4,R2";"R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal";5;"470";;;
+6;"J4";"PinHeader_1x04_P2.00mm_Vertical";1;"Conn_01x04_Female";;;
+7;"A1";"Arduino_Nano";1;"Arduino_Nano_v3.x";;;
+8;"J2";"PinHeader_1x03_P2.54mm_Vertical";1;"Conn_01x03_Male";;;
