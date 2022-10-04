@@ -119,7 +119,7 @@ It’s a good idea to verify your save files too by running the ROM when the sav
 
     List can be found in the documentations folder! Wisdom_Tree.txt - Provided by Benjamin E.
 
-2. GB audio pin base function is already bult-in, but may need extra code cahanges for rare games!
+2. GB audio pin base function is already bult-in, but may need extra code changes for rare games!
 
 ## REVISION HISTORY
 
