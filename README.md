@@ -47,6 +47,7 @@ Have fun and save the retro world :)
 - 1x Arduino Nano (or Uno for old versions)
 - 1x Custom PCB for Arduino Nano by WodoWiesel (abx@gmx.de)
   (or from orig. GBCartReader for Uno)
+  
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
 - 5x 470 Ohm Resistors – recommended for pull-ups on active low pins & to prevent damage
 - 1x Gameboy Cartridge 32-Pin Slot
@@ -59,8 +60,7 @@ Have fun and save the retro world :)
 
 ## SOFTWARE
 
-GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader
-by insideGadgets (https://www.insidegadgets.com/ & support@insidegadgets.com)
+GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets 
 
 GBCartRead is an Arduino based Gameboy Cartridge Reader which uses a C program or python script to interface with Arduino.
 
@@ -72,6 +72,10 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 
 ## HOW TO USE
 
+0. Set GB clockpin jumper to default GND pin (arduino clock only for development purposes).
+  
+    Reset pin can be set optionally to low to +5V pin if you want to soft-reset control may need extra code)
+
 1. Open the \GBCartRead_v(xxx)_Arduino\GBCartRead_v(xxx).ino file and program it to your Arduino.
 
    Note down the COM port number in use; you can find this out from the Arduino software by going to Tools -> Serial port.
@@ -80,9 +84,7 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 
   - Python Program
 
-  a. Download and install Python 3.2+ or higher (https://www.python.org/download/) and
-
-     pySerial (https://pypi.python.org/pypi/pyserial)
+  a. Download and install Python 3.2+ or higher (https://www.python.org/download/) and pySerial (https://pypi.python.org/pypi/pyserial/)
 
   b. Open up the “GBCartRead_v(xxx)_Python_Interface.py” script by right clicking it and selecting “Edit with IDLE”.
 
@@ -92,8 +94,7 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 
  - C Program
 
-  a. Open config.ini and change the COM port number to the serial port that your Arduino is connected on and save
-     the file.
+  a. Open config.ini and change the COM port number to the serial port that your Arduino is connected on and save the file.
 
   b. Run “GBCartRead_v(xxx)_C_Interface.exe” in Windows or re-compile the source for your OS
 
@@ -102,26 +103,29 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 4. Press 0 to read the header and verify that it looks correct. If it doesn’t look correct, press the power button
    to power off the Gameboy cartridge, remove and re-insert it and power it up again.
 
-5. Press 1 to Dump the ROM, 2 to Backup your RAM or 3 to Load your RAM file. Hashes (#) will start printing every
-   few seconds and a file called <gametitle>.gb or .sav will be created if you chose option 1 or 2.
-   If you choose option 3, it will load the save from <gametitle>.sav.
+5. Press 1 to Dump the ROM, 2 to Backup your RAM or 3 to Load your RAM file. 
+   Hashes (#) will start printing every few seconds and a file called <gametitle>.gb or .sav will be created if you chose option 1 or 2.
+   
+  If you choose option 3, it will load the save from <gametitle>.sav.
 
-We recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or "xgbfix.exe -v -d <your_rom.rom>"
-found in the project called "ASMotor" (we've included it).
+  We recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or "xgbfix.exe -v -d <your_rom.rom> 
+  found in the project called "ASMotor" (we've included it).
+
 It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
 
 ## SPECIAL CASES
 
-There are some cartridges which don't quite conform to cartridge header standards or require something out of the ordinary.
+1. There are some cartridges which don't quite conform to cartridge header standards or require something out of the ordinary.
 
-List can be found in the documentations folder!
+    List can be found in the documentations folder! Wisdom_Tree.txt - Provided by Benjamin E.
 
-Wisdom_Tree.txt - Provided by Benjamin E.
+2. GB audio pin base function is already bult-in, but may need extra code cahanges for rare games!
 
 ## REVISION HISTORY
 
 v1.8 Rev 1.2 (29 September 2022) by WodoWiesel
 - adapted pin configuration for new Arduino Nano
+- changable clockpin (default: GND !)
 - added reset pin interrupt
 - added optional display pins
 - added logos & pin labels
@@ -218,7 +222,7 @@ The new optimized PCB was designed with free KiCAD software (https://www.kicad.o
 
 Original: :copyright: 2011-2016 by insideGadgets
 
-(https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com)
+(https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com /support@insidegadgets.com)
 
 ## LICENCES
 
