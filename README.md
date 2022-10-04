@@ -182,11 +182,15 @@ v1.0 (19 March 2011)
 
 ## CREDITS
 
-Original: (c) 2011-2016 by insideGadgets ( https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com)
+ :copyright: 2021-2022 WodoWiesel (https://github.com/wodowiesel/ & https://www.twitch.com/wodowiesel/)
 
-The new optimized PCB was designed with KiCAD (https://www.kicad.org/) by WodoWiesel (https://ww.twitch.com/wodowiesel/)
+The new design was checked by the electrical engineer TheBrutzler (https://github.com/theBrutzler/ & https://ww.twitch.com/thebrutzler/)
 
-The design was checked by the electrical engineer TheBrutzler (https://github.com/theBrutzler/ & https://ww.twitch.com/thebrutzler/)
+The new optimized PCB was designed with free KiCAD software (https://www.kicad.org/)
+
+:heavy_exclamation_mark: The PCB should de produced at a manufracturer (like JLCPCB) with the RoHS lead-less option for environmental protection.
+
+Original: :copyright: 2011-2016 by insideGadgets ( https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com)
 
 ## LICENCES
 
