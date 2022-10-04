@@ -10,7 +10,7 @@ The new configured software and custom PCB is compatible with +5V (mostly USB) A
 - 1x Custom PCB for Arduino Nano by WodoWiesel (abx@gmx.de)
   (or from orig. GBCartReader for Uno)
 - 1x Arduino Nano (or Uno for old versions)
-- 2x SC-74HC595 Shift-Registers
+- 2x SN-74HC595 Shift-Registers from Texas Instrumens
 - 5x 470 Ohm Resistors – recommended for pull-ups on active low pins
 - 1x Gameboy Cartridge 32-Pin Slot
 
@@ -138,11 +138,11 @@ v1.0 (19 March 2011)
 
 ## CREDITS
 
-Original: (c) 2011-2016 by insideGadgets (http://www.insidegadgets.com)
+Original: (c) 2011-2016 by insideGadgets ( https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com)
 
 The new optimized PCB was designed with KiCAD (https://www.kicad.org/) by WodoWiesel (https://ww.twitch.com/wodowiesel/)
 
-The design was checked by the electrical engineer TheBrutzler (https://ww.twitch.com/thebrutzler/)
+The design was checked by the electrical engineer TheBrutzler (https://github.com/theBrutzler/ & https://ww.twitch.com/thebrutzler/)
 
 ## LICENCES
 
