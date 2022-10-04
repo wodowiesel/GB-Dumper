@@ -6,6 +6,8 @@ so you can read ROM and read / write to RAM.
 
 The new configured software and custom PCB is compatible with +5V (mostly USB) Arduino Nano or similar.
 
+![PCB](/docs/GB-Dumper-front%2Bchips.png)
+
 Compatibility list:
 
 - Gameboys
@@ -30,7 +32,15 @@ Compatibility list:
 
 :x: Class D (Advance GBA) -> 3.3V Logic
 
-# REQUIREMENTS
+# DISCLAIMERS
+
+**This is still "work-in-progress (WIP)" so i do NOT take any kind of warranty/responibility for damages or data losses!**
+
+**You can use this at your own risk without guarentees!**
+
+If you like the new design yo are free to share it!
+
+Have fun and save the retro world :)
 
 ## HARDWARE
 - 1x Arduino Nano (or Uno for old versions)
@@ -63,7 +73,7 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
    
 2. There are two choices to communicate with the Arduino – using the C program or the Python program.
 
-  --- Python Program ---
+  - Python Program
   
   a. Download and install Python 3.2+ or higher (https://www.python.org/download/) and pySerial (https://pypi.python.org/pypi/pyserial)
   
@@ -73,7 +83,7 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
      
   d. A new window will appear, after 2-3 seconds you’ll have some options available.
 
-  --- C Program ---
+ - C Program
   
   a. Open config.ini and change the COM port number to the serial port that your Arduino is connected on and save
      the file.
@@ -106,11 +116,15 @@ Wisdom_Tree.txt - Provided by Benjamin E.
 v1.8 Rev 1.2 (29 September 2022) by WodoWiesel
 - adapted pin configuration for new Arduino Nano
 - added reset pin interrupt
-- added audio/Vin pin support for cartridges
+- added optional display pins
+- added logos & pin labels
 
 v1.8 Rev 1.1 (11 March 2022) by WodoWiesel
 - Optimized & detailed Makefile
 - added pull-up active low resistors
+- added audio/Vin pin support for cartridges
+- added more stable common ground-plane connectivity
+- added M3 mounting holes
 
 v1.8 Rev 1 (28 May 2016)
 - Re-add checking for non-printable ASCII characters code that was removed when cleaning up code
