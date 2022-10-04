@@ -36,28 +36,33 @@ Compatibility list:
 
 **This is still "work-in-progress (WIP)" so i do NOT take any kind of warranty/responibility for damages or data losses!**
 
-**You can use this at your own risk without guarentees!**
+**You can use this at your own risk without guarantees!**
 
 If you like the new design yo are free to share it!
 
 Have fun and save the retro world :)
 
 ## HARDWARE
+
 - 1x Arduino Nano (or Uno for old versions)
 - 1x Custom PCB for Arduino Nano by WodoWiesel (abx@gmx.de)
   (or from orig. GBCartReader for Uno)
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
 - 5x 470 Ohm Resistors – recommended for pull-ups on active low pins & to prevent damage
 - 1x Gameboy Cartridge 32-Pin Slot
+
 - 3x Female Pin headers - optional
 - 2x Jumpers - optional
+
+- 1x Soldering iron
+- solder + flux
 
 ## SOFTWARE
 
 GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader
-by insideGadgets (https://www.insidegadgets.com) / support@insidegadgets.com
+by insideGadgets (https://www.insidegadgets.com/ & support@insidegadgets.com)
 
-GBCartRead is an Arduino based Gameboy Cartridge Reader which uses a C program or python script to interface with Arduino. 
+GBCartRead is an Arduino based Gameboy Cartridge Reader which uses a C program or python script to interface with Arduino.
 
 GBCartRead allows you to dump your ROM, save the RAM and write to the RAM.
 
@@ -70,37 +75,39 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 1. Open the \GBCartRead_v(xxx)_Arduino\GBCartRead_v(xxx).ino file and program it to your Arduino.
 
    Note down the COM port number in use; you can find this out from the Arduino software by going to Tools -> Serial port.
-   
+
 2. There are two choices to communicate with the Arduino – using the C program or the Python program.
 
   - Python Program
-  
-  a. Download and install Python 3.2+ or higher (https://www.python.org/download/) and pySerial (https://pypi.python.org/pypi/pyserial)
-  
+
+  a. Download and install Python 3.2+ or higher (https://www.python.org/download/) and
+
+     pySerial (https://pypi.python.org/pypi/pyserial)
+
   b. Open up the “GBCartRead_v(xxx)_Python_Interface.py” script by right clicking it and selecting “Edit with IDLE”.
-  
+
   c. Change the “COM2” serial port to the serial port that your Arduino is connected on, save the file and press F5 to run it.
-     
+
   d. A new window will appear, after 2-3 seconds you’ll have some options available.
 
  - C Program
-  
+
   a. Open config.ini and change the COM port number to the serial port that your Arduino is connected on and save
      the file.
-     
+
   b. Run “GBCartRead_v(xxx)_C_Interface.exe” in Windows or re-compile the source for your OS
 
 3. At this stage you should insert your Gameboy cartridge and press the power button, the power LED should light up.
 
 4. Press 0 to read the header and verify that it looks correct. If it doesn’t look correct, press the power button
    to power off the Gameboy cartridge, remove and re-insert it and power it up again.
-   
+
 5. Press 1 to Dump the ROM, 2 to Backup your RAM or 3 to Load your RAM file. Hashes (#) will start printing every
-   few seconds and a file called <gametitle>.gb or .sav will be created if you chose option 1 or 2. If you choose
-   option 3, it will load the save from <gametitle>.sav.
+   few seconds and a file called <gametitle>.gb or .sav will be created if you chose option 1 or 2.
+   If you choose option 3, it will load the save from <gametitle>.sav.
 
 We recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or "xgbfix.exe -v -d <your_rom.rom>"
-found in the project called "ASMotor" (we've included it). 
+found in the project called "ASMotor" (we've included it).
 It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
 
 ## SPECIAL CASES
@@ -134,7 +141,7 @@ v1.8 (21 March 2016)
 - Added Nintendo Logo check and compare so you can tell if the cartridge is being read correctly
 
   (sometimes the title was read ok but the ROM dump wasn't correct)
- 
+
 - Added missing cartridge RAM support
 - Cleaned up code
 
@@ -156,7 +163,9 @@ v1.6 (3 January 2015)
   (Compatible with Gameboy Cart Shield v1.2 if you connect pins 12 and 13 together)
 
 v1.5 (15 November 2014)
-- Speed increases by using direct PORT writing/reading and sending 64 bytes at a time (thanks Frode vdM. fvdm1992@yahoo.no)
+- Speed increases by using direct PORT writing/reading and sending 64 bytes at a time
+  (thanks Frode vdM. fvdm1992@yahoo.no)
+
 - Compacting functions (thanks Frode vdM. fvdm1992@yahoo.no)
 - Delays when pulsing WR/RD/MREQ pins reduced to a few NOP cycles
 
@@ -198,11 +207,13 @@ v1.0 (19 March 2011)
 
  :copyright: 2021-2022 WodoWiesel (https://github.com/wodowiesel/ & https://www.twitch.com/wodowiesel/)
 
-The new design was checked by the electrical engineer TheBrutzler (https://github.com/theBrutzler/ & https://ww.twitch.com/thebrutzler/)
+The new design was checked by the electrical engineer TheBrutzler
+
+(https://github.com/theBrutzler/ & https://ww.twitch.com/thebrutzler/)
 
 The new optimized PCB was designed with free KiCAD software (https://www.kicad.org/)
 
-:heavy_exclamation_mark: The PCB should de produced at a manufracturer (like JLCPCB) with the RoHS lead-less option for environmental protection.
+:heavy_exclamation_mark: The PCB should de produced at a manufacturer (like JLCPCB) with the RoHS lead-less option for environmental protection.
 
 Original: :copyright: 2011-2016 by insideGadgets ( https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com)
 
