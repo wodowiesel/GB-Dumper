@@ -45,7 +45,7 @@ Have fun and save the retro world :)
 ## HARDWARE
 
 - 1x Arduino Nano (or Uno for old versions)
-- 1x Custom PCB for Arduino Nano by WodoWiesel (abx@gmx.de)
+- 1x Custom PCB for Arduino Nano by WodoWiesel (wodowiesel@quantentunnel.de)
   (or from orig. GBCartReader for Uno)
   
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
