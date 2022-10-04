@@ -164,6 +164,7 @@ v1.6 (3 January 2015)
 
 v1.5 (15 November 2014)
 - Speed increases by using direct PORT writing/reading and sending 64 bytes at a time
+
   (thanks Frode vdM. fvdm1992@yahoo.no)
 
 - Compacting functions (thanks Frode vdM. fvdm1992@yahoo.no)
@@ -215,7 +216,9 @@ The new optimized PCB was designed with free KiCAD software (https://www.kicad.o
 
 :heavy_exclamation_mark: The PCB should de produced at a manufacturer (like JLCPCB) with the RoHS lead-less option for environmental protection.
 
-Original: :copyright: 2011-2016 by insideGadgets ( https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com)
+Original: :copyright: 2011-2016 by insideGadgets
+
+(https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com)
 
 ## LICENCES
 
