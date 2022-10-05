@@ -52,11 +52,12 @@ Have fun and save the retro world :)
 - 5x 470 Ohm Resistors – recommended for pull-ups on active low pins & to prevent damage
 - 1x Gameboy Cartridge 32-Pin Slot
 
-- 3x Female Pin headers - optional
-- 2x Jumpers - optional
+- 3x Female Pin headers/Sockets for the chips - or solder it directly 
+- 3x Male Pin headers
+- 2x Jumpers
 
 - 1x Soldering iron
-- solder + flux
+- solder + flux + IPA
 
 ## SOFTWARE
 
@@ -125,13 +126,13 @@ It’s a good idea to verify your save files too by running the ROM when the sav
 
 v1.8 Rev 1.2 (29 September 2022) by WodoWiesel
 - adapted pin configuration for new Arduino Nano
+- Optimized & detailed Makefile
 - changable clockpin (default: GND !)
-- added reset pin interrupt
 - added optional display pins
 - added logos & pin labels
 
 v1.8 Rev 1.1 (11 March 2022) by WodoWiesel
-- Optimized & detailed Makefile
+- added reset pin interrupt
 - added pull-up active low resistors
 - added audio/Vin pin support for cartridges
 - added more stable common ground-plane connectivity
