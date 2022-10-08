@@ -34,7 +34,7 @@ Compatibility list:
 
 # DISCLAIMERS
 
-**This is still "work-in-progress (WIP)" so i do NOT take any kind of warranty/responibility for damages or data losses!**
+**This is still "work-in-progress (WIP)" so I do NOT take any kind of warranty/responsibility for damages or data losses!**
 
 **You can use this at your own risk without guarantees!**
 
@@ -225,8 +225,18 @@ Original: :copyright: 2011-2016 by insideGadgets
 
 (https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com /support@insidegadgets.com)
 
-## LICENCES
+## LICENSES
+
+- Hardware
+
+CERN Open Hardware License Version 2 - Weakly Reciprocal
+
+Short identifier CERN-OHL-W-2.0
+
+[LICENSE Source](https://spdx.org/licenses/CERN-OHL-W-2.0.html)
+
+- Software
 
 This work is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License.
 
-(http://creativecommons.org/licenses/by-nc/3.0/)
+[CCANC](http://creativecommons.org/licenses/by-nc/3.0/)
