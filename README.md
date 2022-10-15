@@ -10,7 +10,7 @@ The new configured software and custom PCB is compatible with +5V (mostly USB) A
 
 Compatibility list:
 
-- Gameboys
+- Gameboys:
 
 :heavy_check_mark: Classic/Original
 
@@ -22,7 +22,7 @@ Compatibility list:
 
 :heavy_minus_sign: Advance
 
-- Cartridges
+- Cartridges:
 
 :heavy_check_mark: Class/Type A (grey+colors)
 
@@ -49,7 +49,7 @@ Have fun and save the retro world :)
   (or from orig. GBCartReader for Uno)
   
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
-- 5x 470 Ohm Resistors – recommended for pull-ups on active low pins & to prevent damage
+- 5x 330 Ohm Resistors – recommended for pull-ups on active low pins & to prevent damage
 - 1x Gameboy Cartridge 32-Pin Slot
 
 - 3x Female Pin headers/Sockets for the chips - or solder it directly 
