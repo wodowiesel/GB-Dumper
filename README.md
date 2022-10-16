@@ -2,7 +2,7 @@
 
 The GB-Dumper is a **PCB** project for Gameboy cartridge dumps/backups via Arduino __Nano__ 
 
-&amp; USB-connection with the SPI-Protoco, so you can read ROM and read / write to RAMl.
+&amp; USB-connection with the SPI-Protocol, so you can read ROM and read / write to RAMl.
 
 The new configured software and custom PCB is compatible with +5V (mostly USB) Arduino Nano or similar.
 
