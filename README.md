@@ -1,8 +1,8 @@
 # GB-Dumper - Gameboy Cartridge Dumper
 
-The GB-Dumper is a **PCB** project for Gameboy cartridge dumps/backups via Arduino __Nano__ &amp; USB-connection,
+The GB-Dumper is a **PCB** project for Gameboy cartridge dumps/backups via Arduino __Nano__ 
 
-so you can read ROM and read / write to RAM.
+&amp; USB-connection with the SPI-Protoco, so you can read ROM and read / write to RAMl.
 
 The new configured software and custom PCB is compatible with +5V (mostly USB) Arduino Nano or similar.
 
@@ -49,7 +49,7 @@ Have fun and save the retro world :)
   (or from orig. GBCartReader for Uno)
   
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
-- 5x 330 Ohm Resistors – recommended for pull-ups on active low pins & to prevent damage
+- 5x 330 Ohm Resistors – pull-ups on active low & impedance matching
 - 1x Gameboy Cartridge 32-Pin Slot
 
 - 3x Female Pin headers/Sockets for the chips - or solder it directly 
