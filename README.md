@@ -224,9 +224,9 @@ The new design was checked by the electrical engineer theBrutzler
 
 The new optimized PCB was designed with free KiCAD software (https://www.kicad.org/)
 
-:heavy_exclamation_mark: The PCB should de produced at a manufacturer
+:heavy_exclamation_mark: The PCB should be produced at a manufacturer
 
-(like PCBWay/JLCPCB) with the RoHS lead-less option for environmental protection.
+(like PCBWay) with the RoHS lead-free option for environmental protection.
 
 Original: :copyright: 2011-2016 by insideGadgets
 
