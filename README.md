@@ -1,6 +1,6 @@
 # GB-Dumper - Gameboy Cartridge Dumper
 
-The GB-Dumper is a **PCB** project for Gameboy cartridge dumps/backups via Arduino __Nano__ 
+The GB-Dumper is a **PCB** project for Gameboy cartridge dumps/backups via Arduino __Nano__
 
 &amp; USB-connection with the SPI-Protocol, so you can read ROM and read / write to RAM.
 
@@ -34,7 +34,7 @@ Compatibility list:
 
 # DISCLAIMERS
 
-**This is still "work-in-progress (WIP)" so I do NOT take any kind of warranty/responsibility for damages or data losses!**
+**This is still "work-in-progress (WIP)" so I do NOT take any kind of warranty/responsibility for damages/data losses!**
 
 **You can use this at your own risk without guarantees and put device on non conductive surface or enclosure!**
 
@@ -46,13 +46,14 @@ Have fun and save the retro world :)
 
 - 1x Arduino Nano (or Uno for old versions)
 - 1x Custom PCB for Arduino Nano by WodoWiesel (wodowiesel@quantentunnel.de)
+
   (or from orig. GBCartReader for Uno)
-  
+
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
 - 5x 330 Ohm Resistors – pull-ups on active low & impedance matching
 - 1x Gameboy Cartridge 32-Pin Slot
 
-- 3x Female Pin headers/Sockets for the chips - or solder it directly 
+- 3x Female Pin headers/Sockets for the chips - or solder it directly
 - 3x Male Pin headers
 - 2x Jumpers
 
@@ -61,9 +62,11 @@ Have fun and save the retro world :)
 
 ## SOFTWARE
 
-GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets 
+GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets
 
-GBCartRead is an Arduino based Gameboy Cartridge Reader which uses a C program or python script to interface with Arduino.
+GBCartRead is an Arduino based Gameboy Cartridge Reader which uses a C program
+
+or python script to interface with Arduino.
 
 GBCartRead allows you to dump your ROM, save the RAM and write to the RAM.
 
@@ -73,13 +76,15 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 
 ## HOW TO USE
 
-0. Set GB clockpin jumper to default GND pin (arduino clock only for development purposes).
-  
+0. Set GB clock-pin jumper to default GND pin (arduino clock only for development purposes).
+
     Reset pin can be set optionally to low to +5V pin if you want to soft-reset control may need extra code)
 
 1. Open the \GBCartRead_v(xxx)_Arduino\GBCartRead_v(xxx).ino file and program it to your Arduino.
 
-   Note down the COM port number in use; you can find this out from the Arduino software by going to Tools -> Serial port.
+   Note down the COM port number in use; you can find this out from the Arduino
+
+   software by going to Tools -> Serial port.
 
 2. There are two choices to communicate with the Arduino – using the C program or the Python program.
 
@@ -104,12 +109,12 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 4. Press 0 to read the header and verify that it looks correct. If it doesn’t look correct, press the power button
    to power off the Gameboy cartridge, remove and re-insert it and power it up again.
 
-5. Press 1 to Dump the ROM, 2 to Backup your RAM or 3 to Load your RAM file. 
+5. Press 1 to Dump the ROM, 2 to Backup your RAM or 3 to Load your RAM file.
    Hashes (#) will start printing every few seconds and a file called <gametitle>.gb or .sav will be created if you chose option 1 or 2.
-   
+
   If you choose option 3, it will load the save from <gametitle>.sav.
 
-  We recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or "xgbfix.exe -v -d <your_rom.rom> 
+  We recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or "xgbfix.exe -v -d <your_rom.rom>
   found in the project called "ASMotor" (we've included it).
 
 It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
@@ -120,7 +125,7 @@ It’s a good idea to verify your save files too by running the ROM when the sav
 
     List can be found in the documentations folder! Wisdom_Tree.txt - Provided by Benjamin E.
 
-2. GB audio pin base function is already bult-in, but may need extra code changes for rare games!
+2. GB audio pin base function is already built-in, but may need extra code changes for rare games!
 
 ## REVISION HISTORY
 
@@ -140,7 +145,7 @@ v1.8 Rev 1.1 (11 March 2022) by WodoWiesel
 
 v1.8 Rev 1 (28 May 2016)
 - Re-add checking for non-printable ASCII characters code that was removed when cleaning up code
-- Added custom cartridge files for Wisdom Tree games (thanks Benjamin E)
+- Added custom cartridge files for Wisdom Tree games (thanks Benjamin E.)
 
 v1.8 (21 March 2016)
 - Added Nintendo Logo check and compare so you can tell if the cartridge is being read correctly
@@ -157,7 +162,7 @@ v1.7 Rev 1 (17 February 2015)
 - Fixed clockPin to change correct port - PB5 (thanks Anna)
 
 v1.7 (7 February 2015) *Only compatible with Gameboy Cart Shield v1.3*
-- Added interrupt for button on A1 to switch P mosfet on A0 that powers the cartridge
+- Added interrupt for button on A1 to switch P-mosfet on A0 that powers the cartridge
 - Changed so at startup it doesn't display the Game Cartridge header
 
 v1.6 (3 January 2015)
@@ -213,17 +218,19 @@ v1.0 (19 March 2011)
 
  :copyright: 2021-2022 WodoWiesel (https://github.com/wodowiesel/ & https://www.twitch.com/wodowiesel/)
 
-The new design was checked by the electrical engineer TheBrutzler
+The new design was checked by the electrical engineer theBrutzler
 
-(https://github.com/theBrutzler/ & https://ww.twitch.com/thebrutzler/)
+(https://github.com/theBrutzler/ & https://www.twitch.com/theBrutzler/)
 
 The new optimized PCB was designed with free KiCAD software (https://www.kicad.org/)
 
-:heavy_exclamation_mark: The PCB should de produced at a manufacturer (like JLCPCB) with the RoHS lead-less option for environmental protection.
+:heavy_exclamation_mark: The PCB should de produced at a manufacturer
+
+(like PCBWay/JLCPCB) with the RoHS lead-less option for environmental protection.
 
 Original: :copyright: 2011-2016 by insideGadgets
 
-(https://github.com/insidegadgets/GBCartRead/ & http://www.insidegadgets.com /support@insidegadgets.com)
+(https://github.com/insidegadgets/GBCartRead/ / support@insidegadgets.com)
 
 ## LICENSES
 
