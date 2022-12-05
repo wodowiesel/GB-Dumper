@@ -36,9 +36,9 @@ Compatibility list:
 
 **This is still "work-in-progress (WIP)" so I do NOT take any kind of warranty/responsibility for damages/data losses!**
 
-**You can use this at your own risk without guarantees and put device on non conductive surface or enclosure!**
+**You can use this at your own risk without guarantees and put device on a non-conductive surface or use enclosure!**
 
-If you like the new design yo are free to share it!
+If you like the new design you are free to share it!
 
 Have fun and save the retro world :)
 
