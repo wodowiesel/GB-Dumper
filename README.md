@@ -36,9 +36,9 @@ Compatibility list:
 
 **This is still "work-in-progress (WIP)" so I do NOT take any kind of warranty/responsibility for damages/data losses!**
 
-**You can use this at your own risk without guarantees and put device on a non-conductive surface or use enclosure!**
+**You can use this at your own risk without guarantees and put device on non conductive surface or enclosure!**
 
-If you like the new design you are free to share it!
+If you like the new design yo are free to share it!
 
 Have fun and save the retro world :)
 
@@ -119,17 +119,39 @@ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 
 It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
 
-## SPECIAL CASES
+## SPECIALS, CHECKSUMS & MEMORY
 
 1. There are some cartridges which don't quite conform to cartridge header standards or require something out of the ordinary.
-
-    List can be found in the documentations folder! Wisdom_Tree.txt - Provided by Benjamin E.
+For further technical infos and datasheets take a good look into the Documentation folder!!
 
 2. GB audio pin base function is already built-in, but may need extra code changes for rare games!
+
+3. Formatting
+  if you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed.
+
+4. CRC
+  This file [GB/C] (/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for verification at the end of the dumping process.
+   From: [OSCR] (https://github.com/sanni/cartreader/tree/master/sd)
+
+  Example:
+  007 - The World Is Not Enough (USA, Europe).gbc
+  E038E666
+
+  Name
+  CRC32
+
+5. Memory
+  The file [WisdomTree] (/docs/Wisdom_tree.txt) contains Memory Address Informations and Exceptions
+  Additional articles (https://gbdev.gg8.se/wiki/articles/MBC7#Ax8x_-_EEPROM_.28Read.2FWrite.29)
+  
+6. CI
+  Aruino Workflow [CI] (/workflows/ci.yaml)
 
 ## REVISION HISTORY
 
 v1.8 Rev 1.2 (29 September 2022) by WodoWiesel
+- added CRC gaame informations
+- added memory info, links & CI
 - adapted pin configuration for new Arduino Nano
 - Optimized & detailed Makefile
 - changable clockpin (default: GND !)
@@ -188,8 +210,8 @@ v1.4.1 (3 January 2014)
 - Changed wrPin from pin 13 to A3 to suit Gameboy Cart Shield v1.2
 
 v1.4 (30 August 2013)
-- Added gbcartread.exe program for Windows (with source) which can be used instead of using the Python script
-  and is a bit faster
+- Added gbcartread.exe program for Windows (with source)
+  which can be used instead of using the Python script and is a bit faster
 
 v1.3.1 (2 May 2011)
 - Updated schematic as R19, R20 and R31 were actually acting as voltage dividers
@@ -216,7 +238,11 @@ v1.0 (19 March 2011)
 
 ## CREDITS
 
- :copyright: 2021-2022 WodoWiesel (https://github.com/wodowiesel/ & https://www.twitch.com/wodowiesel/)
+ :copyright: 2021-2022 WodoWiesel 
+ Github (https://github.com/wodowiesel/)
+ Twitch (https://www.twitch.com/wodowiesel/)
+ Instagram (https://www.instagram.com/wodowiesel)
+ YT (https://www.youtube.com/@wodowiesel)
 
 The new design was checked by the electrical engineer theBrutzler
 
