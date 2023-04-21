@@ -130,22 +130,20 @@ For further technical infos and datasheets take a good look into the Documentati
   if you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed.
 
 4. CRC
-  This file [GB/C] (/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for verification at the end of the dumping process.
-   From: [OSCR] (https://github.com/sanni/cartreader/tree/master/sd)
+  This file [GB/C](/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for verification at the end of the dumping process.
+  
+   From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd)
 
   Example:
-  007 - The World Is Not Enough (USA, Europe).gbc
-  E038E666
-
-  Name
-  CRC32
+  Name: 007 - The World Is Not Enough (USA, Europe).gbc
+  CRC32: E038E666
 
 5. Memory
-  The file [WisdomTree] (/docs/Wisdom_tree.txt) contains Memory Address Informations and Exceptions
+  The file [WisdomTree](/docs/Wisdom_Tree.txt) contains Memory Address Informations and Exceptions
   Additional articles (https://gbdev.gg8.se/wiki/articles/MBC7#Ax8x_-_EEPROM_.28Read.2FWrite.29)
   
 6. CI
-  Aruino Workflow [CI] (/workflows/ci.yaml)
+  Aruino Workflow [CI](.github/workflows/main.yaml)
 
 ## REVISION HISTORY
 
@@ -239,9 +237,13 @@ v1.0 (19 March 2011)
 ## CREDITS
 
  :copyright: 2021-2022 WodoWiesel 
+ 
  Github (https://github.com/wodowiesel/)
+  
  Twitch (https://www.twitch.com/wodowiesel/)
+  
  Instagram (https://www.instagram.com/wodowiesel)
+  
  YT (https://www.youtube.com/@wodowiesel)
 
 The new design was checked by the electrical engineer theBrutzler
@@ -256,7 +258,7 @@ The new optimized PCB was designed with free KiCAD software (https://www.kicad.o
 
 Original: :copyright: 2011-2016 by insideGadgets
 
-(https://github.com/insidegadgets/GBCartRead/ / support@insidegadgets.com)
+(https://github.com/insidegadgets/GBCartRead/ or support@insidegadgets.com)
 
 ## LICENSES
 
