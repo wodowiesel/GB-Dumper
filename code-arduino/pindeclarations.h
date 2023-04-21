@@ -8,6 +8,7 @@
 
 #ifndef PINDECLARATIONS_H_
 #define PINDECLARATIONS_H_
+#define HW6
 
 // AVR definitions for Arduino NANO!
 #define PA0 0
@@ -20,7 +21,7 @@
 #define PA7 7
 
 #define PB0 0
-#define PB1 1
+#define PB1 1s
 #define PB2 2
 #define PB3 3
 #define PB4 4
@@ -56,7 +57,7 @@
 #define rdPin_high    PORTC |= (1<<PC5); // / RDcorrect
 #define rdPin_low     PORTC &= ~(1<<PC5);
 
-#define latchPin_high PORTB |= (1<<PB2); // RCLK correct  
+#define latchPin_high PORTB |= (1<<PB2); // RCLK correct
 #define latchPin_low  PORTB &= ~(1<<PB2);
 
 #define dataPin_high  PORTB |= (1<<PB3); // correct
@@ -66,35 +67,35 @@
 #define clockPin_low  PORTB &= ~(1<<PB5);
 
 #define mosfetPin_high  PORTC  |= (1<<PC0); // correct
-#define mosfetPin_low   PORTC  &= ~(1<<PC0); 
+#define mosfetPin_low   PORTC  &= ~(1<<PC0);
 
 // extra pins
 #define gb22Pin_high   PORTD |= (1<<PD2); // GB_D0 Pin5 INT0
-#define gb22Pin_low    PORTD &= ~(1<<PD2); 
+#define gb22Pin_low    PORTD &= ~(1<<PD2);
 
 #define gb23Pin_high  PORTD |= (1<<PD3); // GB_D1 Pin6 INT1
-#define gb23Pin_low   PORTD &= ~(1<<PD3); 
+#define gb23Pin_low   PORTD &= ~(1<<PD3);
 
 #define gb24Pin_high  PORTD |= (1<<PD4); // GB_D2 Pin7
-#define gb24Pin_low   PORTD &= ~(1<<PD4); 
+#define gb24Pin_low   PORTD &= ~(1<<PD4);
 
 #define gb25Pin_high  PORTD |= (1<<PD5); // GB_D3 Pin8
-#define gb25Pin_low   PORTD &= ~(1<<PD5); 
+#define gb25Pin_low   PORTD &= ~(1<<PD5);
 
 #define gb26Pin_high  PORTD |= (1<<PD6); // GB_D4 Pin9
-#define gb26Pin_low   PORTD &= ~(1<<PD6); 
+#define gb26Pin_low   PORTD &= ~(1<<PD6);
 
 #define gb27Pin_high  PORTD |= (1<<PD7); // GB_D5 Pin10
-#define gb27Pin_low   PORTD &= ~(1<<PD7); 
+#define gb27Pin_low   PORTD &= ~(1<<PD7);
 
 #define gb28Pin_high  PORTB |= (1<<PB0); // GB_D6 Pin11
-#define gb28Pin_low   PORTB &= ~(1<<PB0); 
+#define gb28Pin_low   PORTB &= ~(1<<PB0);
 
 #define gb29Pin_high  PORTB |= (1<<PB1); // GB_D7 Pin12
-#define gb29Pin_low   PORTB &= ~(1<<PB1); 
+#define gb29Pin_low   PORTB &= ~(1<<PB1);
 
 #define gb30Pin_high  PORTB |= ~(1<<PC6); // /RES Pin3&29
-#define gb30Pin_low   PORTB &= ~(1<<PC6); 
+#define gb30Pin_low   PORTB &= ~(1<<PC6);
 
 #define gb31Pin_high  PORTB |= (1<<PB4); // audio correct
 #define gb31Pin_low   PORTB &= ~(1<<PB4);
