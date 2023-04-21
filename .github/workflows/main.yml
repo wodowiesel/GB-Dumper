@@ -28,7 +28,6 @@ jobs:
       - name: Install libraries
         run: |
           arduino-cli lib install \
-            "SPI" \
             "SdFat" \
             "Adafruit SSD1306" \
             "Adafruit GFX Library" \
