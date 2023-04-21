@@ -42,5 +42,5 @@ jobs:
         run: |
           cd code-arduino/
           # Select hardware version by uncommenting it (using regular expression)
-          sed -i 's/^\/\/[\t ]*#define ${{ matrix.hwVersion }}/#define ${{ matrix.hwVersion }}/g' Config.h
+          sed -i 's/^\/\/[\t ]*#define ${{ matrix.hwVersion }}/#define ${{ matrix.hwVersion }}/g' pindeclarations.h
           arduino-cli compile --fqbn arduino:avr:mega --warnings all
