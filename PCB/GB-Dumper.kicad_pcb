@@ -20266,7 +20266,7 @@
       (effects (font (size 0.75 0.75) (thickness 0.15)))
       (tstamp 4b8e4218-9740-4574-b59e-9bff3b6ae8ff)
     )
-    (fp_text value "470" (at 8.99 0.16 270) (layer "F.SilkS")
+    (fp_text value "470Ω" (at 8.99 0.16 270) (layer "F.SilkS")
       (effects (font (size 0.5 0.5) (thickness 0.125)))
       (tstamp 1ac84470-ff35-4e92-8c90-2205b203daf4)
     )
