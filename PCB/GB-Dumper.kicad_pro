@@ -396,12 +396,12 @@
   "pcbnew": {
     "last_paths": {
       "gencad": "GB-Dumper.cad",
-      "idf": "GB-Dumper.emn",
+      "idf": "export/GB-Dumper.emn",
       "netlist": "GB Dumper.net",
-      "specctra_dsn": "GB-Dumper.dsn",
-      "step": "GB-Dumper.step",
+      "specctra_dsn": "export/GB-Dumper.dsn",
+      "step": "export/GB-Dumper.step",
       "vmrl": "",
-      "vrml": "GB-Dumper.wrl"
+      "vrml": "export/GB-Dumper.wrl"
     },
     "page_layout_descr_file": ""
   },

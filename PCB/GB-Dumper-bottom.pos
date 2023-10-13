@@ -1,7 +1,0 @@
-### Module positions - created on Mon Oct  3 14:36:39 2022 ###
-### Printed by Pcbnew version (6.0.4)
-## Unit = mm, Angle = deg.
-## Side : bottom
-# Ref     Val       Package                            PosX       PosY       Rot  Side
-G2        LOGO      thebrutzler_approved_small02   -16.3000    45.2000  -90.0000  bottom
-## End
