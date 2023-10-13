@@ -44,17 +44,30 @@ Have fun and save the retro world :)
 
 ## HARDWARE
 
-- 1x Arduino Nano (or Uno for old versions)
-- 1x Custom PCB for Arduino Nano by WodoWiesel (wodowiesel@quantentunnel.de)
-
+- 1x Arduino Nano v3 (or Uno for old versions) + USB-Cable + IDE
+- 1x Custom PCB by WodoWiesel (wodowiesel@quantentunnel.de)
   (or from orig. GBCartReader for Uno)
-
+-  flat M3 screw and an enclosue
+  
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
-- 5x 330 Ohm Resistors – pull-ups on active low & impedance matching
+- 5x 470 (or 330) Ohm Resistors – pull-ups on active low & impedance matching
+- 1x 22 uF Capacitor (pol.)
 - 1x Gameboy Cartridge 32-Pin Slot
 
-- 3x Female Pin headers/Sockets for the chips - or solder it directly
-- 3x Male Pin headers
+- Female Pin headers/sockets for the chips - or solder it directly
+  
+  * 1x 30-pin arduino
+    
+  * 2x 16-pin shift register
+
+- Male headers
+  
+    - 1x 2-pin
+    
+    - 1x 3-pin
+    
+    - 1x 4-pin
+
 - 2x Jumpers
 
 - 1x Soldering iron
