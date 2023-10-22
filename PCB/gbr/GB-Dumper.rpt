@@ -1,4 +1,4 @@
-## Footprint report - date Fri Oct 13 20:45:31 2023
+## Footprint report - date Sun Oct 22 17:33:15 2023
 ## Created by Pcbnew version (6.0.4)
 ## Unit = mm, Angle = deg.
 
@@ -6,7 +6,7 @@ $BeginDESCRIPTION
 
 $BOARD
 upper_left_corner 175.324578 76.886266
-lower_right_corner 276.358000 158.064000
+lower_right_corner 280.787857 156.577500
 $EndBOARD
 
 $MODULE A1
@@ -230,18 +230,18 @@ layer front
 $EndMODULE  G2
 
 $MODULE G2*
-footprint theBrutzler:thebrutzler_approved_small02
-attribut none
-position 200.737406 110.595778  orientation -90.00
-layer back
-$EndMODULE  G2*
-
-$MODULE G2*
 footprint Logos:wiesel-kicad-back-white
 attribut virtual
 position 207.228000 88.854000  orientation -90.00
 layer back
 $EndMODULE  G2*
+
+$MODULE G2**
+footprint theBrutzler:thebrutzler_approved_small02
+attribut none
+position 200.737406 110.595778  orientation -90.00
+layer back
+$EndMODULE  G2**
 
 $MODULE G3
 footprint Logos:recycling-symbol-kicad
@@ -653,44 +653,30 @@ $EndMODULE  R5
 $MODULE REF0
 footprint Symbol:OSHW-Logo_5.7x6mm_SilkScreen
 attribut virtual
-position 188.658000 137.474000  orientation 90.00
+position 188.010000 122.490000  orientation 90.00
 layer front
 $EndMODULE  REF0
 
 $MODULE REF0*
 footprint Symbol:OSHW-Logo_5.7x6mm_SilkScreen
 attribut virtual
-position 188.548000 137.414000  orientation -90.00
+position 188.080000 122.480000  orientation -90.00
 layer back
 $EndMODULE  REF0*
 
 $MODULE REF1*
 footprint Symbol:KiCad-Logo2_5mm_SilkScreen
 attribut virtual
-position 188.348000 127.314000  orientation -90.00
+position 188.190000 109.110000  orientation -90.00
 layer back
 $EndMODULE  REF1*
 
 $MODULE REF2
 footprint Symbol:KiCad-Logo2_5mm_SilkScreen
 attribut virtual
-position 188.528000 126.504000  orientation 90.00
+position 187.950000 109.090000  orientation 90.00
 layer front
 $EndMODULE  REF2
-
-$MODULE REF3*
-footprint Symbol:RoHS-Logo_6mm_SilkScreen
-attribut virtual
-position 188.078000 108.164000  orientation -90.00
-layer back
-$EndMODULE  REF3*
-
-$MODULE REF4
-footprint Symbol:RoHS-Logo_6mm_SilkScreen
-attribut virtual
-position 188.078000 108.164000  orientation 90.00
-layer front
-$EndMODULE  REF4
 
 $MODULE REF4*
 footprint Symbol:WEEE-Logo_5.6x8mm_SilkScreen
@@ -706,127 +692,31 @@ position 188.778000 93.764000  orientation 90.00
 layer front
 $EndMODULE  REF5
 
-$MODULE REF6
-footprint MountingHole:MountingHole_3.2mm_M3_Pad_Via
+$MODULE REF888**
+footprint MountingHole:MountingHole_3.2mm_M3_Pad
 attribut virtual
-position 188.478000 87.564000  orientation 0.00
+position 269.570000 151.460000  orientation 0.00
 layer front
-$PAD "1"
-Shape Circle Layer both
-position  1.697056 -1.697056  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position -2.400000  0.000000  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position  0.000000 -2.400000  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position -1.697056  1.697056  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position  2.400000  0.000000  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position  0.000000  2.400000  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position -1.697056 -1.697056  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
 $PAD "1"
 Shape Circle Layer both
 position  0.000000  0.000000  size  6.400000  6.400000  orientation 0.00
 drill  3.200000
 shape_offset  0.000000  0.000000
 $EndPAD
-$PAD "1"
-Shape Circle Layer both
-position  1.697056  1.697056  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$EndMODULE  REF6
+$EndMODULE  REF888**
 
-$MODULE REF7
-footprint MountingHole:MountingHole_3.2mm_M3_Pad_Via
+$MODULE REF999**
+footprint MountingHole:MountingHole_3.2mm_M3_Pad
 attribut virtual
-position 269.978000 151.564000  orientation 0.00
+position 188.620000 87.720000  orientation 0.00
 layer front
-$PAD "1"
-Shape Circle Layer both
-position  2.400000  0.000000  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position -1.697056  1.697056  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position -2.400000  0.000000  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
 $PAD "1"
 Shape Circle Layer both
 position  0.000000  0.000000  size  6.400000  6.400000  orientation 0.00
 drill  3.200000
 shape_offset  0.000000  0.000000
 $EndPAD
-$PAD "1"
-Shape Circle Layer both
-position  0.000000  2.400000  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position -1.697056 -1.697056  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position  1.697056 -1.697056  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position  1.697056  1.697056  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$PAD "1"
-Shape Circle Layer both
-position  0.000000 -2.400000  size  0.800000  0.800000  orientation 0.00
-drill  0.500000
-shape_offset  0.000000  0.000000
-$EndPAD
-$EndMODULE  REF7
+$EndMODULE  REF999**
 
 $MODULE U1
 footprint Package_DIP:DIP-16_W7.62mm

@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew   date = 13.10.2023 20:55:48
+Cmp-Mod V01 Created by PcbNew   date = 22.10.2023 17:35:26
 
 BeginCmp
 TimeStamp = 0239a7dc-4f11-4dd5-9564-b10e3cb51ffa
@@ -49,14 +49,6 @@ IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
 EndCmp
 
 BeginCmp
-TimeStamp = 34d0cf70-6e1b-4ca8-bf5e-b6b0c9bfbc3e
-Path = 
-Reference = REF4;
-ValeurCmp = RoHS-Logo_6mm_SilkScreen;
-IdModule  = Symbol:RoHS-Logo_6mm_SilkScreen;
-EndCmp
-
-BeginCmp
 TimeStamp = 4b134ca8-8963-4dae-9208-bbed3e241058
 Path = /f0172b04-3281-4d5a-a911-69e210ac9ebd
 Reference = J4;
@@ -100,8 +92,16 @@ BeginCmp
 TimeStamp = 7813b372-135c-4554-8bda-8f8d0900a309
 Path = /161a0297-a52b-49d1-8ab2-281352eaf1e4
 Reference = R5;
-ValeurCmp = 470;
+ValeurCmp = 470Ω;
 IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = 8ee03db8-8ad7-4bb8-92b9-76bda4b0907f
+Path = 
+Reference = REF999**;
+ValeurCmp = MountingHole_3.2mm_M3_Pad;
+IdModule  = MountingHole:MountingHole_3.2mm_M3_Pad;
 EndCmp
 
 BeginCmp
@@ -121,11 +121,11 @@ IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical;
 EndCmp
 
 BeginCmp
-TimeStamp = c63dd883-01bd-4ebb-ac52-93aa4fc06c8f
+TimeStamp = bede1092-872b-4e49-9d3a-d552aec96b57
 Path = 
-Reference = REF7;
-ValeurCmp = MountingHole_3.2mm_M3_Pad_Via;
-IdModule  = MountingHole:MountingHole_3.2mm_M3_Pad_Via;
+Reference = REF888**;
+ValeurCmp = MountingHole_3.2mm_M3_Pad;
+IdModule  = MountingHole:MountingHole_3.2mm_M3_Pad;
 EndCmp
 
 BeginCmp
@@ -158,14 +158,6 @@ Path =
 Reference = REF2;
 ValeurCmp = KiCad-Logo2_5mm_SilkScreen;
 IdModule  = Symbol:KiCad-Logo2_5mm_SilkScreen;
-EndCmp
-
-BeginCmp
-TimeStamp = f5e1fb03-1db6-452a-8441-188986ada38e
-Path = 
-Reference = REF6;
-ValeurCmp = MountingHole_3.2mm_M3_Pad_Via;
-IdModule  = MountingHole:MountingHole_3.2mm_M3_Pad_Via;
 EndCmp
 
 BeginCmp
@@ -214,14 +206,6 @@ Path =
 Reference = REF4*;
 ValeurCmp = WEEE-Logo_5.6x8mm_SilkScreen;
 IdModule  = Symbol:WEEE-Logo_5.6x8mm_SilkScreen;
-EndCmp
-
-BeginCmp
-TimeStamp = cc5e2450-fcfa-4edd-a220-2c102decb9f6
-Path = 
-Reference = REF3*;
-ValeurCmp = RoHS-Logo_6mm_SilkScreen;
-IdModule  = Symbol:RoHS-Logo_6mm_SilkScreen;
 EndCmp
 
 BeginCmp

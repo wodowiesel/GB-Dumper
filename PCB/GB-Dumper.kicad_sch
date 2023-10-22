@@ -5,7 +5,7 @@
   (paper "A4")
 
   (title_block
-    (title "Arduino-Nano-GB-Dumper")
+    (title "GB-Dumper")
     (date "2023-05-16")
     (rev "0.7")
     (company "(C) WodoWiesel")
