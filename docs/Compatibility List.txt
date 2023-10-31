@@ -1,0 +1,58 @@
+Game Title					|  Ver	| Game Code	| PCB MODEL			| MBC	|  IR	| ROMR	| RAMR	| RAMW
+----------------------------------------------------------------------------------------------------------------------------------------------
+Alien Olympics					|  01	| DMG-ALGP-UKV	| DMG-BEAN-10			| MBC1	|   X	|   X	|   N	|   N
+Army Men					|  00	| CGB-AVCP-EUR	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+Asteroids					|  00	| DMG-AARP-EUR	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+Baseball					|  00	| DMG-BS-GPS	| DMG-BEAN[K]-02		| MBC1	|   X	|   X	|   N	|   N
+Blades of Steel					|  00	| DMG-UB-ITA	| DMG-BEAN-02			| MBC1	|   X	|   X	|   N	|   N
+Caesar's Palace II				|  00	| CGB-AI2P-EUR	| DMG-A06-01			| MBC5	|   X	|   X	|   X	|   X
+Casper						|  00	| DMG-ACEE-USA	| DMG-BEAN-02			| MBC1	|   X	|   X	|   N	|   N
+Championship Motocross 2001			|  00	| CGB-BCMP-EUR	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+Chase H.Q.					|  01	| DMG-HQ-ITA	| DMG-BEAN-02			| MBC1	|   X	|   X	|   N	|   N
+David Beckham Soccer				|  00	| CGB-BJ2P-EUR	| DMG-A06-01			| MBC5	|   X	|   X	|   -	|   -
+Diva Starz					|  00	| CGB-BD8P-EUR	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+Duffy Duck - The Marvin Missions		|  00	| DMG-YS-UKV-2	| DMG-BEAN-10			| MBC1	|   X	|   X	|   N	|   N
+F-1 Race					|  01	| DMG-F1-NOE	| DMG-GDAN-03			| MBC2	|   X	|   X	|   -	|   -
+F1 Racing Championship				|  00	| CGB-AEQP-EUR	| DMG-A08-10			| MBC5	|   X	|   X	|   X	|   -
+Football					|  00	| DMG-FL-USA	| DMG-BEAN-01			| MBC1	|   X	|   X	|   N	|   N
+Hyper Dunk					|  00	| DMG-DW-NOE	| DMG-BEAN-02			| MBC1	|   X	|   X	|   N	|   N
+Indiana Jones and the Infernal Machine		|  00	| CGB-BIJP-EUR	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+Lamborghini American Challenge			|  00	| DMG-L7-FAH	| DMG-BEAN-02			| MBC1	|   X	|   X	|   N	|   N
+Mega Man					|  00	| DMG-RW-ITA	| DMG-BEAN-02			| MBC1	|   X	|   X	|   N	|   N
+Men In Black The Series				|  00	| DMG-AMNP-EUR	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+NHL 2000					|  00	| DMG-ANRP-EUR	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+Nigel Mansell's World Championship Racing	|  00	| DMG-WC-UKV	| DMG-BEAN-02			| MBC1	|   X	|   X	|   N	|   N
+Obelix						|  00	| DMG-AXOP-FAH	| DMG-BEAN-10			| MBC1	|   X	|   X	|   N	|   N
+Pocahontas					|  00	| DMG-AHOP-EUR	| DMG-BEAN-10			| MBC1	|   X	|   X	|   N	|   N
+Pokemon Versione Argento			|  00	| DMG-AAXI-ITA-1| DMG-KGDU-10			| MBC3	|   X	|   X	|   X	|   X
+Pooh & Tigger's Hunny Safari			|  00	| CGB-BP8P-EUR	| DMG-A09-10			| MBC5	|   X	|   X	|   N	|   N
+Rip-Tide Racer					|  00	| DMG-AXYP-EUR	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+Snow White and the Seven Dwarfs			|  00	| CGB-B7DP-EUR	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+Space Invaders					|  00	| DMG-SP-ITA	| DMG-BEAN-02			| MBC1	|   X	|   X	|   N	|   N
+Super Mario Land				|  01	| DMG-ML-EUR	| DMG-BEAN-10			| MBC1	|   X	|   X	|   N	|   N
+Tamagotchi					|  00	| DMG-ATAP-NOE	| DMG-DECN-10			| MBC1	|   X	|   X	|   X	|   X
+Tennis						|  00	| DMG-TN-EUR	| DMG-AAA-10			|  N	|   X	|   X	|   N	|   N
+Tennis						|  00	| DMG-TN-NOE	| DMG-AAA-03			|  N	|   X	|   X	|   N	|   N
+Tetris						|  01	| DMG-TR-ITA	| AAC S				|  N	|   X	|   X	|   N	|   N
+Tetris						|  01	| DMG-TR-ITA	| DMG-AAA-03			|  N	|   X	|   X	|   N	|   N
+The Emperor's New Groove			|  00	| CGB-BENP-EUR	| DMG-A08-10			| MBC5	|   X	|   X	|   X	|   X
+The Fish Files					|  00	| CGB-BFQP-EUR	| DMG-A08-10			| MBC5	|   X	|   X	|   X	|   X
+The Jungle Book					|  00	| DMG-J7-EUR	| DMG-BEAN-10			| MBC1	|   X	|   X	|   N	|   N
+Tomb Raider (Repro)				|  00	| CGB-AT9E-USA	| SD007_TSOP_48BALL_V10		| MBC5	|   X	|   X	|   X	|   X
+V-Rally Championship Edition			|  00	| CGB-AVYP-UKV	| DMG-A07-01			| MBC5	|   X	|   X	|   N	|   N
+V-Rally Championship Edition			|  00	| DMG-AVLP-EUR	| DMG-BEAN-10			| MBC1	|   X	|   X	|   N	|   N
+World Cup					|  00	| DMG-NC-ITA	| DMG-BEAN-02			| MBC1	|   X	|   X	|   N	|   N
+World Cup 98					|  00	| DMG-A8WP-EUU	| DMG-BEAN-10			| MBC1	|   X	|   X	|   N	|   N
+
+
+MBC = Memory Bank Controller
+IR = Info Read
+ROMR = ROM Read
+RAMR = RAM Read
+RAMW = RAM Write
+
+X = Yes
+N = Unavailable
+- = Not Implemented or Not Tested Yet
+
+Update: 2023/05/02
