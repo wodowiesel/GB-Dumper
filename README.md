@@ -48,24 +48,24 @@ Have fun and save the retro world :)
 - 1x Custom PCB by WodoWiesel (wodowiesel@quantentunnel.de)
   (or from orig. GBCartReader for Uno)
 -  flat M3 screw and an enclosue
-  
+
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
 - 5x 470 (or 330) Ohm Resistors – pull-ups on active low & impedance matching
 - 1x 22 uF Capacitor (pol.)
 - 1x Gameboy Cartridge 32-Pin Slot
 
 - Female Pin headers/sockets for the chips - or solder it directly
-  
+
   * 1x 30-pin arduino
-    
+
   * 2x 16-pin shift register
 
 - Male headers
-  
+
     - 1x 2-pin
-    
+
     - 1x 3-pin
-    
+
     - 1x 4-pin
 
 - 2x Jumpers
@@ -142,30 +142,34 @@ For further technical infos and datasheets take a good look into the Documentati
 3. Formatting
   if you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed.
 
-4. CRC
+4. CRC/Verification
   This file [GB/C](/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for verification at the end of the dumping process.
-  
    From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd)
-
   Example:
-  Name: 007 - The World Is Not Enough (USA, Europe).gbc
+  Name: 007 - The World Is Not Enough (USA, Europe).gb
   CRC32: E038E666
+
+  -> verification can be done via the executable [xgbfix.exe](/code-pc/xgbfix.exe)
 
 5. Memory
   The file [WisdomTree](/docs/Wisdom_Tree.txt) contains Memory Address Informations and Exceptions
   Additional articles (https://gbdev.gg8.se/wiki/articles/MBC7#Ax8x_-_EEPROM_.28Read.2FWrite.29)
-  
+
 6. CI
-  Aruino Workflow [CI](.github/workflows/main.yaml)
+  Arduino Workflow [CI](.github/workflows/main.yaml)
 
 ## REVISION HISTORY
+v1.8 Rev 1.3 (23 February 2024) by WodoWiesel
+- lot ore comments and docu
+- clockpin to GND
+- added optional button pin
+- changed RST connection
 
 v1.8 Rev 1.2 (29 September 2022) by WodoWiesel
-- added CRC gaame informations
+- added CRC game informations
 - added memory info, links & CI
 - adapted pin configuration for new Arduino Nano
 - Optimized & detailed Makefile
-- changable clockpin (default: GND !)
 - added optional display pins
 - added logos & pin labels
 
@@ -249,14 +253,14 @@ v1.0 (19 March 2011)
 
 ## CREDITS
 
- :copyright: 2021-2022 WodoWiesel 
- 
+ :copyright: 2021-2022 WodoWiesel
+
  Github (https://github.com/wodowiesel/)
-  
+
  Twitch (https://www.twitch.com/wodowiesel/)
-  
+
  Instagram (https://www.instagram.com/wodowiesel)
-  
+
  YT (https://www.youtube.com/@wodowiesel)
 
 The new design was checked by the electrical engineer theBrutzler
