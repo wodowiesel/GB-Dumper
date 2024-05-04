@@ -5,25 +5,20 @@
  Created: 21/07/2013
  Modified:26/05/2016
  Optimized: 05/05/2024 by WodoWiesel
-
  */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
 #include <string.h>
 #include "rs232.h"
-
 #ifdef _WIN32
 #include <Windows.h>
 #else
 #include <unistd.h>
 #endif
-
 int cport_nr = 3; // /dev/ttyS0 (COM1 on windows)
 int bdrate = 57600; // 57600 baud (default)
 int firstStart = 1;
-
 int headercounter = 0;
 char gametitle[80];
 char filename[30];
@@ -31,7 +26,6 @@ int cartridgeType = 255;
 int romSize = 255;
 int ramSize = 255;
 int logoCheck = 0;
-
 // Read the config.ini file for the COM port to use
 void read_config(void) {
 	FILE* configfile = fopen ( "config.ini" , "rb" );
@@ -52,20 +46,17 @@ void read_config(void) {
 	printf("config.ini Error\n");
 	}
 }
-
 // Read one letter from stdin
 int read_one_letter(void) {
 	int c = getchar();
 	while (getchar() != '\n' && getchar() != EOF);
 	return c;
 }
-
 // Write serial data to file - used for ROM and RAM dumping
 void write_to_file(char* filename, char* cmd, int blocksize) {
 	// Create a new file
 	FILE *pFile = fopen(filename, "wb");
 	RS232_cputs(cport_nr, cmd);
-
 	int Kbytesread = 0;
 	int uptoKbytes = 1;
 	unsigned char buf[4096];
@@ -73,13 +64,11 @@ void write_to_file(char* filename, char* cmd, int blocksize) {
 	int timeout = 0;
 	while(1) {
 		n = RS232_PollComport(cport_nr, buf, 4095);
-
 		if (n > 0) {
 			buf[n] = 0;
 			fwrite((char *) buf, 1, n, pFile);
 			printf("#");
 			Kbytesread += n;
-
 			if (blocksize == 32) {
 				if (Kbytesread / 32768 == uptoKbytes) {
 					printf("%iK", (Kbytesread/32768) * 32);
@@ -92,7 +81,6 @@ void write_to_file(char* filename, char* cmd, int blocksize) {
 					uptoKbytes++;
 				}
 			}
-
 			fflush(stdout);
 			timeout = 0;
 		}
@@ -101,7 +89,6 @@ void write_to_file(char* filename, char* cmd, int blocksize) {
 			if (timeout >= 50) {
 				break;
 			}
-
 			#ifdef _WIN32
 			Sleep(50);
 			#else
@@ -111,20 +98,17 @@ void write_to_file(char* filename, char* cmd, int blocksize) {
 	}
 	fclose(pFile);
 }
-
 // Read from file to serial - used writing to RAM
 void read_from_file(char* filename, char* cmd) {
 	// Load a new file
 	FILE *pFile = fopen(filename, "rb");
 	RS232_cputs(cport_nr, cmd);
-
 	// Wait a little bit until we start gettings some data
 	#ifdef _WIN32
 	Sleep(500);
 	#else
 	usleep(500000); // Sleep for 500 milliseconds
 	#endif
-
 	int Kbytesread = 0;
 	int uptoKbytes = 1;
 	unsigned char readbuf[100];
@@ -133,10 +117,8 @@ void read_from_file(char* filename, char* cmd) {
 			break;
 		}
 		readbuf[64] = 0;
-
 		// Send 64 bytes at a time
 		RS232_SendBuf(cport_nr, readbuf, 64);
-
 		printf("#");
 		Kbytesread += 64;
 		if (Kbytesread / 1024 == uptoKbytes) {
@@ -144,47 +126,37 @@ void read_from_file(char* filename, char* cmd) {
 			uptoKbytes++;
 		}
 		fflush(stdout);
-
 		#ifdef _WIN32
 		Sleep(5);
 		#else
 		usleep(5000); // Sleep for 200 milliseconds
 		#endif
 	}
-
 	fclose(pFile);
 }
-
 int main() {
 	read_config();
-
 	printf("GBCartRead v1.8 Rev. 1.3 by wodowiessel\n");
 	printf("################################\n\n");
-
 	printf("Opening COM PORT %d at %d baud ...\n\n", cport_nr+1, bdrate);
-
 	// Open COM port
 	if(RS232_OpenComport(cport_nr, bdrate)) {
 		printf("Can not open com port\n");
 		return(0);
 	}
-
 	#ifdef _WIN32
 	Sleep(1000);
 	#else
 	usleep(1000000); // Sleep for 2 seconds
 	#endif
-
 	char userInput = '0';
 	while (1) {
 		printf ("\nSelect an option below\n0. Read Header\n1. Dump ROM\n2. Save RAM\n3. Write RAM\n4. Exit\n");
 		printf (">");
 		userInput = read_one_letter();
-
 		if (userInput == '0') {
 			headercounter = 0;
 			RS232_cputs(cport_nr, "HEADER\n");
-
 			unsigned char buffer[4096];
 			int n = 0;
 			int waitingforheader = 0;
@@ -200,7 +172,6 @@ int main() {
 					if (waitingforheader >= 50) {
 						break;
 					}
-
 					#ifdef _WIN32
 					Sleep(50);
 					#else
@@ -208,15 +179,13 @@ int main() {
 					#endif
 				}
 			}
-
 			char* tokstr = strtok ((char *) buffer, "\r\n");
 			 if (tokstr == NULL) {
-				printf ("tokstr: NULL\n");
+				printf ("tokstr: NULL error\n");
 			 }
 			while (tokstr != NULL) {
 				if (headercounter == 0) {
-					printf ("\nGame title: ");
-					printf ("%s\n", tokstr);
+					printf ("\nGame title: %s\n", tokstr);
 					strncpy(gametitle, tokstr, 30);
 				}
 				else if (headercounter == 1) {
@@ -301,7 +270,6 @@ int main() {
 						case 3: printf ("32 KBytes (4 banks of 8 Kbytes)\n"); break;
 						case 4: printf ("128 KBytes (16 banks of 8 Kbytes)\n"); break;
 						default: printf ("Not found\n");
-					
 					}
 				}
 				else if (headercounter == 4) {
@@ -315,13 +283,13 @@ int main() {
 					}
 				}
 				else {
-				printf ("\ntest fail\n");
+				printf ("\nselect loop error\n");
 				}
-			tokstr = strtok (NULL, "\r\n");
-			printf ("tokstr: %s\n", tokstr);
-			headercounter++;
+				tokstr = strtok (NULL, "\r\n");
+				printf ("tokstr: %s\n", tokstr);
+				headercounter++;
 			}
-			printf ("\nFlushn");
+			printf ("\nFlushed\n");
 			fflush(stdout);
 		}
 		else if (userInput == '1') {

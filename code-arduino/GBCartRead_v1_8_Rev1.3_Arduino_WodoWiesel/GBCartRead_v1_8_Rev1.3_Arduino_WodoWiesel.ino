@@ -1,7 +1,7 @@
 /*
  GBCartRead
  Version: 1.8 Rev 1.2
- 
+
  Author: Alex from insideGadgets (https://www.insidegadgets.com)
  github: (https://github.com/insidegadgets/GBCartRead)
  Created: 18/03/2011
@@ -17,7 +17,7 @@
 
  UPDATE: This code was changed to be compatible for Arduino NANO and a custom PCB!!
 
- Version: 1.8 Rev 1.2
+ Version: 1.8 Rev 1.3
  Author: WodoWiesel
  github: (https://github.com/wodowiesel/GB-Dumper)
  Last Modified: 23. February 2024
