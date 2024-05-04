@@ -147,6 +147,7 @@ void loop() {
           (headerChar >= 0x41 && headerChar <= 0x5A) || // A-Z
           (headerChar >= 0x61 && headerChar <= 0x7A)) { // a-z
           gameTitle[(romAddress-0x0134)] = headerChar;
+          Serial.println(headerChar);
       }
     }
     
