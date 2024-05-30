@@ -12,15 +12,15 @@ Compatibility list:
 
 - Gameboys:
 
-:heavy_check_mark: Classic/Original
+:heavy_check_mark: Classic/Original (DMG)
 
 :heavy_check_mark: Color
 
-:heavy_check_mark: Pocket
+:heavy_check_mark: Pocket/Lite
 
 :heavy_check_mark: Micro
 
-:heavy_minus_sign: Advance
+:heavy_check_mark: Advance/SP
 
 - Cartridges:
 
@@ -30,7 +30,8 @@ Compatibility list:
 
 :heavy_check_mark: Class C (transparent/clear)
 
-:x: Class D (Advance GBA) -> 3.3V Logic
+:heavy_minus_sign: Class D (Advance GBA) -> 3.3V Logic, can changed with switch
+  and jumpers for pin 30 RES&CS2 & 31 AUDIO&IRQ
 
 # DISCLAIMERS
 
@@ -68,24 +69,22 @@ Have fun and save the retro world :)
 
     - 1x 4-pin
 
-- 2x Jumpers
+- 3x Jumpers
 
 - 1x Soldering iron
 - solder + flux + IPA
 
 ## SOFTWARE
 
-GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets
+It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets.
 
-GBCartRead is an Arduino based Gameboy Cartridge Reader which uses a C program
+- It is an Arduino based Gameboy Cartridge Reader & Writer which uses 
 
-or python script to interface with Arduino.
+  a C program or Python script to interface via USB with Arduino/Cartridge directly.
 
-GBCartRead allows you to dump your ROM, save the RAM and write to the RAM.
+- It allows you to dump your ROM, read & write the RAM.
 
-Works with Arduino Duemilanove and Uno, but requires wiring & code definition changes.
-
-Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
+- Works with Arduino Duemilanove and Uno, but requires wiring & code definition changes.
 
 ## HOW TO USE
 
@@ -135,9 +134,9 @@ It’s a good idea to verify your save files too by running the ROM when the sav
 ## SPECIALS, CHECKSUMS & MEMORY
 
 1. There are some cartridges which don't quite conform to cartridge header standards or require something out of the ordinary.
-For further technical infos and datasheets take a good look into the Documentation folder!!
+  For further technical infos and datasheets take a good look into the Documentation folder!!
 
-2. GB audio pin base function is already built-in, but may need extra code changes for rare games!
+2. GB audio pin(VIN analog) base function is already built-in, but may need extra code changes for rare games!  :construction:
 
 3. Formatting
   if you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed.
@@ -159,8 +158,9 @@ For further technical infos and datasheets take a good look into the Documentati
   Arduino Workflow [CI](.github/workflows/main.yaml)
 
 ## REVISION HISTORY
+
 v1.8 Rev 1.3 (23 February 2024) by WodoWiesel
-- lot ore comments and docu
+- lot more comments and documentation
 - clockpin to GND
 - added optional button pin
 - changed RST connection
@@ -253,7 +253,7 @@ v1.0 (19 March 2011)
 
 ## CREDITS
 
- :copyright: 2021-2022 WodoWiesel
+:copyright: 2021-2024 WodoWiesel
 
  Github (https://github.com/wodowiesel/)
 
@@ -271,9 +271,11 @@ The new optimized PCB was designed with free KiCAD software (https://www.kicad.o
 
 :heavy_exclamation_mark: The PCB should be produced at a manufacturer
 
-(like PCBWay) with the RoHS lead-free option for environmental protection.
+(like PCBWay/JLCPCB) with the RoHS lead-free option for environmental protection.
 
 Original: :copyright: 2011-2016 by insideGadgets
+
+Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 
 (https://github.com/insidegadgets/GBCartRead/ or support@insidegadgets.com)
 
