@@ -30,7 +30,7 @@ Compatibility list:
 
 :heavy_check_mark: Class C (transparent/clear)
 
-:heavy_check_mark: Class D (Advance GBA) -> 3.3V Logic, can changed with switch
+:heavy_check_mark: Class D (Advance GBA) -> 3.3V Logic, can be changed with switch
 
   and jumpers for pin 30 /RES & /CS2 & 31 AUDIO & IRQ
 
@@ -53,7 +53,7 @@ Have fun and save the retro world :)
 - 1x Custom PCB by WodoWiesel (wodowiesel@quantentunnel.de)
   (or from orig. GBCartReader for Uno)
 
--  2x flat M3 screws and an enclosue
+- 2x flat M3 screws and an enclosue
 
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
 - 5x 470 (or 330) Ohm Resistors – pull-ups on active low & impedance matching
