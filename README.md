@@ -30,25 +30,30 @@ Compatibility list:
 
 :heavy_check_mark: Class C (transparent/clear)
 
-:heavy_minus_sign: Class D (Advance GBA) -> 3.3V Logic, can changed with switch
-  and jumpers for pin 30 RES&CS2 & 31 AUDIO&IRQ
+:heavy_check_mark: Class D (Advance GBA) -> 3.3V Logic, can changed with switch
+
+  and jumpers for pin 30 /RES & /CS2 & 31 AUDIO & IRQ
 
 # DISCLAIMERS
 
-**This is still "work-in-progress (WIP)" so I do NOT take any kind of warranty/responsibility for damages/data losses!**
+**This is still "work-in-progress (WIP)" so
+
+I do NOT take any kind of warranty/responsibility for damages/data losses!**
 
 **You can use this at your own risk without guarantees and put device on non conductive surface or enclosure!**
 
-If you like the new design yo are free to share it!
+If you like the new design you are free to share it!
 
 Have fun and save the retro world :)
 
 ## HARDWARE
 
 - 1x Arduino Nano v3 (or Uno for old versions) + USB-Cable + IDE
+
 - 1x Custom PCB by WodoWiesel (wodowiesel@quantentunnel.de)
   (or from orig. GBCartReader for Uno)
--  flat M3 screw and an enclosue
+
+-  2x flat M3 screws and an enclosue
 
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
 - 5x 470 (or 330) Ohm Resistors – pull-ups on active low & impedance matching
@@ -72,13 +77,14 @@ Have fun and save the retro world :)
 - 3x Jumpers
 
 - 1x Soldering iron
+
 - solder + flux + IPA
 
 ## SOFTWARE
 
 It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets.
 
-- It is an Arduino based Gameboy Cartridge Reader & Writer which uses 
+- It is an Arduino based Gameboy Cartridge Reader & Writer which uses
 
   a C program or Python script to interface via USB with Arduino/Cartridge directly.
 
@@ -102,11 +108,15 @@ It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets.
 
   - Python Program
 
-  a. Download and install Python 3.2+ or higher (https://www.python.org/download/) and pySerial (https://pypi.python.org/pypi/pyserial/)
+  a. Download and install Python 3.2+ or higher (https://www.python.org/download/)
+
+  and pySerial (https://pypi.python.org/pypi/pyserial/)
 
   b. Open up the “GBCartRead_v(xxx)_Python_Interface.py” script by right clicking it and selecting “Edit with IDLE”.
 
-  c. Change the “COM2” serial port to the serial port that your Arduino is connected on, save the file and press F5 to run it.
+  c. Change the “COM2” serial port to the serial port that your Arduino is connected on,
+
+   save the file and press F5 to run it.
 
   d. A new window will appear, after 2-3 seconds you’ll have some options available.
 
@@ -116,24 +126,32 @@ It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets.
 
   b. Run “GBCartRead_v(xxx)_C_Interface.exe” in Windows or re-compile the source for your OS
 
-3. At this stage you should insert your Gameboy cartridge and press the power button, the power LED should light up.
+3. At this stage you should insert your Gameboy cartridge and press the power button,
 
-4. Press 0 to read the header and verify that it looks correct. If it doesn’t look correct, press the power button
-   to power off the Gameboy cartridge, remove and re-insert it and power it up again.
+  the power LED should light up.
+
+4. Press 0 to read the header and verify that it looks correct. If it doesn’t look correct,
+
+  press the power button to power off the Gameboy cartridge, remove and re-insert it and power it up again.
 
 5. Press 1 to Dump the ROM, 2 to Backup your RAM or 3 to Load your RAM file.
-   Hashes (#) will start printing every few seconds and a file called <gametitle>.gb or .sav will be created if you chose option 1 or 2.
+
+   Hashes (#) will start printing every few seconds and a file called <gametitle>.gb
+
+   or *.sav will be created if you chose option 1 or 2.
 
   If you choose option 3, it will load the save from <gametitle>.sav.
 
-  We recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or "xgbfix.exe -v -d <your_rom.rom>
-  found in the project called "ASMotor" (we've included it).
+  It is recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or
 
-It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
+  "xgbfix.exe -v -d <your_rom.rom> can be found here or in the project called "ASMotor".
+
+  It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
 
 ## SPECIALS, CHECKSUMS & MEMORY
 
 1. There are some cartridges which don't quite conform to cartridge header standards or require something out of the ordinary.
+
   For further technical infos and datasheets take a good look into the Documentation folder!!
 
 2. GB audio pin(VIN analog) base function is already built-in, but may need extra code changes for rare games!  :construction:
@@ -143,9 +161,11 @@ It’s a good idea to verify your save files too by running the ROM when the sav
 
 4. CRC/Verification
   This file [GB/C](/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for verification at the end of the dumping process.
-   From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd)
+
+  From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd)
   Example:
   Name: 007 - The World Is Not Enough (USA, Europe).gb
+
   CRC32: E038E666
 
   -> verification can be done via the executable [xgbfix.exe](/code-pc/xgbfix.exe)
@@ -161,11 +181,12 @@ It’s a good idea to verify your save files too by running the ROM when the sav
 
 v1.8 Rev 1.3 (23 February 2024) by WodoWiesel
 - lot more comments and documentation
-- clockpin to GND
+- CLK switchable (default to GND)
 - added optional button pin
-- changed RST connection
+- /RST & /CS2 (digital) switchable connection
+- VIN (analog) & IRQ (digital) switchable
 
-v1.8 Rev 1.2 (29 September 2022) by WodoWiesel
+v1.8 Rev 1.2 (29 September 2023) by WodoWiesel
 - added CRC game informations
 - added memory info, links & CI
 - adapted pin configuration for new Arduino Nano
@@ -176,7 +197,7 @@ v1.8 Rev 1.2 (29 September 2022) by WodoWiesel
 v1.8 Rev 1.1 (11 March 2022) by WodoWiesel
 - added reset pin interrupt
 - added pull-up active low resistors
-- added audio/Vin pin support for cartridges
+- added Audio/VIN (into the card) pin support for cartridges
 - added more stable common ground-plane connectivity
 - added M3 mounting holes
 
