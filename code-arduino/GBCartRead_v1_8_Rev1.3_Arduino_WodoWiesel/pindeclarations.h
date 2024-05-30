@@ -11,7 +11,7 @@
 #define HW3 // hardware revision v3
 /*
 // AVR definitions for Arduino nano! -> check  again!
-// PORTA (oonly nano 33 / uno)
+// PORTA (only nano 33 / uno)
 #define PA0 0
 #define PA1 1
 #define PA2 2
@@ -21,6 +21,7 @@
 #define PA6 6
 #define PA7 7 // ??
 */
+
 // PORTB
 #define PB0 0 // D8
 #define PB1 1 // D9
@@ -53,7 +54,7 @@
 
 
 // Assignments for functions to specific ports
-#define mosfetPin_high PORTC  |= (1<<PC0); // Pin19 A0  
+#define mosfetPin_high PORTC  |= (1<<PC0); // Pin19 A0
 #define mosfetPin_low  PORTC  &= ~(1<<PC0); // not sure if | & inverted?? test
 
 //#define BTNPin_high   PORTC |= (1<<PC1); // / Button for soft reset, Pin20 A1, not used atm
@@ -76,7 +77,7 @@
 #define dataPin_low   PORTB &= ~(1<<PB3);
 
 #define clockPin_high PORTB |= (1<<PB5); // SRCLK/SCK Pin 16 D13
-#define clockPin_low  PORTB &= ~(1<<PB5);
+#define clockPin_low PORTB &= ~(1<<PB5);
 
 // extra pins
 /*
@@ -103,13 +104,16 @@
 
 #define gb29Pin_high  PORTB |= (1<<PB1); // GB_D7 Pin12 D9
 #define gb29Pin_low   PORTB &= ~(1<<PB1);
+*/
 
-#define gb30Pin_high  PORTB |= (1<<PB6); // /RES & CS2 Pin3&29
+// special pins
+/*
+#define gb30Pin_high  PORTB |= (1<<PB6); // /RES & /CS2 (digital) Pin3&29 on D0
 #define gb30Pin_low   PORTB &= ~(1<<PB6);
 
-#define gb31Pin_high  PORTB |= (1<<PB4); // AUD_IN & IRQ / MISO Pin15 D12
+#define gb31Pin_high  PORTB |= (1<<PB4); // AUD_IN (analog on A1/PC1) (bits 7 & 3 of NR_50 register ) & IRQ (digital) on MISO Pin15 D12
 #define gb31Pin_low   PORTB &= ~(1<<PB4);
 */
-//#define gb32Pin_ground_oe 0 //Pin 4&29
+//#define gb32Pin_ground_oe 0 // GND Pin 4&29
 
 #endif /* PINDECLARATIONS_H_ */
