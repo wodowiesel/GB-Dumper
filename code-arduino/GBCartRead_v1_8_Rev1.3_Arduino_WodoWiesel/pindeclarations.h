@@ -10,8 +10,12 @@
 #define PINDECLARATIONS_H_
 #define HW3 // hardware revision v3
 /*
-// AVR definitions for Arduino nano! -> check  again!
-// PORTA (only nano 33 / uno)
+// AVR definitions for Arduino nano! -> check your cocnnections again!
+
+Registers:
+https://docs.arduino.cc/retired/hacking/software/PortManipulation/
+https://deepbluembedded.com/arduino-port-manipulation-registers-example/
+// PORTA (only nano 33/uno?)
 #define PA0 0
 #define PA1 1
 #define PA2 2
@@ -28,9 +32,9 @@
 #define PB2 2 // D10
 #define PB3 3 // D11
 #define PB4 4 // D12
-#define PB5 5 // D13
+#define PB5 5 // D13/SCK(SPI)
 #define PB6 6 // /RES
-//#define PB7 7 // ?? not on nano
+//#define PB7 7 // not on nano
 
 // PORTC
 #define PC0 0 // A0
@@ -52,7 +56,6 @@
 #define PD6 6 // D6
 #define PD7 7 // D7
 
-
 // Assignments for functions to specific ports
 #define mosfetPin_high PORTC  |= (1<<PC0); // Pin19 A0
 #define mosfetPin_low  PORTC  &= ~(1<<PC0); // not sure if | & inverted?? test
@@ -70,13 +73,13 @@
 #define rdPin_high    PORTC |= (1<<PC5); // /RD Pin24 A5
 #define rdPin_low     PORTC &= ~(1<<PC5);
 
-#define latchPin_high PORTB |= (1<<PB2); // RCLK/SS Pin13 D10
+#define latchPin_high PORTB |= (1<<PB2); // RCLK/SS Pin13 D10  ->CS???
 #define latchPin_low  PORTB &= ~(1<<PB2);
 
 #define dataPin_high  PORTB |= (1<<PB3); // MOSI Pin14 D11
 #define dataPin_low   PORTB &= ~(1<<PB3);
 
-#define clockPin_high PORTB |= (1<<PB5); // SRCLK/SCK Pin 16 D13
+#define clockPin_high PORTB |= (1<<PB5); // SRCLK/SCK Pin 16 D13 (SPI)
 #define clockPin_low PORTB &= ~(1<<PB5);
 
 // extra pins
@@ -108,12 +111,19 @@
 
 // special pins
 /*
-#define gb30Pin_high  PORTB |= (1<<PB6); // /RES & /CS2 (digital) Pin3&29 on D0
+#define gb30Pin_high  PORTB |= (1<<PB6); // /RES Pin3&29
 #define gb30Pin_low   PORTB &= ~(1<<PB6);
-
-#define gb31Pin_high  PORTB |= (1<<PB4); // AUD_IN (analog on A1/PC1) (bits 7 & 3 of NR_50 register ) & IRQ (digital) on MISO Pin15 D12
-#define gb31Pin_low   PORTB &= ~(1<<PB4);
 */
+#define gb30Pin_high  PORTD |= (1<<PD0); // /CS2(digital)on D0/PD0 Pin2
+#define gb30Pin_low   PORTD &= ~(1<<PD0);
+
+#define gb31Pin_high  PORTC |= (1<<PC1); // AUD_IN analog on A1 PC1 Pin21 (bits 7 & 3 of NR_50 register ) 
+#define gb31Pin_low   PORTC &= ~(1<<PC1);
+
+#define gb31iPin_high  PORTB |= (1<<PB4); // IRQ (digital) on MISO Pin15 D12
+#define gb31iPin_low   PORTB &= ~(1<<PB4);
+
+
 //#define gb32Pin_ground_oe 0 // GND Pin 4&29
 
 #endif /* PINDECLARATIONS_H_ */
