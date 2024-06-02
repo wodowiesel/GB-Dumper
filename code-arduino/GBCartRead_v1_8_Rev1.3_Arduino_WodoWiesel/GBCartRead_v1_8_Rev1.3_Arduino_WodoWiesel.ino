@@ -97,7 +97,7 @@ void setup() {
   pinMode(mreqPin, OUTPUT); // /CS
   pinMode(mosfetControlPin, OUTPUT); // A0
   //pinMode(gb30Pin, OUTPUT); // /RES + /RST + /RESET -> Ar_Pin3&27 INPUT => std as active (if GND) LOW -> pull-up
-  pinMode(gb30Pin, OUTPUT); // /CS2 PD0/D0/RX
+  pinMode(gb30Pin, OUTPUT); // /CS2 PD0/D0/TX
   pinMode(gb31Pin, OUTPUT); // AUDIO_IN/IRQ
 
   //mosfetPin_high; // mosfet off

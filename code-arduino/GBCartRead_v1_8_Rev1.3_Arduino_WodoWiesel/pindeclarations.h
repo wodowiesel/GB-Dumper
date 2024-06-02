@@ -30,8 +30,8 @@ https://deepbluembedded.com/arduino-port-manipulation-registers-example/
 #define PB0 0 // D8
 #define PB1 1 // D9
 #define PB2 2 // D10
-#define PB3 3 // D11
-#define PB4 4 // D12
+#define PB3 3 // D11/MOSI
+#define PB4 4 // D12/MISO
 #define PB5 5 // D13/SCK(SPI)
 #define PB6 6 // /RES
 //#define PB7 7 // not on nano
@@ -47,8 +47,8 @@ https://deepbluembedded.com/arduino-port-manipulation-registers-example/
 #define PC7 7 // A7
 
 // PORTD
-#define PD0 0 // D0/RX
-#define PD1 1 // D1/TX
+#define PD0 0 // D0/TX
+#define PD1 1 // D1/RX
 #define PD2 2 // D2/INT0
 #define PD3 3 // D3/INT1
 #define PD4 4 // D4
@@ -58,9 +58,9 @@ https://deepbluembedded.com/arduino-port-manipulation-registers-example/
 
 // Assignments for functions to specific ports
 #define mosfetPin_high PORTC  |= (1<<PC0); // Pin19 A0
-#define mosfetPin_low  PORTC  &= ~(1<<PC0); // not sure if | & inverted?? test
+#define mosfetPin_low  PORTC  &= ~(1<<PC0); // not sure if | or & inverted?
 
-//#define BTNPin_high   PORTC |= (1<<PC1); // / Button for soft reset, Pin20 A1, not used atm
+//#define BTNPin_high   PORTC |= (1<<PC1); // /RST Button for soft reset, Pin20 A1, not used atm
 
 // A2/PC2 not used
 
