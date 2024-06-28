@@ -8,7 +8,7 @@
 
 #ifndef PINDECLARATIONS_H_
 #define PINDECLARATIONS_H_
-#define HW3 // hardware revision v3
+#define HW3 // hardware revision v3.x
 /*
 // AVR definitions for Arduino nano! -> check your cocnnections again!
 
@@ -60,7 +60,9 @@ https://deepbluembedded.com/arduino-port-manipulation-registers-example/
 #define mosfetPin_high PORTC  |= (1<<PC0); // Pin19 A0
 #define mosfetPin_low  PORTC  &= ~(1<<PC0); // not sure if | or & inverted?
 
-//#define BTNPin_high   PORTC |= (1<<PC1); // /RST Button for soft reset, Pin20 A1, not used atm
+#define BTNPin_high   PORTC |= (1<<PC1); // /RST Button for soft reset, Pin20 A1, not used atm
+#define BTNPin_low    PORTC &= ~(1<<PC1); // /RST Button for soft reset, Pin20 A1, not used atm
+
 
 // A2/PC2 not used
 
@@ -84,8 +86,8 @@ https://deepbluembedded.com/arduino-port-manipulation-registers-example/
 
 // extra pins
 /*
-#define gb22Pin_high  PORTD |= (1<<PD2); // GB_D0 Pin5 INT0 D2
-#define gb22Pin_low   PORTD &= ~(1<<PD2);
+#define gb22Pin_high  PORTD |= (1<<PD1); // GB_D0  Pin2 D1 RX    
+#define gb22Pin_low   PORTD &= ~(1<<PD1);
 
 #define gb23Pin_high  PORTD |= (1<<PD3); // GB_D1 Pin6 INT1 D3
 #define gb23Pin_low   PORTD &= ~(1<<PD3);
@@ -110,20 +112,17 @@ https://deepbluembedded.com/arduino-port-manipulation-registers-example/
 */
 
 // special pins
-/*
+
 #define gb30Pin_high  PORTB |= (1<<PB6); // /RES Pin3&29
 #define gb30Pin_low   PORTB &= ~(1<<PB6);
-*/
-#define gb30Pin_high  PORTD |= (1<<PD0); // /CS2(digital)on D0/PD0 Pin2
-#define gb30Pin_low   PORTD &= ~(1<<PD0);
+
+#define gb30cPin_high  PORTD |= (1<<PD0); // /CS2(digital)on D0/PD0 Pin1
+#define gb30cPin_low   PORTD &= ~(1<<PD0);
 
 #define gb31Pin_high  PORTC |= (1<<PC1); // AUD_IN analog on A1 PC1 Pin21 (bits 7 & 3 of NR_50 register ) 
 #define gb31Pin_low   PORTC &= ~(1<<PC1);
 
-#define gb31iPin_high  PORTB |= (1<<PB4); // IRQ (digital) on MISO Pin15 D12
-#define gb31iPin_low   PORTB &= ~(1<<PB4);
-
-
-//#define gb32Pin_ground_oe 0 // GND Pin 4&29
+#define gb31iPin_high  PORTB |= (1<<PD2); // IRQ (digital)  Pin5 INT0 D2 (on MISO Pin15 D12 old)
+#define gb31iPin_low   PORTB &= ~(1<<PD2);
 
 #endif /* PINDECLARATIONS_H_ */
