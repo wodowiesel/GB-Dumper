@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "(6.0.4)"
+      "Version": "8.0.3"
     },
-    "CreationDate": "2023-10-22T17:32:39+02:00"
+    "CreationDate": "2024-06-28T19:00:13+02:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "GB-Dumper",
       "GUID": "47422d44-756d-4706-9572-2e6b69636164",
-      "Revision": "0.7"
+      "Revision": "0.83"
     },
     "Size": {
       "X": 89.606,
@@ -24,8 +24,8 @@
   "DesignRules": [
     {
       "Layers": "Outer",
-      "PadToPad": 0.0,
-      "PadToTrack": 0.0,
+      "PadToPad": 0.2,
+      "PadToTrack": 0.2,
       "TrackToTrack": 0.0,
       "MinLineWidth": 0.25,
       "TrackToRegion": 0.2,
@@ -119,47 +119,47 @@
       "FilePolarity": "Positive"
     },
     {
-      "Path": "GB-Dumper-Nutzer_1.gbr",
+      "Path": "GB-Dumper-User_1.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "GB-Dumper-Nutzer_2.gbr",
+      "Path": "GB-Dumper-User_2.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "GB-Dumper-Nutzer_3.gbr",
+      "Path": "GB-Dumper-User_3.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "GB-Dumper-Nutzer_4.gbr",
+      "Path": "GB-Dumper-User_4.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "GB-Dumper-Nutzer_5.gbr",
+      "Path": "GB-Dumper-User_5.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "GB-Dumper-Nutzer_6.gbr",
+      "Path": "GB-Dumper-User_6.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "GB-Dumper-Nutzer_7.gbr",
+      "Path": "GB-Dumper-User_7.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "GB-Dumper-Nutzer_8.gbr",
+      "Path": "GB-Dumper-User_8.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     },
     {
-      "Path": "GB-Dumper-Nutzer_9.gbr",
+      "Path": "GB-Dumper-User_9.gbr",
       "FileFunction": "Other,User",
       "FilePolarity": "Positive"
     }

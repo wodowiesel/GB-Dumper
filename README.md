@@ -30,9 +30,10 @@ Compatibility list:
 
 :heavy_check_mark: Class C (transparent/clear)
 
-:heavy_check_mark: Class D (Advance GBA) -> 3.3V Logic, can be changed with switch
+:heavy_check_mark: Class D (Advance GBA) -> 3.3V Logic, manual switch
 
-  and jumpers for pin 30 /RES & /CS2 & 31 AUDIO & IRQ
+:heavy_check_mark: compatibility jumpers for pin 30 /RES + /CS2 & pin 31 VIN/AUDIO + IRQ
+                  (functions wip!)
 
 # DISCLAIMERS
 
@@ -48,53 +49,61 @@ Have fun and save the retro world :)
 
 ## HARDWARE
 
-- 1x Arduino Nano v3 (or Uno for old versions) + USB-Cable + IDE
+- 1x Arduino Nano v3.x (or Uno for old versions) + mini-USB-Cable + IDE
 
 - 1x Custom PCB by WodoWiesel (wodowiesel@quantentunnel.de)
+
   (or from orig. GBCartReader for Uno)
 
-- 2x flat M3 screws and an enclosue
+- 2x flat M3 screws and an enclosure - optional
 
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
+
 - 5x 470 (or 330) Ohm Resistors – pull-ups on active low & impedance matching
-- 1x 22 uF Capacitor (pol.)
-- 1x Gameboy Cartridge 32-Pin Slot
+
+- 1x 2-position (3-pin) switch SPDT
+
+- 1x Gameboy Cartridge 32-pin Slot
+
+- 1x push-button - optional
+
+- 1x ~10 uF Capacitor (pol.) - optional/recommended
+
+- 3x Jumpers (required) -> default to GB DMG (marked as dot)
 
 - Female Pin headers/sockets for the chips - or solder it directly
 
-  * 1x 30-pin arduino
+  * 1x 30-pin for Arduino
 
-  * 2x 16-pin shift register
+  * 2x 16-pin for shift register
 
 - Male headers
 
-    - 1x 2-pin
+  * 3x 3-pin (required)
 
-    - 1x 3-pin
+  * 1x 4-pin (I²C RTC/Display - optional)
 
-    - 1x 4-pin
-
-- 3x Jumpers
+  * 1x 6-pin (SPI SD-Card - optional)
 
 - 1x Soldering iron
 
-- solder + flux + IPA
+- solder + flux + IPA etc.
 
 ## SOFTWARE
 
-It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets.
+- It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets,  but impoved and smaller.
 
 - It is an Arduino based Gameboy Cartridge Reader & Writer which uses
 
   a C program or Python script to interface via USB with Arduino/Cartridge directly.
 
-- It allows you to dump your ROM, read & write the RAM.
+- It allows you to dump your ROM (game), read & write the RAM (saves).
 
-- Works with Arduino Duemilanove and Uno, but requires wiring & code definition changes.
+-Works with old Arduino Due-milanove and Uno, but requires wiring & code changes!)
 
 ## HOW TO USE
 
-0. Set GB clock-pin jumper to default GND pin (arduino clock only for development purposes).
+0. Set GB clock-pin jumper to default GND pin (arduino clock only for development/debug purposes).
 
     Reset pin can be set optionally to low to +5V pin if you want to soft-reset control may need extra code)
 
@@ -144,7 +153,7 @@ It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets.
 
   It is recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or
 
-  "xgbfix.exe -v -d <your_rom.rom> can be found here or in the project called "ASMotor".
+  "xgbfix.exe -v -d <your_rom.gb> can be found here or in the project called "ASMotor".
 
   It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
 
@@ -154,7 +163,7 @@ It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets.
 
   For further technical infos and datasheets take a good look into the Documentation folder!!
 
-2. GB audio pin(VIN analog) base function is already built-in, but may need extra code changes for rare games!  :construction:
+2. GB audio pin (VIN analog)/ IRQ base function is already built-in, but may need code changes for rare games! :construction:
 
 3. Formatting
   if you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed.
@@ -179,14 +188,17 @@ It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets.
 
 ## REVISION HISTORY
 
-v1.8 Rev 1.3 (23 February 2024) by WodoWiesel
+v1.8 Rev 1.3 (28 June 2024) by WodoWiesel
+- pcb 0.83
 - lot more comments and documentation
-- CLK switchable (default to GND)
+- CLK switchable (default to GND or unconnected)
 - added optional button pin
-- /RST & /CS2 (digital) switchable connection
-- VIN (analog) & IRQ (digital) switchable
+- added debug testpoint A0 for mosfet
+- /RST & /CS2 (digital) switchable + functions wip
+- VIN (analog) & IRQ (digital) switchable + functions wip
 
 v1.8 Rev 1.2 (29 September 2023) by WodoWiesel
+- pcb 0.7
 - added CRC game informations
 - added memory info, links & CI
 - adapted pin configuration for new Arduino Nano
@@ -195,11 +207,14 @@ v1.8 Rev 1.2 (29 September 2023) by WodoWiesel
 - added logos & pin labels
 
 v1.8 Rev 1.1 (11 March 2022) by WodoWiesel
+- pcb v0.6
 - added reset pin interrupt
 - added pull-up active low resistors
 - added Audio/VIN (into the card) pin support for cartridges
 - added more stable common ground-plane connectivity
 - added M3 mounting holes
+
+-------
 
 v1.8 Rev 1 (28 May 2016)
 - Re-add checking for non-printable ASCII characters code that was removed when cleaning up code
@@ -207,9 +222,7 @@ v1.8 Rev 1 (28 May 2016)
 
 v1.8 (21 March 2016)
 - Added Nintendo Logo check and compare so you can tell if the cartridge is being read correctly
-
   (sometimes the title was read ok but the ROM dump wasn't correct)
-
 - Added missing cartridge RAM support
 - Cleaned up code
 
@@ -227,14 +240,11 @@ v1.6 (3 January 2015)
 - Speed increase by using a higher baud rate (400 Kbit from 57.6Kbit) and using hardware SPI (thanks David R.)
 - Changed SCK from pin 12 to pin 13 for SPI
 - RAM writing speed increase by continually sending 64bytes data from PC and pausing for 5 ms in-between
-
   (Compatible with Gameboy Cart Shield v1.2 if you connect pins 12 and 13 together)
 
 v1.5 (15 November 2014)
 - Speed increases by using direct PORT writing/reading and sending 64 bytes at a time
-
   (thanks Frode vdM. fvdm1992@yahoo.no)
-
 - Compacting functions (thanks Frode vdM. fvdm1992@yahoo.no)
 - Delays when pulsing WR/RD/MREQ pins reduced to a few NOP cycles
 

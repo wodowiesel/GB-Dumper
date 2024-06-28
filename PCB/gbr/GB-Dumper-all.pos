@@ -1,0 +1,23 @@
+### Footprint positions - created on 2024-06-28T19:02:26+0200 ###
+### Printed by KiCad version 8.0.3
+## Unit = mm, Angle = deg.
+## Side : All
+# Ref     Val                            Package                                                        PosX       PosY       Rot  Side
+A1        Arduino_Nano_v3.x_sorted       Arduino_Nano_WithMountingHoles                              50.9320    21.3740  -90.0000  top
+BTN       SW_Push                        SW_PUSH_6mm                                                  2.5320    38.8340   90.0000  top
+C1        10_µF                         CP_Radial_D4.0mm_P2.00mm                                    71.8446    69.3940    0.0000  top
+J1        GameBoy_Cartridge_MountingPin  GameBoy_Cartridge_AGS_1x32-1MP_P1.50mm_Socket_Horizontal    75.8940    37.6160  -90.0000  top
+J2        Conn_01x03_Pin                 PinHeader_1x03_P2.54mm_Vertical                             16.5820    30.0040   90.0000  top
+J3        Conn_01x03_Pin                 PinHeader_1x03_P2.54mm_Vertical                             78.9270     5.7840  -90.0000  top
+J4        Conn_01x04_Pin                 PinHeader_1x04_P2.54mm_Vertical                             60.5420    15.4740    0.0000  top
+J5        Conn_01x03_Pin                 PinHeader_1x03_P2.54mm_Vertical                             46.3420    69.6140  -90.0000  top
+J7        Conn_01x06_Pin                 PinHeader_1x06_P2.54mm_Vertical                              6.6520    20.0940  180.0000  top
+R1        470Ω                          R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal            62.1220     1.9340  180.0000  top
+R2        470Ω                          R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal            53.7900    59.0000    0.0000  top
+R3        470Ω                          R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal            53.7900    56.7000    0.0000  top
+R4        470Ω                          R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal            53.7900    54.3000    0.0000  top
+R5        470Ω                          R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal            63.7920     4.1040  180.0000  top
+SW1       SW_SPDT                        SW_E-Switch_EG1224_SPDT_Angled                              61.3420    66.3640  180.0000  top
+U1        74HC595_sorted                 DIP-16_W7.62mm                                              31.4590    53.3740   90.0000  top
+U2        74HC595_sorted                 DIP-16_W7.62mm                                              49.2090    44.7180  -90.0000  top
+## End

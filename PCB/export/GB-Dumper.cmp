@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by PcbNew   date = 22.10.2023 17:35:26
+Cmp-Mod V01 Created by PcbNew   date = 2024-06-28T18:59:02+0200
 
 BeginCmp
 TimeStamp = 0239a7dc-4f11-4dd5-9564-b10e3cb51ffa
@@ -9,11 +9,11 @@ IdModule  = Button_Switch_Keyboard:GameBoy_Cartridge_AGS_1x32-1MP_P1.50mm_Socket
 EndCmp
 
 BeginCmp
-TimeStamp = 1971fd4b-902b-4a27-beb1-a55d067593ca
-Path = /baccc23b-52bc-4efd-b225-48d6918d9eaa
-Reference = J3;
-ValeurCmp = Conn_01x02_Male;
-IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical;
+TimeStamp = 1c35f814-a807-4813-b98c-14a04f53f8c9
+Path = /e32bdade-42ef-4129-ba5f-2a5065c59dd8
+Reference = BTN;
+ValeurCmp = SW_Push;
+IdModule  = Button_Switch_THT:SW_PUSH_6mm;
 EndCmp
 
 BeginCmp
@@ -25,43 +25,35 @@ IdModule  = Logos:wiesel-kicad-back-white;
 EndCmp
 
 BeginCmp
-TimeStamp = 285f779b-7fb1-4cc3-8b29-1a1639b5d4d6
-Path = 
-Reference = G1;
-ValeurCmp = LOGO;
-IdModule  = theBrutzler:thebrutzler_approved_small02;
-EndCmp
-
-BeginCmp
 TimeStamp = 28b61970-be32-4027-a006-7ee2adc035c1
-Path = /d5cdb44b-d3b4-4210-b5d7-d91741b1e421
+Path = /0db326ac-8d3f-428c-befe-9c41b2a0e9ae
 Reference = U2;
-ValeurCmp = 74HC595;
+ValeurCmp = 74HC595_sorted;
 IdModule  = Package_DIP:DIP-16_W7.62mm;
 EndCmp
 
 BeginCmp
-TimeStamp = 2effc2af-dfae-4ee1-9f01-384f8d2f9678
-Path = /c693858a-1129-4736-ab51-d45f0fe1bbc8
+TimeStamp = 434b6a2a-96d2-473d-95d9-4e7835a3e0fa
+Path = /03b59761-0926-4ccd-bcb7-141f4d302cba
+Reference = J4;
+ValeurCmp = Conn_01x04_Pin;
+IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 46777a5c-c669-440e-b783-87135cfd26b4
+Path = /9011337f-be26-4bda-a51d-e362e39b5462
+Reference = SW1;
+ValeurCmp = SW_SPDT;
+IdModule  = Button_Switch_THT:SW_E-Switch_EG1224_SPDT_Angled;
+EndCmp
+
+BeginCmp
+TimeStamp = 6640f6de-deb2-46b2-a749-b080b0b4b0f2
+Path = /c346cad2-ebbe-4196-a3b7-cae7ef27da5c
 Reference = R1;
 ValeurCmp = 470Ω;
 IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
-EndCmp
-
-BeginCmp
-TimeStamp = 4b134ca8-8963-4dae-9208-bbed3e241058
-Path = /f0172b04-3281-4d5a-a911-69e210ac9ebd
-Reference = J4;
-ValeurCmp = Conn_01x04_Female;
-IdModule  = Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Vertical;
-EndCmp
-
-BeginCmp
-TimeStamp = 5a397f61-35c4-4c18-9dcd-73a2d44cc9af
-Path = /65a8895e-60d4-4e2b-8fd2-f734af690ffa
-Reference = A1;
-ValeurCmp = Arduino_Nano_v3.x;
-IdModule  = Module:Arduino_Nano;
 EndCmp
 
 BeginCmp
@@ -74,9 +66,9 @@ EndCmp
 
 BeginCmp
 TimeStamp = 6afe7f07-b5c5-46e5-8c67-9f3c2f2ccc07
-Path = /2bd6b25f-a519-4224-8dd9-2e42d262ce2e
+Path = /bcb829b8-79b8-4246-b6a0-7cd46cfbe1f4
 Reference = C1;
-ValeurCmp = 22 µF;
+ValeurCmp = 10 µF;
 IdModule  = Capacitor_THT:CP_Radial_D4.0mm_P2.00mm;
 EndCmp
 
@@ -89,8 +81,16 @@ IdModule  = Symbol:OSHW-Logo_5.7x6mm_SilkScreen;
 EndCmp
 
 BeginCmp
-TimeStamp = 7813b372-135c-4554-8bda-8f8d0900a309
-Path = /161a0297-a52b-49d1-8ab2-281352eaf1e4
+TimeStamp = 71d17b19-4bb9-4328-be6b-ae23090f30a5
+Path = /3e4dd905-4de6-44c7-933c-cb8f2bb32ed5
+Reference = J3;
+ValeurCmp = Conn_01x03_Pin;
+IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = 8be2dd85-837a-4565-9660-5f1a9ba372ba
+Path = /81a3d3c0-274e-489a-a9bd-b16f65bfeb45
 Reference = R5;
 ValeurCmp = 470Ω;
 IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
@@ -113,11 +113,11 @@ IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
 EndCmp
 
 BeginCmp
-TimeStamp = aed26b28-68b6-455b-aa7d-055d3d65bae9
-Path = /c5314997-4479-47c7-aebc-e9f9fd7ef59f
-Reference = J2;
-ValeurCmp = Conn_01x03_Male;
-IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical;
+TimeStamp = aea75ec5-5279-4d47-ab09-573ae0a4819b
+Path = /0f2504e5-afd9-4fa8-9faa-15c57bb5ed05
+Reference = TP1;
+ValeurCmp = TestPoint;
+IdModule  = TestPoint:TestPoint_THTPad_2.5x2.5mm_Drill1.2mm;
 EndCmp
 
 BeginCmp
@@ -129,11 +129,59 @@ IdModule  = MountingHole:MountingHole_3.2mm_M3_Pad;
 EndCmp
 
 BeginCmp
+TimeStamp = c5d352ce-a0cf-478b-a278-c394a9d5ab8d
+Path = 
+Reference = REF**;
+ValeurCmp = ESD-Logo_6.6x6mm_SilkScreen;
+IdModule  = Symbol:ESD-Logo_6.6x6mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = c6713126-a24f-4833-abaf-b7bc18ccbe9b
+Path = 
+Reference = G1;
+ValeurCmp = LOGO;
+IdModule  = the_brutzler_logo:approved_theBrutzler;
+EndCmp
+
+BeginCmp
+TimeStamp = c79b9fe5-5fa2-4225-8150-bc6d5a290a1f
+Path = /c8ca811f-3a45-49db-931f-75cf743e2384
+Reference = A1;
+ValeurCmp = Arduino_Nano_v3.x_sorted;
+IdModule  = Module:Arduino_Nano_WithMountingHoles;
+EndCmp
+
+BeginCmp
+TimeStamp = d4e3f71b-4799-48ef-ae82-9a7c82f4934b
+Path = /bb826843-cf63-4aff-a052-4354aacd2360
+Reference = J2;
+ValeurCmp = Conn_01x03_Pin;
+IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical;
+EndCmp
+
+BeginCmp
+TimeStamp = d53f2f28-28c4-4698-be7c-5b7843007e27
+Path = /312d24f6-c011-4b25-b606-6a4e7fdce93c
+Reference = J7;
+ValeurCmp = Conn_01x06_Pin;
+IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical;
+EndCmp
+
+BeginCmp
 TimeStamp = d6371195-a98c-4851-98f2-131ee8feffde
 Path = /6c0814d8-589e-4385-a695-7b08edb63c30
 Reference = R2;
 ValeurCmp = 470Ω;
 IdModule  = Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal;
+EndCmp
+
+BeginCmp
+TimeStamp = ddae93e0-e469-4f07-a746-d3b736fd8ba9
+Path = /a57ceec2-8de9-431b-a12e-816a6b959b42
+Reference = J5;
+ValeurCmp = Conn_01x03_Pin;
+IdModule  = Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical;
 EndCmp
 
 BeginCmp
@@ -162,18 +210,18 @@ EndCmp
 
 BeginCmp
 TimeStamp = fe58da8d-70f0-4c3c-ba33-1942b951f5f5
-Path = /c65ba2c9-dffe-4f00-a051-423e57562a1d
+Path = /3baa8ef0-efda-4d4c-a378-2ce46281975e
 Reference = U1;
-ValeurCmp = 74HC595;
+ValeurCmp = 74HC595_sorted;
 IdModule  = Package_DIP:DIP-16_W7.62mm;
 EndCmp
 
 BeginCmp
-TimeStamp = 0668a3cd-9d26-46b5-8b3b-9f75c0dc4f0d
+TimeStamp = 1698bbbe-ae7e-44e0-84fd-64d3718f216a
 Path = 
-Reference = G2**;
+Reference = G1*;
 ValeurCmp = LOGO;
-IdModule  = theBrutzler:thebrutzler_approved_small02;
+IdModule  = the_brutzler_logo:approved_theBrutzler;
 EndCmp
 
 BeginCmp
@@ -198,6 +246,14 @@ Path =
 Reference = G3*;
 ValeurCmp = LOGO;
 IdModule  = Logos:recycling-symbol-kicad;
+EndCmp
+
+BeginCmp
+TimeStamp = b3c90797-c784-4d42-bedf-17c4045ff624
+Path = 
+Reference = REF2**;
+ValeurCmp = ESD-Logo_6.6x6mm_SilkScreen;
+IdModule  = Symbol:ESD-Logo_6.6x6mm_SilkScreen;
 EndCmp
 
 BeginCmp

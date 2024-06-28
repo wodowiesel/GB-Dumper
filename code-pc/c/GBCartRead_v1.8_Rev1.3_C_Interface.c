@@ -181,7 +181,7 @@ int main() {
 			}
 			char* tokstr = strtok ((char *) buffer, "\r\n");
 			 if (tokstr == NULL) {
-				printf ("tokstr: NULL error\n");
+				printf ("tokstr: NULL error, no title found\n");
 			 }
 			while (tokstr != NULL) {
 				if (headercounter == 0) {
@@ -218,7 +218,7 @@ int main() {
 						case 29: printf ("MBC5+RUMBLE+RAM\n"); break;
 						case 30: printf ("MBC5+RUMBLE+RAM+BATTERY\n"); break;
 						case 252: printf("Gameboy-Camera\n"); break;
-						default: printf ("Not found\n");
+						default: printf ("Not found or unknown\n");
 					}
 				}
 				else if (headercounter == 2) {
