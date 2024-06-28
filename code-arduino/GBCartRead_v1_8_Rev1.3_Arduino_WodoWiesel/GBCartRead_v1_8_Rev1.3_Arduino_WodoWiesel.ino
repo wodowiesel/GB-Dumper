@@ -331,17 +331,23 @@ void loop() {
           }
         }
 
+        /// dump ram special
+        cs2_dumpsave(); 
+        
         // Disable RAM
         write_byte(0x0000, 0x00);
-        Serial.flush(); // Flush any serial data that wasn't processed
+
+        // Flush any serial data that wasn't processed
+        Serial.flush();
       }
     }
 
       rd_wr_mreq_off();
     ///Serial.println("Loop done \n");
-   }
-  
+}
+//--- End loop!
 
+// func definitions  
   uint8_t read_byte(uint16_t address) {
     shiftout_address(address); // Shift out address
 
