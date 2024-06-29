@@ -146,7 +146,6 @@ void loop() {
 
     gameTitle[16] = '\0';
 
-    
     // Read cartridge title and check for non-printable text
     for (uint16_t romAddress = 0x0134; romAddress <= 0x143; romAddress++) {
       char headerChar = (char) read_byte(romAddress);
@@ -154,7 +153,7 @@ void loop() {
           (headerChar >= 0x41 && headerChar <= 0x5A) || // A-Z
           (headerChar >= 0x61 && headerChar <= 0x7A)) { // a-z
           gameTitle[(romAddress - 0x0134)] = headerChar;
-          Serial.println(headerChar);
+          //Serial.println(headerChar);
         /*
          * MULICARD MBCs & EMS etc https://gbdev.gg8.se/wiki/articles/Memory_Bank_Controllers
           A header matching any of the following is detected as EMS mapper:
@@ -202,7 +201,6 @@ void loop() {
       if (ramSize > 1) {
         ramEndAddress = 0xBFFF;  // 8K RAM
       }
-
    
     }
  

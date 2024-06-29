@@ -52,7 +52,7 @@ while (waitInput == 1):
 
         cartridgeType = ascii(ser.readline())
         cartridgeType = cartridgeType[2:(len(cartridgeType)-5)]
-        print ('\nCartridge type: '+cartridgeType+'\n')
+        print ('Cartridge type: '+cartridgeType+'\n')
         sys.stdout.write('MBC type: ')
         if (cartridgeType == 0):
             print ('ROM ONLY\n')

@@ -16,8 +16,8 @@
 #else
 #include <unistd.h>
 #endif
-int cport_nr = 3; // /dev/ttyS0 (COM1 on windows)
-int bdrate = 57600; // 57600 baud (default)
+int cport_nr = 2; // /dev/ttyS0 (COM1 on windows) , i use on com3
+int bdrate = 9600; // 57600 baud (default)
 int firstStart = 1;
 int headercounter = 0;
 char gametitle[80];
@@ -181,7 +181,8 @@ int main() {
 			}
 			char* tokstr = strtok ((char *) buffer, "\r\n");
 			 if (tokstr == NULL) {
-				printf ("tokstr: NULL error, no title found\n");
+				printf ("tokstr: NULL error, no title found, using default: unknown\n");
+				tokstr = "unknown";
 			 }
 			while (tokstr != NULL) {
 				if (headercounter == 0) {
@@ -301,7 +302,7 @@ int main() {
 		}
 		else if (userInput == '2') {
 			printf ("\nDumping RAM to %s.sav ... ", gametitle);
-			strncpy(filename, gametitle, 20);
+			strncpy(filename, gametitle, 20); //why 20?
 			strcat(filename, ".sav");
 			write_to_file(filename, "READRAM\n", 1);
 			printf ("\nFinished\n");
@@ -314,7 +315,7 @@ int main() {
 			char userInputConfirm = read_one_letter();
 			if (userInputConfirm == 'y') {
 				printf ("\nWriting to RAM from %s.sav ... ", gametitle);
-				strncpy(filename, gametitle, 20);
+				strncpy(filename, gametitle, 30);
 				strcat(filename, ".sav");
 				read_from_file(filename, "WRITERAM\n");
 				printf ("\nFinished\n");
