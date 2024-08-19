@@ -91,7 +91,7 @@ Have fun and save the retro world :)
 
 ## SOFTWARE
 
-- It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets,  but impoved and smaller.
+- It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets, but impoved and smaller.
 
 - It is an Arduino based Gameboy Cartridge Reader & Writer which uses
 
@@ -99,49 +99,59 @@ Have fun and save the retro world :)
 
 - It allows you to dump your ROM (game), read & write the RAM (saves).
 
--Works with old Arduino Due-milanove and Uno, but requires wiring & code changes!)
+- Works with old Arduino Due-milanove and Uno, but requires wiring & code changes!)
+
+-
 
 ## HOW TO USE
 
-0. Set GB clock-pin jumper to default GND pin (arduino clock only for development/debug purposes).
+0. Set GB clock-pin jumper to default GND pin (arduino clock only for development/debug purposes 4-16 MHz).
 
-    Reset pin can be set optionally to low to +5V pin if you want to soft-reset control may need extra code)
+   Reset pin can be set optionally to low to +5V pin if you want to soft-reset control (may need extra code).
 
-1. Open the \GBCartRead_v(xxx)_Arduino\GBCartRead_v(xxx).ino file and program it to your Arduino.
+1. Open the \GBCartRead_v1.3.x_Arduino_WodoWiesel\GBCartRead_v1.3.x_Arduino_WodoWoiesel.ino file
 
-   Note down the COM port number in use; you can find this out from the Arduino
+   with Arduino IDE. Note down and select your COM port number in use (std. Nr.3).
 
-   software by going to Tools -> Serial port.
+   You can find this out from the Arduino IDE (2) by going to Tools -> Serial port.  
+
+   Then set the identical baudrate as in the py/c-program and flash it to your Arduino.
 
 2. There are two choices to communicate with the Arduino – using the C program or the Python program.
 
-  - Python Program
+  - Python Program:
 
-  a. Download and install Python 3.2+ or higher (https://www.python.org/download/)
+  a. Dependencies:
 
-  and pySerial (https://pypi.python.org/pypi/pyserial/)
+   - Download and install Python 3.2+ or higher (https://www.python.org/download/)
 
-  b. Open up the “GBCartRead_v(xxx)_Python_Interface.py” script by right clicking it and selecting “Edit with IDLE”.
+   - Libs: pySerial (https://pypi.python.org/pypi/pyserial/)
 
-  c. Change the “COM2” serial port to the serial port that your Arduino is connected on,
+  b. Open up the “GB-Dumper-v1.8_Rev1.3.x_Py_Interface.py” script by right clicking it and selecting “Edit with IDLE”.
 
-   save the file and press F5 to run it.
+  c. Then set the identical COM port & baudrate as in the arduino ino-program,
+
+   save and press F5 to run it via py-reader.bat as admins.
 
   d. A new window will appear, after 2-3 seconds you’ll have some options available.
 
- - C Program
+ - C Program:
 
-  a. Open config.ini and change the COM port number to the serial port that your Arduino is connected on and save the file.
+   a. Open config.ini and change the COM port & baudrate identical to your Arduino is connected on and save the file.
 
-  b. Run “GBCartRead_v(xxx)_C_Interface.exe” in Windows or re-compile the source for your OS
+   b. Check dependencies cygwin64 & gcc compiler are installed.
+
+      Check paths in Makefile and cmaker.bat and run it as admin to compile it.
+
+   c. Run “GBCartRead_v1.3.x_C_Interface.exe” in Windows terminal as admin or re-compile the source for your OS.
 
 3. At this stage you should insert your Gameboy cartridge and press the power button,
 
-  the power LED should light up.
+   the power LED should light up.
 
 4. Press 0 to read the header and verify that it looks correct. If it doesn’t look correct,
 
-  press the power button to power off the Gameboy cartridge, remove and re-insert it and power it up again.
+   press the power button to power off the Gameboy cartridge, remove and re-insert it and power it up again.
 
 5. Press 1 to Dump the ROM, 2 to Backup your RAM or 3 to Load your RAM file.
 
@@ -149,42 +159,42 @@ Have fun and save the retro world :)
 
    or *.sav will be created if you chose option 1 or 2.
 
-  If you choose option 3, it will load the save from <gametitle>.sav.
+   If you choose option 3, it will load the save from <gametitle>.sav.
 
-  It is recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or
+   It is recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or
 
-  "xgbfix.exe -v -d <your_rom.gb> can be found here or in the project called "ASMotor".
+   run validator.bat as admin "xgbfix.exe -v -d <your_rom.gb(a)> can be found here or in the project called "ASMotor".
 
-  It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
+   It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
 
 ## SPECIALS, CHECKSUMS & MEMORY
 
 1. There are some cartridges which don't quite conform to cartridge header standards or require something out of the ordinary.
 
-  For further technical infos and datasheets take a good look into the Documentation folder!!
+   For further technical infos and datasheets take a good look into the Documentation folder!!
 
 2. GB audio pin (VIN analog)/ IRQ base function is already built-in, but may need code changes for rare games! :construction:
 
 3. Formatting
-  if you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed.
+
+   If you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed and write a shell script.
 
 4. CRC/Verification
-  This file [GB/C](/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for verification at the end of the dumping process.
+   This file [GB/C](/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for verification at the end of the dumping process.
 
-  From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd)
-  Example:
-  Name: 007 - The World Is Not Enough (USA, Europe).gb
+   From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd)
+   Example:
+   Name: 007 - The World Is Not Enough (USA, Europe).gb
+   CRC32: E038E666
 
-  CRC32: E038E666
-
-  -> verification can be done via the executable [xgbfix.exe](/code-pc/xgbfix.exe)
+   -> verification can be done via the validator.bat or executable [xgbfix.exe](/code-pc/xgbfix.exe)
 
 5. Memory
-  The file [WisdomTree](/docs/Wisdom_Tree.txt) contains Memory Address Informations and Exceptions
-  Additional articles (https://gbdev.gg8.se/wiki/articles/MBC7#Ax8x_-_EEPROM_.28Read.2FWrite.29)
+   The file [WisdomTree](/docs/Wisdom_Tree.txt) contains Memory Address Informations and Exceptions
+   Additional articles (https://gbdev.gg8.se/wiki/articles/MBC7#Ax8x_-_EEPROM_.28Read.2FWrite.29)
 
 6. CI
-  Arduino Workflow [CI](.github/workflows/main.yaml)
+   Arduino Workflow [CI](.github/workflows/main.yaml) just for debug.
 
 ## REVISION HISTORY
 
@@ -193,7 +203,7 @@ v1.8 Rev 1.3 (28 June 2024) by WodoWiesel
 - lot more comments and documentation
 - CLK switchable (default to GND or unconnected)
 - added optional button pin
-- added debug testpoint A0 for mosfet
+- added debug test point A0 for mosfet
 - /RST & /CS2 (digital) switchable + functions wip
 - VIN (analog) & IRQ (digital) switchable + functions wip
 
@@ -284,7 +294,7 @@ v1.0 (19 March 2011)
 
 ## CREDITS
 
-:copyright: 2021-2024 WodoWiesel
+ :copyright: 2021-2024 WodoWiesel
 
  Github (https://github.com/wodowiesel/)
 
@@ -294,34 +304,34 @@ v1.0 (19 March 2011)
 
  YT (https://www.youtube.com/@wodowiesel)
 
-The new design was checked by the electrical engineer theBrutzler
+ The new design was checked by the electrical engineer theBrutzler
 
-(https://github.com/theBrutzler/ & https://www.twitch.com/theBrutzler/)
+ (https://github.com/theBrutzler/ & https://www.twitch.com/theBrutzler/)
 
-The new optimized PCB was designed with free KiCAD software (https://www.kicad.org/)
+ The new optimized PCB was designed with free KiCAD software (https://www.kicad.org/)
 
-:heavy_exclamation_mark: The PCB should be produced at a manufacturer
+ :heavy_exclamation_mark: The PCB should be produced at a manufacturer
 
-(like PCBWay/JLCPCB) with the RoHS lead-free option for environmental protection.
+ (like PCBWay/JLCPCB) with the RoHS lead-free option for environmental protection.
 
-Original: :copyright: 2011-2016 by insideGadgets
+ Original: :copyright: 2011-2016 by insideGadgets
 
-Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
+ Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
 
-(https://github.com/insidegadgets/GBCartRead/ or support@insidegadgets.com)
+ (https://github.com/insidegadgets/GBCartRead/ or support@insidegadgets.com)
 
 ## LICENSES
 
 - Hardware
 
-CERN Open Hardware License Version 2 - Weakly Reciprocal
+   CERN Open Hardware License Version 2 - Weakly Reciprocal
 
-Short identifier CERN-OHL-W-2.0
+   Short identifier CERN-OHL-W-2.0
 
-[LICENSE Source](https://spdx.org/licenses/CERN-OHL-W-2.0.html)
+   [LICENSE Source](https://spdx.org/licenses/CERN-OHL-W-2.0.html)
 
 - Software
 
-This work is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License.
+   This work is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License.
 
-[CCANC](http://creativecommons.org/licenses/by-nc/3.0/)
+   [CCANC](http://creativecommons.org/licenses/by-nc/3.0/)

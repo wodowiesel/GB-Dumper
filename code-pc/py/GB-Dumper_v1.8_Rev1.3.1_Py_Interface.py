@@ -1,9 +1,8 @@
-# GBCartRead - Arduino Interface
-# Version: 1.8
-# Author: Alex from insideGadgets (http://www.insidegadgets.com)
-# Created: 18/03/2011
-# Last Modified: 21/03/2016
-# Optimized: 03/10/2022 by WodoWiesel
+# GBCartRead - Arduino Interface Version: 1.8
+# orig. Author: Alex from insideGadgets (http://www.insidegadgets.com)
+# Created: 18/03/2011, Last Modified: 21/03/2016
+# GB-Dumperv 1.8 Rev1.3.1 by wodowiesel
+# Optimized: 08/08/2024
 
 import os
 import sys
@@ -11,16 +10,18 @@ import time
 import string
 import serial
 import atexit
+import signal
 
-# Change COM to the port the Arduino is on.
-# You can lower the baud rate of 400Kbit if you have issues connecting to the Arduino or the ROM has checksum errors
-
-sys.stdout.write('\nGBCartRead v1.8 Rev1.3 by wodowiesel\n')
+sys.stdout.write('\nGB-Dumperv1.8 Rev1.3.1 by wodowiesel\n')
 sys.stdout.write('###################################\n')
 sys.stdout.flush()
 
+# Change COM to the port the Arduino is on.
+# You can lower the baud rate of 400kBit if you have issues connecting to the Arduino or the ROM has checksum errors
 port = 'COM3'
-baudrate = 57600
+baudrate = 9600 #57600
+print("Serial connection on: "+port+" with baud ",baudrate)
+
 ser = serial.Serial(port, baudrate, timeout=1) # /dev/ttyACM0 (old) or ttyS0 (newer via usb) for linux-based systems
 
 time.sleep(1)
@@ -45,7 +46,6 @@ while (waitInput == 1):
         print (gameTitle)
         if (gameTitle != None):
             print (gameTitle)
-        
         else:
             print ('not found or none, using "unknown"\n')
             gameTitle = 'unknown'
@@ -163,7 +163,8 @@ while (waitInput == 1):
         else:
             print('not found or unknown\n')
 
-        sys.stdout.write('Logo Check: ')
+        #sys.stdout.write('Logo Check: ')
+        print('Logo Check: ')
         logoCheck = ascii(ser.readline())
         logoCheck = logoCheck[2:(len(logoCheck)-5)]
         print (logoCheck)
@@ -171,6 +172,8 @@ while (waitInput == 1):
             print ('OK\n')
         elif (logoCheck == 0):
             print ('Failed\n')
+        else:
+            print('not found or unknown\n')
 
     elif (userInput == '1'):
         sys.stdout.write('\nDumping ROM to ' + gameTitle + '.gb')
