@@ -37,7 +37,7 @@ Compatibility list:
 
 # DISCLAIMERS
 
-**This is still "work-in-progress (WIP)" so
+**This is still "work-in-progress (WIP)/experimental"
 
 I do NOT take any kind of warranty/responsibility for damages/data losses!**
 
@@ -93,15 +93,25 @@ Have fun and save the retro world :)
 
 - It is based on GBCartRead v1.8 Rev 1.2 - Gameboy Cart Reader by insideGadgets, but impoved and smaller.
 
-- It is an Arduino based Gameboy Cartridge Reader & Writer which uses
+- Board based Gameboy Cartridge Reader & Writer which uses
 
-  a C program or Python script to interface via USB with Arduino/Cartridge directly.
+  a C program or Python script to interface via USB with Cartridge directly.
 
 - It allows you to dump your ROM (game), read & write the RAM (saves).
 
 - Works with old Arduino Due-milanove and Uno, but requires wiring & code changes!)
 
--
+-  Dependencies:
+  
+    a. Py:
+   
+   - Download and install Python 3.2+ or higher (https://www.python.org/download/)
+     
+   - Lib: pySerial (https://pypi.python.org/pypi/pyserial/)
+     
+   b. C
+   
+   - Check dependencies cygwin64 & gcc compiler are installed.
 
 ## HOW TO USE
 
@@ -121,27 +131,19 @@ Have fun and save the retro world :)
 
   - Python Program:
 
-  a. Dependencies:
+  a. Open up the “GB-Dumper-v1.8_Rev1.3.x_Py_Interface.py” script by right clicking it and selecting “Edit with IDLE”.
 
-   - Download and install Python 3.2+ or higher (https://www.python.org/download/)
-
-   - Libs: pySerial (https://pypi.python.org/pypi/pyserial/)
-
-  b. Open up the “GB-Dumper-v1.8_Rev1.3.x_Py_Interface.py” script by right clicking it and selecting “Edit with IDLE”.
-
-  c. Then set the identical COM port & baudrate as in the arduino ino-program,
+  b. Then set the identical COM port & baudrate as in the arduino ino-program,
 
    save and press F5 to run it via py-reader.bat as admins.
 
-  d. A new window will appear, after 2-3 seconds you’ll have some options available.
+  c. A new window will appear, after 2-3 seconds you’ll have some options available.
 
  - C Program:
 
    a. Open config.ini and change the COM port & baudrate identical to your Arduino is connected on and save the file.
 
-   b. Check dependencies cygwin64 & gcc compiler are installed.
-
-      Check paths in Makefile and cmaker.bat and run it as admin to compile it.
+   b.  Check paths in Makefile and cmaker.bat and run it as admin to compile it.
 
    c. Run “GBCartRead_v1.3.x_C_Interface.exe” in Windows terminal as admin or re-compile the source for your OS.
 
@@ -180,20 +182,20 @@ Have fun and save the retro world :)
    If you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed and write a shell script.
 
 4. CRC/Verification
+   
    This file [GB/C](/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for verification at the end of the dumping process.
 
    From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd)
    Example:
    Name: 007 - The World Is Not Enough (USA, Europe).gb
    CRC32: E038E666
-
    -> verification can be done via the validator.bat or executable [xgbfix.exe](/code-pc/xgbfix.exe)
 
-5. Memory
+6. Memory
    The file [WisdomTree](/docs/Wisdom_Tree.txt) contains Memory Address Informations and Exceptions
    Additional articles (https://gbdev.gg8.se/wiki/articles/MBC7#Ax8x_-_EEPROM_.28Read.2FWrite.29)
 
-6. CI
+7. CI
    Arduino Workflow [CI](.github/workflows/main.yaml) just for debug.
 
 ## REVISION HISTORY
@@ -321,6 +323,8 @@ v1.0 (19 March 2011)
  (https://github.com/insidegadgets/GBCartRead/ or support@insidegadgets.com)
 
 ## LICENSES
+
+Not for commercial and/or criminal usage!
 
 - Hardware
 
