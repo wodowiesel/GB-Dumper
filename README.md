@@ -102,15 +102,15 @@ Have fun and save the retro world :)
 - Works with old Arduino Due-milanove and Uno, but requires wiring & code changes!)
 
 -  Dependencies:
-  
+
     a. Py:
-   
+
    - Download and install Python 3.2+ or higher (https://www.python.org/download/)
-     
+
    - Lib: pySerial (https://pypi.python.org/pypi/pyserial/)
-     
+
    b. C
-   
+
    - Check dependencies cygwin64 & gcc compiler are installed.
 
 ## HOW TO USE
@@ -157,15 +157,11 @@ Have fun and save the retro world :)
 
 5. Press 1 to Dump the ROM, 2 to Backup your RAM or 3 to Load your RAM file.
 
-   Hashes (#) will start printing every few seconds and a file called <gametitle>.gb
+   Hashes (#) will start printing every few seconds and a file called <gametitle>[.gb]
 
    or *.sav will be created if you chose option 1 or 2.
 
    If you choose option 3, it will load the save from <gametitle>.sav.
-
-   It is recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or
-
-   run validator.bat as admin "xgbfix.exe -v -d <your_rom.gb(a)> can be found here or in the project called "ASMotor".
 
    It’s a good idea to verify your save files too by running the ROM when the save file is present in BGB.
 
@@ -181,21 +177,37 @@ Have fun and save the retro world :)
 
    If you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed and write a shell script.
 
-4. CRC/Verification
-   
-   This file [GB/C](/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for verification at the end of the dumping process.
+4. CRC/Verification/Validation
+
+   This file [GB/C](/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for
+
+   verification at the end of the dumping process.
+
+   Example:
 
    From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd)
-   Example:
+
    Name: 007 - The World Is Not Enough (USA, Europe).gb
+
    CRC32: E038E666
-   -> verification can be done via the validator.bat or executable [xgbfix.exe](/code-pc/xgbfix.exe)
+
+   It is recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or
+
+   run validator.bat as admin "xgbfix.exe -v -p -d <gametitle>[.gb(c/a)]
+
+   Original can be found in the project called "ASMotor"
+
+   -> My easier validation can be done via the [validator.bat](/code-pc/validator/validator.bat)
+
+   or executable [xgbfix.exe](/code-pc/validator/xgbfix.exe).
 
 6. Memory
-   The file [WisdomTree](/docs/Wisdom_Tree.txt) contains Memory Address Informations and Exceptions
+   The file [WisdomTree](/docs/Wisdom_Tree.txt) contains memory address informations and exceptions.
+
    Additional articles (https://gbdev.gg8.se/wiki/articles/MBC7#Ax8x_-_EEPROM_.28Read.2FWrite.29)
 
 7. CI
+
    Arduino Workflow [CI](.github/workflows/main.yaml) just for debug.
 
 ## REVISION HISTORY
