@@ -270,13 +270,13 @@ v1.6 (3 January 2015)
 
 v1.5 (15 November 2014)
 - Speed increases by using direct PORT writing/reading and sending 64 bytes at a time
-  (thanks Frode vdM. fvdm1992@yahoo.no)
-- Compacting functions (thanks Frode vdM. fvdm1992@yahoo.no)
+  (thanks Frode vdM.)
+- Compacting functions (thanks Frode vdM.)
 - Delays when pulsing WR/RD/MREQ pins reduced to a few NOP cycles
 
 v1.4.2 (14 November 2014)
 - Fixed gameTitle array length issue (thanks Frode vdM. and David R.)
-- Added Gameboy Camera support (thanks Frode vdM.)
+- Added Gameboy Camera support (thanks Frode vdM. fvdm1992@yahoo.no)
 
 v1.4.1 (3 January 2014)
 - Changed wrPin from pin 13 to A3 to suit Gameboy Cart Shield v1.2
