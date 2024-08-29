@@ -103,7 +103,7 @@ Have fun and save the retro world :)
 
 -  Dependencies:
 
-    a. Py:
+   a. Py:
 
    - Download and install Python 3.2+ or higher (https://www.python.org/download/)
 
@@ -185,7 +185,7 @@ Have fun and save the retro world :)
 
    Example:
 
-   From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd)
+   From: [OSCR](https://github.com/sanni/cartreader/tree/master/sd/)
 
    Name: 007 - The World Is Not Enough (USA, Europe).gb
 
@@ -193,15 +193,16 @@ Have fun and save the retro world :)
 
    It is recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or
 
-   run validator.bat as admin "xgbfix.exe -v -p -d <gametitle>[.gb(c/a)]
+   run validator.bat as admin "xgbfix.exe -v -p -d <gametitle>[.gb(c/a)].
 
-   Original can be found in the project called "ASMotor"
+   Original can be found in the git project called [ASMotor](https://github.com/asmotor/asmotor/).
 
    -> My easier validation can be done via the [validator.bat](/code-pc/validator/validator.bat)
 
    or executable [xgbfix.exe](/code-pc/validator/xgbfix.exe).
 
 6. Memory
+
    The file [WisdomTree](/docs/Wisdom_Tree.txt) contains memory address informations and exceptions.
 
    Additional articles (https://gbdev.gg8.se/wiki/articles/MBC7#Ax8x_-_EEPROM_.28Read.2FWrite.29)
