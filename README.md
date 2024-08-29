@@ -115,7 +115,7 @@ Have fun and save the retro world :)
 
 ## HOW TO USE
 
-0. Set GB clock-pin jumper to default GND pin (arduino clock only for development/debug purposes 4-16 MHz).
+0. Set GB clock-pin jumper to default GND pin (arduino clock only for development/debug purposes 4/16 MHz).
 
    Reset pin can be set optionally to low to +5V pin if you want to soft-reset control (may need extra code).
 
@@ -135,7 +135,7 @@ Have fun and save the retro world :)
 
   b. Then set the identical COM port & baudrate as in the arduino ino-program,
 
-   save and press F5 to run it via py-reader.bat as admins.
+   save and press F5 to run it via py-reader.bat as admin.
 
   c. A new window will appear, after 2-3 seconds you’ll have some options available.
 
@@ -171,7 +171,8 @@ Have fun and save the retro world :)
 
    For further technical infos and datasheets take a good look into the Documentation folder!!
 
-2. GB audio pin (VIN analog)/ IRQ base function is already built-in, but may need code changes for rare games! :construction:
+2. GB audio pin (VIN analog) / IRQ (digital) base function is already built-in (wip!), but needs changes for rare games!          :construction:
+   The /RST and /CS2 pins got own compatibility functions thanks to [joaopauloap](https://github.com/joaopauloap/arduino-gba-dumper).
 
 3. Formatting
 
@@ -193,7 +194,7 @@ Have fun and save the retro world :)
 
    It is recommend verifying your Gameboy ROM using BGB (a Gameboy emulator) or
 
-   run validator.bat as admin "xgbfix.exe -v -p -d <gametitle>[.gb(c/a)].
+   run validator.bat as admin via ```xgbfix.exe -v -p -d <gametitle>[.gb(c)]``` (should not contain spaces).
 
    Original can be found in the git project called [ASMotor](https://github.com/asmotor/asmotor/).
 
@@ -213,7 +214,7 @@ Have fun and save the retro world :)
 
 ## REVISION HISTORY
 
-v1.8 Rev 1.3 (28 June 2024) by WodoWiesel
+v1.8 Rev 1.3.1 (28 June 2024) by WodoWiesel
 - pcb 0.83
 - lot more comments and documentation
 - CLK switchable (default to GND or unconnected)
@@ -329,11 +330,7 @@ v1.0 (19 March 2011)
 
  (like PCBWay/JLCPCB) with the RoHS lead-free option for environmental protection.
 
- Original: :copyright: 2011-2016 by insideGadgets
-
- Speed increases thanks to Frode vdM. (fvdm1992@yahoo.no) and David R.
-
- (https://github.com/insidegadgets/GBCartRead/ or support@insidegadgets.com)
+ Original: :copyright: 2011-2016 by [insideGadgets](https://github.com/insidegadgets/GBCartRead/) support@insidegadgets.com
 
 ## LICENSES
 
