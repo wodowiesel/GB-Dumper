@@ -44,7 +44,9 @@ while (waitInput == 1):
     userInput = input()
 
     if (userInput == '0'):
-        ser.write('HEADER'.encode())
+        ser.write('HEADER'.encode()) 
+        #standard is utf_8 if nothig is specified or use option encoding="ascii", same for decode
+        #https://docs.python.org/3/library/codecs.html#standard-encodings
         #ser.write(b'0') #not sure if needed? probably not
 
         gameTitle = ascii(ser.readline())
