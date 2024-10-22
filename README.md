@@ -103,7 +103,7 @@ Have fun and save the retro world :)
 
 -  Dependencies:
 
-   a. Py:
+   a. Py
 
    - Download and install Python 3.2+ or higher (https://www.python.org/download/)
 
