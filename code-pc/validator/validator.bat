@@ -1,11 +1,12 @@
 :: start validator in cmd terminal
 @echo off
 cd C:\github\GB-Dumper\code-pc\validator\
-set /p gameTitle="Input game title (no spaces) with extention [.gb/.gbc]: "
+echo ***ROM (game) VALIDATOR***
+set /p gameTitle="Input game title (no spaces) with extention [.gb]:"
 call xgbfix.exe -v -p -d %gameTitle%
 ::motorgbfix v1.0.0 (part of ASMotor 0.1.0)
 ::https://github.com/asmotor/asmotor/
-::Usage: xgbfix [flags] gametitle[.gb] ()
+::Usage: xgbfix.exe [flags] gametitle[.gb]
 ::Options: Flags
 ::        -h              This text
 ::        -d              Debug: Don't change image

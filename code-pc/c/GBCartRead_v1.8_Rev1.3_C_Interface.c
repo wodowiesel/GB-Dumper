@@ -4,7 +4,7 @@
  Author: Alex from insideGadgets (www.insidegadgets.com)
  Created: 21/07/2013
  Modified:26/05/2016
- Optimized: 05/05/2024 by WodoWiesel
+ Optimized: 21/10/2024 by WodoWiesel
  */
 #include <stdlib.h>
 #include <stdio.h>
@@ -17,7 +17,7 @@
 #include <unistd.h>
 #endif
 int cport_nr = 2; // /dev/ttyS0 (COM1 on windows) , i use on com3
-int bdrate = 9600; // 57600 baud (default)
+int bdrate = 19200; // 9600 (slow), 57600 baud (default)
 int firstStart = 1;
 int headercounter = 0;
 char gametitle[80];
@@ -136,12 +136,12 @@ void read_from_file(char* filename, char* cmd) {
 }
 int main() {
 	read_config();
-	printf("GBCartRead v1.8 Rev. 1.3 by wodowiessel\n");
-	printf("################################\n\n");
-	printf("Opening COM PORT %d at %d baud ...\n\n", cport_nr+1, bdrate);
+	printf("GB-Dumper v1.8 Rev. 1.3.2 by wodowiesel\n");
+	printf("################################\n");
+	printf("Opening COM PORT %d at %d baud ...\n", cport_nr+1, bdrate);
 	// Open COM port
 	if(RS232_OpenComport(cport_nr, bdrate)) {
-		printf("Can not open com port\n");
+		printf("Can not open COM port\n");
 		return(0);
 	}
 	#ifdef _WIN32
@@ -152,11 +152,11 @@ int main() {
 	char userInput = '0';
 	while (1) {
 		printf ("\nSelect an option below\n0. Read Header\n1. Dump ROM\n2. Save RAM\n3. Write RAM\n4. Exit\n");
-		printf (">");
+		printf ("> ");
 		userInput = read_one_letter();
 		if (userInput == '0') {
 			headercounter = 0;
-			RS232_cputs(cport_nr, "HEADER\n");
+			RS232_cputs(cport_nr, "HEADER");
 			unsigned char buffer[4096];
 			int n = 0;
 			int waitingforheader = 0;
@@ -181,7 +181,7 @@ int main() {
 			}
 			char* tokstr = strtok ((char *) buffer, "\r\n");
 			 if (tokstr == NULL) {
-				printf ("tokstr: NULL error, no title found, using default: unknown\n");
+				printf ("\ntokstr: NULL error, no title found, using default: unknown\n");
 				tokstr = "unknown";
 			 }
 			while (tokstr != NULL) {
@@ -255,7 +255,7 @@ int main() {
 					}
 				}
 				else if (headercounter == 3) {
-					printf ("RAM size: ");
+					printf ("\nRAM size: ");
 					ramSize = atoi(tokstr);
 					switch (ramSize) {
 						case 0:
@@ -263,7 +263,7 @@ int main() {
 								printf ("512 bytes (nibbles)\n");
 							}
 							else {
-								printf ("None\n");
+								printf ("0 None\n");
 							}
 							break;
 						case 1: printf ("2 KBytes\n"); break;
@@ -277,16 +277,16 @@ int main() {
 					printf ("Logo check: ");
 					logoCheck = atoi(tokstr);
 					if (logoCheck == 1) {
-						printf ("OK\n");
+						printf ("1 OK\n");
 					}
 					else {
-						printf ("Failed\n");
+						printf ("0 Failed\n");
 					}
 				}
 				else {
 				printf ("\nselect loop error\n");
 				}
-				tokstr = strtok (NULL, "\r\n");
+				//tokstr = strtok (NULL, "\r\n");
 				printf ("tokstr: %s\n", tokstr);
 				headercounter++;
 			}
@@ -294,27 +294,27 @@ int main() {
 			fflush(stdout);
 		}
 		else if (userInput == '1') {
-			printf ("\nDumping ROM to %s.gb ... ", gametitle);
+			printf ("\nDumping ROM to %s.gb ... \n", gametitle);
 			strncpy(filename, gametitle, 20);
 			strcat(filename, ".gb");
-			write_to_file(filename, "READROM\n", 32);
+			write_to_file(filename, "READROM", 32);
 			printf ("\nFinished\n");
 		}
 		else if (userInput == '2') {
-			printf ("\nDumping RAM to %s.sav ... ", gametitle);
+			printf ("\nDumping RAM to %s.sav ... \n", gametitle);
 			strncpy(filename, gametitle, 20); //why 20?
 			strcat(filename, ".sav");
-			write_to_file(filename, "READRAM\n", 1);
+			write_to_file(filename, "READRAM", 1);
 			printf ("\nFinished\n");
 		}
 		else if (userInput == '3') {
-			printf ("\nGoing to write to RAM from %s.sav ...", gametitle);
-			printf ("\n*** This will erase the save game from your Gameboy Cartridge ***");
-			printf ("\nPress y to continue or any other key to abort.");
-			printf ("\n>");
+			printf ("\nGoing to write to RAM from %s.sav ...\n", gametitle);
+			printf ("*** This will erase the save game from your Gameboy Cartridge ***\n");
+			printf ("Press y to continue or any other key to abort.\n");
+			printf ("> ");
 			char userInputConfirm = read_one_letter();
 			if (userInputConfirm == 'y') {
-				printf ("\nWriting to RAM from %s.sav ... ", gametitle);
+				printf ("\nWriting to RAM from %s.sav ... \n", gametitle);
 				strncpy(filename, gametitle, 30);
 				strcat(filename, ".sav");
 				read_from_file(filename, "WRITERAM\n");
@@ -326,6 +326,8 @@ int main() {
 		}
 		else if (userInput == '4') {
 			RS232_CloseComport(cport_nr);
+			printf("\nCLosing Com connection...\n");
+			printf("\nExiting..\n");
 			return(0);
 		}
 		else {

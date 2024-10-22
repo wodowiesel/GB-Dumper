@@ -3,12 +3,15 @@
 
  Author: WodoWiesel
  github: (https://github.com/wodowiesel/GB-Dumper)
- Last Modified: 14 November 2023
+ Last Modified: 28 June 2024
+ Compativble with PCB v0.83!
  */
 
 #ifndef PINDECLARATIONS_H_
 #define PINDECLARATIONS_H_
-#define HW3 // hardware revision v3.x
+#define HW 3 // hardware revision v3.x nano
+#define FW 4.4
+#define OZ 28.800 //xtal oscilator 28,800 MHz
 /*
 // AVR definitions for Arduino nano! -> check your cocnnections again!
 
@@ -116,13 +119,13 @@ https://deepbluembedded.com/arduino-port-manipulation-registers-example/
 #define gb30Pin_high  PORTB |= (1<<PB6); // /RES Pin3&29
 #define gb30Pin_low   PORTB &= ~(1<<PB6);
 
-#define gb30cPin_high  PORTD |= (1<<PD0); // /CS2(digital)on D0/PD0 Pin1
+#define gb30cPin_high  PORTD |= (1<<PD0); // /CS2(digital) on D0/PD0 Pin1
 #define gb30cPin_low   PORTD &= ~(1<<PD0);
 
 #define gb31Pin_high  PORTC |= (1<<PC1); // AUD_IN analog on A1 PC1 Pin21 (bits 7 & 3 of NR_50 register ) 
 #define gb31Pin_low   PORTC &= ~(1<<PC1);
 
-#define gb31iPin_high  PORTB |= (1<<PD2); // IRQ (digital)  Pin5 INT0 D2 (on MISO Pin15 D12 old)
+#define gb31iPin_high  PORTB |= (1<<PD2); // IRQ (digital) Pin5 INT0 D2 (on MISO Pin15 D12 old)
 #define gb31iPin_low   PORTB &= ~(1<<PD2);
 
 #endif /* PINDECLARATIONS_H_ */

@@ -583,15 +583,15 @@ read_from_file:
 	.ascii "unknown\0"
 	.align 8
 .LC6:
-	.ascii "GBCartRead v1.8 Rev. 1.3 by wodowiessel\0"
+	.ascii "GB-Dumper v1.8 Rev. 1.3.2 by wodowiesel\0"
 	.align 8
 .LC7:
-	.ascii "################################\12\0"
+	.ascii "################################\0"
 	.align 8
 .LC8:
-	.ascii "Opening COM PORT %d at %d baud ...\12\12\0"
+	.ascii "Opening COM PORT %d at %d baud ...\12\0"
 .LC9:
-	.ascii "Can not open com port\0"
+	.ascii "Can not open COM port\0"
 	.align 8
 .LC10:
 	.ascii "\12Select an option below\12"
@@ -601,158 +601,160 @@ read_from_file:
 	.ascii "3. Write RAM\12"
 	.ascii "4. Exit\0"
 .LC11:
-	.ascii "HEADER\12\0"
+	.ascii "> \0"
 .LC12:
+	.ascii "HEADER\0"
+.LC13:
 	.ascii "\15\12\0"
 	.align 8
-.LC13:
-	.ascii "tokstr: NULL error, no title found, using default: unknown\0"
 .LC14:
-	.ascii "\12Game title: %s\12\0"
+	.ascii "\12tokstr: NULL error, no title found, using default: unknown\0"
 .LC15:
-	.ascii "MBC type: \0"
+	.ascii "\12Game title: %s\12\0"
 .LC16:
-	.ascii "ROM ONLY\0"
+	.ascii "MBC type: \0"
 .LC17:
-	.ascii "MBC1\0"
+	.ascii "ROM ONLY\0"
 .LC18:
-	.ascii "MBC1+RAM\0"
+	.ascii "MBC1\0"
 .LC19:
-	.ascii "MBC1+RAM+BATTERY\0"
+	.ascii "MBC1+RAM\0"
 .LC20:
-	.ascii "MBC2\0"
+	.ascii "MBC1+RAM+BATTERY\0"
 .LC21:
-	.ascii "MBC2+BATTERY\0"
+	.ascii "MBC2\0"
 .LC22:
-	.ascii "ROM+RAM\0"
+	.ascii "MBC2+BATTERY\0"
 .LC23:
-	.ascii "MMM01\0"
+	.ascii "ROM+RAM\0"
 .LC24:
-	.ascii "MMM01+RAM\0"
+	.ascii "MMM01\0"
 .LC25:
-	.ascii "MMM01+RAM+BATTERY\0"
+	.ascii "MMM01+RAM\0"
 .LC26:
-	.ascii "MBC3+TIMER+BATTERY\0"
+	.ascii "MMM01+RAM+BATTERY\0"
 .LC27:
-	.ascii "MBC3+TIMER+RAM+BATTERY\0"
+	.ascii "MBC3+TIMER+BATTERY\0"
 .LC28:
-	.ascii "MBC3\0"
+	.ascii "MBC3+TIMER+RAM+BATTERY\0"
 .LC29:
-	.ascii "MBC3+RAM\0"
+	.ascii "MBC3\0"
 .LC30:
-	.ascii "MBC3+RAM+BATTERY\0"
+	.ascii "MBC3+RAM\0"
 .LC31:
-	.ascii "MBC4\0"
+	.ascii "MBC3+RAM+BATTERY\0"
 .LC32:
-	.ascii "MBC4+RAM\0"
+	.ascii "MBC4\0"
 .LC33:
-	.ascii "MBC4+RAM+BATTERY\0"
+	.ascii "MBC4+RAM\0"
 .LC34:
-	.ascii "MBC5\0"
+	.ascii "MBC4+RAM+BATTERY\0"
 .LC35:
-	.ascii "MBC5+RAM\0"
+	.ascii "MBC5\0"
 .LC36:
-	.ascii "MBC5+RAM+BATTERY\0"
+	.ascii "MBC5+RAM\0"
 .LC37:
-	.ascii "MBC5+RUMBLE\0"
+	.ascii "MBC5+RAM+BATTERY\0"
 .LC38:
-	.ascii "MBC5+RUMBLE+RAM\0"
+	.ascii "MBC5+RUMBLE\0"
 .LC39:
-	.ascii "MBC5+RUMBLE+RAM+BATTERY\0"
+	.ascii "MBC5+RUMBLE+RAM\0"
 .LC40:
-	.ascii "Gameboy-Camera\0"
+	.ascii "MBC5+RUMBLE+RAM+BATTERY\0"
 .LC41:
-	.ascii "Not found or unknown\0"
+	.ascii "Gameboy-Camera\0"
 .LC42:
-	.ascii "ROM size: \0"
+	.ascii "Not found or unknown\0"
 .LC43:
-	.ascii "32 KByte (no ROM banking)\0"
+	.ascii "ROM size: \0"
 .LC44:
-	.ascii "64 KByte (4 banks)\0"
+	.ascii "32 KByte (no ROM banking)\0"
 .LC45:
-	.ascii "128 KByte (8 banks)\0"
+	.ascii "64 KByte (4 banks)\0"
 .LC46:
-	.ascii "256 KByte (16 banks)\0"
+	.ascii "128 KByte (8 banks)\0"
 .LC47:
-	.ascii "512 KByte (32 banks)\0"
+	.ascii "256 KByte (16 banks)\0"
 .LC48:
-	.ascii "1 MByte (63 banks)\0"
+	.ascii "512 KByte (32 banks)\0"
 .LC49:
-	.ascii "1 MByte (64 banks)\0"
+	.ascii "1 MByte (63 banks)\0"
 .LC50:
-	.ascii "2 MByte (125 banks)\0"
+	.ascii "1 MByte (64 banks)\0"
 .LC51:
-	.ascii "2 MByte (128 banks)\0"
+	.ascii "2 MByte (125 banks)\0"
 .LC52:
-	.ascii "4 MByte (256 banks)\0"
+	.ascii "2 MByte (128 banks)\0"
 .LC53:
-	.ascii "1.1 MByte (72 banks)\0"
+	.ascii "4 MByte (256 banks)\0"
 .LC54:
-	.ascii "1.2 MByte (80 banks)\0"
+	.ascii "1.1 MByte (72 banks)\0"
 .LC55:
-	.ascii "1.5 MByte (96 banks)\0"
+	.ascii "1.2 MByte (80 banks)\0"
 .LC56:
-	.ascii "Not found\0"
+	.ascii "1.5 MByte (96 banks)\0"
 .LC57:
-	.ascii "RAM size: \0"
+	.ascii "Not found\0"
 .LC58:
-	.ascii "512 bytes (nibbles)\0"
+	.ascii "\12RAM size: \0"
 .LC59:
-	.ascii "None\0"
+	.ascii "512 bytes (nibbles)\0"
 .LC60:
-	.ascii "2 KBytes\0"
+	.ascii "0 None\0"
 .LC61:
+	.ascii "2 KBytes\0"
+.LC62:
 	.ascii "8 KBytes\0"
 	.align 8
-.LC62:
+.LC63:
 	.ascii "32 KBytes (4 banks of 8 Kbytes)\0"
 	.align 8
-.LC63:
-	.ascii "128 KBytes (16 banks of 8 Kbytes)\0"
 .LC64:
-	.ascii "Logo check: \0"
+	.ascii "128 KBytes (16 banks of 8 Kbytes)\0"
 .LC65:
-	.ascii "OK\0"
+	.ascii "Logo check: \0"
 .LC66:
-	.ascii "Failed\0"
+	.ascii "1 OK\0"
 .LC67:
-	.ascii "\12select loop error\0"
+	.ascii "0 Failed\0"
 .LC68:
-	.ascii "tokstr: %s\12\0"
+	.ascii "\12select loop error\0"
 .LC69:
-	.ascii "\12Flushed\0"
+	.ascii "tokstr: %s\12\0"
 .LC70:
-	.ascii "\12Dumping ROM to %s.gb ... \0"
+	.ascii "\12Dumping ROM to %s.gb ... \12\0"
 .LC71:
-	.ascii "READROM\12\0"
+	.ascii "READROM\0"
 .LC72:
 	.ascii "\12Finished\0"
 .LC73:
-	.ascii "\12Dumping RAM to %s.sav ... \0"
+	.ascii "\12Dumping RAM to %s.sav ... \12\0"
 .LC74:
-	.ascii "READRAM\12\0"
+	.ascii "READRAM\0"
 	.align 8
 .LC75:
-	.ascii "\12Going to write to RAM from %s.sav ...\0"
+	.ascii "\12Going to write to RAM from %s.sav ...\12\0"
 	.align 8
 .LC76:
-	.ascii "\12*** This will erase the save game from your Gameboy Cartridge ***\0"
+	.ascii "*** This will erase the save game from your Gameboy Cartridge ***\0"
 	.align 8
 .LC77:
-	.ascii "\12Press y to continue or any other key to abort.\0"
+	.ascii "Press y to continue or any other key to abort.\0"
+	.align 8
 .LC78:
-	.ascii "\12>\0"
-	.align 8
+	.ascii "\12Writing to RAM from %s.sav ... \12\0"
 .LC79:
-	.ascii "\12Writing to RAM from %s.sav ... \0"
-.LC80:
 	.ascii "WRITERAM\12\0"
-.LC81:
+.LC80:
 	.ascii "\12Aborted\0"
-	.align 8
+.LC81:
+	.ascii "\12CLosing Com connection...\0"
 .LC82:
-	.ascii "\12Option not recognised, please try again.\0"
+	.ascii "\12Exiting..\0"
+	.align 8
 .LC83:
+	.ascii "\12Option not recognised, please try again.\0"
+.LC84:
 	.ascii "\12Tasks Finished\0"
 	.text
 	.globl	main
@@ -823,180 +825,175 @@ main:
 .LVL74:
 	.loc 1 145 3 view .LVU150
 	.loc 1 145 9 is_stmt 0 view .LVU151
-	jmp	.L98
+	jmp	.L97
 .L23:
 	.loc 1 150 2 is_stmt 1 view .LVU152
 	movl	$1000000, %ecx
 	call	usleep
 .LVL75:
 	.loc 1 152 2 view .LVU153
-	.loc 1 152 2 is_stmt 0 view .LVU154
-	leaq	.L81(%rip), %rsi
-	leaq	.L65(%rip), %rdi
+	.loc 1 154 3 is_stmt 0 view .LVU154
+	leaq	.LC10(%rip), %rsi
+	.loc 1 155 3 view .LVU155
+	leaq	.LC11(%rip), %rbx
+	.loc 1 334 4 view .LVU156
+	leaq	.LC83(%rip), %rdi
 	jmp	.L96
 .LVL76:
-.L109:
+.L107:
 .LBB2:
-	.loc 1 158 4 is_stmt 1 view .LVU155
-	.loc 1 158 18 is_stmt 0 view .LVU156
+	.loc 1 158 4 is_stmt 1 view .LVU157
+	.loc 1 158 18 is_stmt 0 view .LVU158
 	movl	$0, headercounter(%rip)
-	.loc 1 159 4 is_stmt 1 view .LVU157
-	leaq	.LC11(%rip), %rdx
+	.loc 1 159 4 is_stmt 1 view .LVU159
+	leaq	.LC12(%rip), %rdx
 	movl	cport_nr(%rip), %ecx
 	call	RS232_cputs
 .LVL77:
-	.loc 1 160 4 view .LVU158
-	.loc 1 161 4 view .LVU159
-	.loc 1 162 4 view .LVU160
-	.loc 1 159 4 is_stmt 0 view .LVU161
+	.loc 1 160 4 view .LVU160
+	.loc 1 161 4 view .LVU161
+	.loc 1 162 4 view .LVU162
+	.loc 1 159 4 is_stmt 0 view .LVU163
 	movl	$50, %ebx
-	.loc 1 164 9 view .LVU162
-	leaq	32(%rsp), %rbp
+	.loc 1 164 9 view .LVU164
+	leaq	32(%rsp), %rsi
 .LVL78:
 .L28:
-	.loc 1 163 4 is_stmt 1 view .LVU163
-	.loc 1 164 5 view .LVU164
-	.loc 1 164 9 is_stmt 0 view .LVU165
+	.loc 1 163 4 is_stmt 1 view .LVU165
+	.loc 1 164 5 view .LVU166
+	.loc 1 164 9 is_stmt 0 view .LVU167
 	movl	$4095, %r8d
-	movq	%rbp, %rdx
+	movq	%rsi, %rdx
 	movl	cport_nr(%rip), %ecx
 	call	RS232_PollComport
 .LVL79:
-	.loc 1 165 5 is_stmt 1 view .LVU166
-	.loc 1 165 8 is_stmt 0 view .LVU167
+	.loc 1 165 5 is_stmt 1 view .LVU168
+	.loc 1 165 8 is_stmt 0 view .LVU169
 	testl	%eax, %eax
-	jg	.L99
-	.loc 1 171 6 is_stmt 1 view .LVU168
+	jg	.L98
+	.loc 1 171 6 is_stmt 1 view .LVU170
 .LVL80:
-	.loc 1 172 6 view .LVU169
-	.loc 1 172 9 is_stmt 0 view .LVU170
+	.loc 1 172 6 view .LVU171
+	.loc 1 172 9 is_stmt 0 view .LVU172
 	subl	$1, %ebx
 .LVL81:
-	.loc 1 172 9 view .LVU171
+	.loc 1 172 9 view .LVU173
 	je	.L27
 .LVL82:
-	.loc 1 178 6 is_stmt 1 view .LVU172
+	.loc 1 178 6 is_stmt 1 view .LVU174
 	movl	$50000, %ecx
 	call	usleep
 .LVL83:
-	.loc 1 163 10 view .LVU173
-	.loc 1 164 7 is_stmt 0 view .LVU174
+	.loc 1 163 10 view .LVU175
+	.loc 1 164 7 is_stmt 0 view .LVU176
 	jmp	.L28
 .LVL84:
-.L99:
-	.loc 1 166 6 is_stmt 1 view .LVU175
-	.loc 1 166 16 is_stmt 0 view .LVU176
+.L98:
+	.loc 1 166 6 is_stmt 1 view .LVU177
+	.loc 1 166 16 is_stmt 0 view .LVU178
 	cltq
-	.loc 1 166 16 view .LVU177
+	.loc 1 166 16 view .LVU179
 	movb	$0, 32(%rsp,%rax)
-	.loc 1 167 6 is_stmt 1 view .LVU178
-	.loc 1 167 14 is_stmt 0 view .LVU179
+	.loc 1 167 6 is_stmt 1 view .LVU180
+	.loc 1 167 14 is_stmt 0 view .LVU181
 	call	__getreent
 .LVL85:
-	.loc 1 167 6 view .LVU180
+	.loc 1 167 6 view .LVU182
 	movq	16(%rax), %rcx
 	call	fflush
 .LVL86:
-	.loc 1 168 6 is_stmt 1 view .LVU181
+	.loc 1 168 6 is_stmt 1 view .LVU183
 .L27:
-	.loc 1 182 4 view .LVU182
-	.loc 1 182 19 is_stmt 0 view .LVU183
+	.loc 1 182 4 view .LVU184
+	.loc 1 182 19 is_stmt 0 view .LVU185
 	leaq	32(%rsp), %rcx
-	leaq	.LC12(%rip), %rdx
+	leaq	.LC13(%rip), %rdx
 	call	strtok
 .LVL87:
 	movq	%rax, %rbx
 .LVL88:
-	.loc 1 183 5 is_stmt 1 view .LVU184
-	.loc 1 183 8 is_stmt 0 view .LVU185
+	.loc 1 183 5 is_stmt 1 view .LVU186
+	.loc 1 183 8 is_stmt 0 view .LVU187
 	testq	%rax, %rax
-	je	.L100
+	je	.L99
 .LVL89:
 .L29:
-	.loc 1 187 10 is_stmt 1 view .LVU186
-	leaq	.L36(%rip), %rbp
+	.loc 1 187 10 is_stmt 1 view .LVU188
+	leaq	.L81(%rip), %rdi
+	leaq	.L65(%rip), %rbp
+	leaq	.L36(%rip), %rsi
 	jmp	.L89
 .LVL90:
-.L100:
-	.loc 1 184 5 view .LVU187
-	leaq	.LC13(%rip), %rcx
+.L99:
+	.loc 1 184 5 view .LVU189
+	leaq	.LC14(%rip), %rcx
 	call	puts
 .LVL91:
-	.loc 1 185 5 view .LVU188
-	.loc 1 185 12 is_stmt 0 view .LVU189
+	.loc 1 185 5 view .LVU190
+	.loc 1 185 12 is_stmt 0 view .LVU191
 	leaq	.LC5(%rip), %rbx
 	jmp	.L29
 .LVL92:
-.L102:
-	.loc 1 189 6 is_stmt 1 view .LVU190
+.L100:
+	.loc 1 189 6 is_stmt 1 view .LVU192
 	movq	%rbx, %rdx
-	leaq	.LC14(%rip), %rcx
+	leaq	.LC15(%rip), %rcx
 	call	printf
 .LVL93:
-	.loc 1 190 6 view .LVU191
+	.loc 1 190 6 view .LVU193
 	movl	$30, %r8d
 	movq	%rbx, %rdx
 	leaq	gametitle(%rip), %rcx
 	call	strncpy
 .LVL94:
 .L31:
-	.loc 1 289 5 view .LVU192
-	.loc 1 289 14 is_stmt 0 view .LVU193
-	leaq	.LC12(%rip), %rdx
-	movl	$0, %ecx
-	call	strtok
-.LVL95:
-	movq	%rax, %rbx
-.LVL96:
-	.loc 1 290 5 is_stmt 1 view .LVU194
-	movq	%rax, %rdx
-	leaq	.LC68(%rip), %rcx
+	.loc 1 290 5 view .LVU194
+	movq	%rbx, %rdx
+	leaq	.LC69(%rip), %rcx
 	call	printf
-.LVL97:
+.LVL95:
 	.loc 1 291 5 view .LVU195
 	.loc 1 291 18 is_stmt 0 view .LVU196
 	addl	$1, headercounter(%rip)
 	.loc 1 187 10 is_stmt 1 view .LVU197
-	testq	%rbx, %rbx
-	je	.L101
 .L89:
 	.loc 1 188 5 view .LVU198
 	.loc 1 188 23 is_stmt 0 view .LVU199
 	movl	headercounter(%rip), %eax
 	.loc 1 188 8 view .LVU200
 	testl	%eax, %eax
-	je	.L102
+	je	.L100
 	.loc 1 192 10 is_stmt 1 view .LVU201
 	.loc 1 192 13 is_stmt 0 view .LVU202
 	cmpl	$1, %eax
-	je	.L103
+	je	.L101
 	.loc 1 225 10 is_stmt 1 view .LVU203
 	.loc 1 225 13 is_stmt 0 view .LVU204
 	cmpl	$2, %eax
-	je	.L104
+	je	.L102
 	.loc 1 257 10 is_stmt 1 view .LVU205
 	.loc 1 257 13 is_stmt 0 view .LVU206
 	cmpl	$3, %eax
-	je	.L105
+	je	.L103
 	.loc 1 276 10 is_stmt 1 view .LVU207
 	.loc 1 276 13 is_stmt 0 view .LVU208
 	cmpl	$4, %eax
-	je	.L106
+	je	.L104
 	.loc 1 287 5 is_stmt 1 view .LVU209
-	leaq	.LC67(%rip), %rcx
+	leaq	.LC68(%rip), %rcx
 	call	puts
-.LVL98:
+.LVL96:
 	jmp	.L31
-.L103:
+.L101:
 	.loc 1 193 6 view .LVU210
-	leaq	.LC15(%rip), %rcx
+	leaq	.LC16(%rip), %rcx
 	call	printf
-.LVL99:
+.LVL97:
 	.loc 1 194 6 view .LVU211
 	.loc 1 194 22 is_stmt 0 view .LVU212
 	movq	%rbx, %rcx
 	call	atoi
-.LVL100:
+.LVL98:
 	.loc 1 194 20 view .LVU213
 	movl	%eax, cartridgeType(%rip)
 	.loc 1 195 6 is_stmt 1 view .LVU214
@@ -1007,8 +1004,8 @@ main:
 	cmpl	$30, %eax
 	ja	.L34
 	movl	%eax, %eax
-	movslq	0(%rbp,%rax,4), %rax
-	addq	%rbp, %rax
+	movslq	(%rsi,%rax,4), %rax
+	addq	%rsi, %rax
 	jmp	*%rax
 	.section .rdata,"dr"
 	.align 4
@@ -1049,236 +1046,236 @@ main:
 	cmpl	$252, %eax
 	jne	.L34
 	.loc 1 221 17 view .LVU215
-	leaq	.LC40(%rip), %rcx
+	leaq	.LC41(%rip), %rcx
 	call	puts
-.LVL101:
+.LVL99:
 	.loc 1 221 45 view .LVU216
 	.loc 1 221 7 is_stmt 0 view .LVU217
 	jmp	.L31
 .L60:
 	.loc 1 196 15 is_stmt 1 view .LVU218
-	leaq	.LC16(%rip), %rcx
+	leaq	.LC17(%rip), %rcx
 	call	puts
-.LVL102:
+.LVL100:
 	.loc 1 196 38 view .LVU219
 	.loc 1 196 7 is_stmt 0 view .LVU220
 	jmp	.L31
 .L59:
 	.loc 1 197 15 is_stmt 1 view .LVU221
-	leaq	.LC17(%rip), %rcx
+	leaq	.LC18(%rip), %rcx
 	call	puts
-.LVL103:
+.LVL101:
 	.loc 1 197 34 view .LVU222
 	.loc 1 197 7 is_stmt 0 view .LVU223
 	jmp	.L31
 .L58:
 	.loc 1 198 15 is_stmt 1 view .LVU224
-	leaq	.LC18(%rip), %rcx
+	leaq	.LC19(%rip), %rcx
 	call	puts
-.LVL104:
+.LVL102:
 	.loc 1 198 38 view .LVU225
 	.loc 1 198 7 is_stmt 0 view .LVU226
 	jmp	.L31
 .L57:
 	.loc 1 199 15 is_stmt 1 view .LVU227
-	leaq	.LC19(%rip), %rcx
+	leaq	.LC20(%rip), %rcx
 	call	puts
-.LVL105:
+.LVL103:
 	.loc 1 199 46 view .LVU228
 	.loc 1 199 7 is_stmt 0 view .LVU229
 	jmp	.L31
 .L56:
 	.loc 1 200 15 is_stmt 1 view .LVU230
-	leaq	.LC20(%rip), %rcx
+	leaq	.LC21(%rip), %rcx
 	call	puts
-.LVL106:
+.LVL104:
 	.loc 1 200 34 view .LVU231
 	.loc 1 200 7 is_stmt 0 view .LVU232
 	jmp	.L31
 .L55:
 	.loc 1 201 15 is_stmt 1 view .LVU233
-	leaq	.LC21(%rip), %rcx
+	leaq	.LC22(%rip), %rcx
 	call	puts
-.LVL107:
+.LVL105:
 	.loc 1 201 42 view .LVU234
 	.loc 1 201 7 is_stmt 0 view .LVU235
 	jmp	.L31
 .L54:
 	.loc 1 202 15 is_stmt 1 view .LVU236
-	leaq	.LC22(%rip), %rcx
+	leaq	.LC23(%rip), %rcx
 	call	puts
-.LVL108:
+.LVL106:
 	.loc 1 202 37 view .LVU237
 	.loc 1 202 7 is_stmt 0 view .LVU238
 	jmp	.L31
 .L53:
 	.loc 1 203 15 is_stmt 1 view .LVU239
-	leaq	.LC16(%rip), %rcx
+	leaq	.LC17(%rip), %rcx
 	call	puts
-.LVL109:
+.LVL107:
 	.loc 1 203 38 view .LVU240
 	.loc 1 203 7 is_stmt 0 view .LVU241
 	jmp	.L31
 .L52:
 	.loc 1 204 16 is_stmt 1 view .LVU242
-	leaq	.LC23(%rip), %rcx
+	leaq	.LC24(%rip), %rcx
 	call	puts
-.LVL110:
+.LVL108:
 	.loc 1 204 36 view .LVU243
 	.loc 1 204 7 is_stmt 0 view .LVU244
 	jmp	.L31
 .L51:
 	.loc 1 205 16 is_stmt 1 view .LVU245
-	leaq	.LC24(%rip), %rcx
+	leaq	.LC25(%rip), %rcx
 	call	puts
-.LVL111:
+.LVL109:
 	.loc 1 205 40 view .LVU246
 	.loc 1 205 7 is_stmt 0 view .LVU247
 	jmp	.L31
 .L50:
 	.loc 1 206 16 is_stmt 1 view .LVU248
-	leaq	.LC25(%rip), %rcx
+	leaq	.LC26(%rip), %rcx
 	call	puts
-.LVL112:
+.LVL110:
 	.loc 1 206 48 view .LVU249
 	.loc 1 206 7 is_stmt 0 view .LVU250
 	jmp	.L31
 .L49:
 	.loc 1 207 16 is_stmt 1 view .LVU251
-	leaq	.LC26(%rip), %rcx
+	leaq	.LC27(%rip), %rcx
 	call	puts
-.LVL113:
+.LVL111:
 	.loc 1 207 49 view .LVU252
 	.loc 1 207 7 is_stmt 0 view .LVU253
 	jmp	.L31
 .L48:
 	.loc 1 208 16 is_stmt 1 view .LVU254
-	leaq	.LC27(%rip), %rcx
+	leaq	.LC28(%rip), %rcx
 	call	puts
-.LVL114:
+.LVL112:
 	.loc 1 208 53 view .LVU255
 	.loc 1 208 7 is_stmt 0 view .LVU256
 	jmp	.L31
 .L47:
 	.loc 1 209 16 is_stmt 1 view .LVU257
-	leaq	.LC28(%rip), %rcx
+	leaq	.LC29(%rip), %rcx
 	call	puts
-.LVL115:
+.LVL113:
 	.loc 1 209 35 view .LVU258
 	.loc 1 209 7 is_stmt 0 view .LVU259
 	jmp	.L31
 .L46:
 	.loc 1 210 16 is_stmt 1 view .LVU260
-	leaq	.LC29(%rip), %rcx
+	leaq	.LC30(%rip), %rcx
 	call	puts
-.LVL116:
+.LVL114:
 	.loc 1 210 39 view .LVU261
 	.loc 1 210 7 is_stmt 0 view .LVU262
 	jmp	.L31
 .L45:
 	.loc 1 211 16 is_stmt 1 view .LVU263
-	leaq	.LC30(%rip), %rcx
+	leaq	.LC31(%rip), %rcx
 	call	puts
-.LVL117:
+.LVL115:
 	.loc 1 211 47 view .LVU264
 	.loc 1 211 7 is_stmt 0 view .LVU265
 	jmp	.L31
 .L44:
 	.loc 1 212 16 is_stmt 1 view .LVU266
-	leaq	.LC31(%rip), %rcx
+	leaq	.LC32(%rip), %rcx
 	call	puts
-.LVL118:
+.LVL116:
 	.loc 1 212 35 view .LVU267
 	.loc 1 212 7 is_stmt 0 view .LVU268
 	jmp	.L31
 .L43:
 	.loc 1 213 16 is_stmt 1 view .LVU269
-	leaq	.LC32(%rip), %rcx
+	leaq	.LC33(%rip), %rcx
 	call	puts
-.LVL119:
+.LVL117:
 	.loc 1 213 39 view .LVU270
 	.loc 1 213 7 is_stmt 0 view .LVU271
 	jmp	.L31
 .L42:
 	.loc 1 214 16 is_stmt 1 view .LVU272
-	leaq	.LC33(%rip), %rcx
+	leaq	.LC34(%rip), %rcx
 	call	puts
-.LVL120:
+.LVL118:
 	.loc 1 214 47 view .LVU273
 	.loc 1 214 7 is_stmt 0 view .LVU274
 	jmp	.L31
 .L41:
 	.loc 1 215 16 is_stmt 1 view .LVU275
-	leaq	.LC34(%rip), %rcx
+	leaq	.LC35(%rip), %rcx
 	call	puts
-.LVL121:
+.LVL119:
 	.loc 1 215 35 view .LVU276
 	.loc 1 215 7 is_stmt 0 view .LVU277
 	jmp	.L31
 .L40:
 	.loc 1 216 16 is_stmt 1 view .LVU278
-	leaq	.LC35(%rip), %rcx
+	leaq	.LC36(%rip), %rcx
 	call	puts
-.LVL122:
+.LVL120:
 	.loc 1 216 39 view .LVU279
 	.loc 1 216 7 is_stmt 0 view .LVU280
 	jmp	.L31
 .L39:
 	.loc 1 217 16 is_stmt 1 view .LVU281
-	leaq	.LC36(%rip), %rcx
+	leaq	.LC37(%rip), %rcx
 	call	puts
-.LVL123:
+.LVL121:
 	.loc 1 217 47 view .LVU282
 	.loc 1 217 7 is_stmt 0 view .LVU283
 	jmp	.L31
 .L38:
 	.loc 1 218 16 is_stmt 1 view .LVU284
-	leaq	.LC37(%rip), %rcx
+	leaq	.LC38(%rip), %rcx
 	call	puts
-.LVL124:
+.LVL122:
 	.loc 1 218 42 view .LVU285
 	.loc 1 218 7 is_stmt 0 view .LVU286
 	jmp	.L31
 .L37:
 	.loc 1 219 16 is_stmt 1 view .LVU287
-	leaq	.LC38(%rip), %rcx
+	leaq	.LC39(%rip), %rcx
 	call	puts
-.LVL125:
+.LVL123:
 	.loc 1 219 46 view .LVU288
 	.loc 1 219 7 is_stmt 0 view .LVU289
 	jmp	.L31
 .L35:
 	.loc 1 220 16 is_stmt 1 view .LVU290
-	leaq	.LC39(%rip), %rcx
+	leaq	.LC40(%rip), %rcx
 	call	puts
-.LVL126:
+.LVL124:
 	.loc 1 220 54 view .LVU291
 	.loc 1 220 7 is_stmt 0 view .LVU292
 	jmp	.L31
 .L34:
 	.loc 1 222 16 is_stmt 1 view .LVU293
-	leaq	.LC41(%rip), %rcx
-	call	puts
-.LVL127:
-	jmp	.L31
-.L104:
-	.loc 1 226 6 view .LVU294
 	leaq	.LC42(%rip), %rcx
+	call	puts
+.LVL125:
+	jmp	.L31
+.L102:
+	.loc 1 226 6 view .LVU294
+	leaq	.LC43(%rip), %rcx
 	call	printf
-.LVL128:
+.LVL126:
 	.loc 1 227 6 view .LVU295
 	.loc 1 227 16 is_stmt 0 view .LVU296
 	movq	%rbx, %rcx
 	call	atoi
-.LVL129:
+.LVL127:
 	.loc 1 227 14 view .LVU297
 	movl	%eax, romSize(%rip)
 	.loc 1 228 6 is_stmt 1 view .LVU298
 	cmpl	$84, %eax
 	ja	.L63
 	movl	%eax, %eax
-	movslq	(%rdi,%rax,4), %rax
-	addq	%rdi, %rax
+	movslq	0(%rbp,%rax,4), %rax
+	addq	%rbp, %rax
 	jmp	*%rax
 	.section .rdata,"dr"
 	.align 4
@@ -1371,41 +1368,41 @@ main:
 	.text
 .L75:
 	.loc 1 229 15 view .LVU299
-	leaq	.LC43(%rip), %rcx
+	leaq	.LC44(%rip), %rcx
 	call	puts
-.LVL130:
+.LVL128:
 	.loc 1 229 55 view .LVU300
 	.loc 1 229 7 is_stmt 0 view .LVU301
 	jmp	.L31
 .L74:
 	.loc 1 230 15 is_stmt 1 view .LVU302
-	leaq	.LC44(%rip), %rcx
+	leaq	.LC45(%rip), %rcx
 	call	puts
-.LVL131:
+.LVL129:
 	.loc 1 230 48 view .LVU303
 	.loc 1 230 7 is_stmt 0 view .LVU304
 	jmp	.L31
 .L73:
 	.loc 1 231 15 is_stmt 1 view .LVU305
-	leaq	.LC45(%rip), %rcx
+	leaq	.LC46(%rip), %rcx
 	call	puts
-.LVL132:
+.LVL130:
 	.loc 1 231 49 view .LVU306
 	.loc 1 231 7 is_stmt 0 view .LVU307
 	jmp	.L31
 .L72:
 	.loc 1 232 15 is_stmt 1 view .LVU308
-	leaq	.LC46(%rip), %rcx
+	leaq	.LC47(%rip), %rcx
 	call	puts
-.LVL133:
+.LVL131:
 	.loc 1 232 50 view .LVU309
 	.loc 1 232 7 is_stmt 0 view .LVU310
 	jmp	.L31
 .L71:
 	.loc 1 233 15 is_stmt 1 view .LVU311
-	leaq	.LC47(%rip), %rcx
+	leaq	.LC48(%rip), %rcx
 	call	puts
-.LVL134:
+.LVL132:
 	.loc 1 233 50 view .LVU312
 	.loc 1 233 7 is_stmt 0 view .LVU313
 	jmp	.L31
@@ -1418,15 +1415,15 @@ main:
 	cmpl	$2, %eax
 	ja	.L76
 	.loc 1 236 9 is_stmt 1 view .LVU317
-	leaq	.LC48(%rip), %rcx
+	leaq	.LC49(%rip), %rcx
 	call	puts
-.LVL135:
+.LVL133:
 	jmp	.L31
 .L76:
 	.loc 1 239 9 view .LVU318
-	leaq	.LC49(%rip), %rcx
+	leaq	.LC50(%rip), %rcx
 	call	puts
-.LVL136:
+.LVL134:
 	jmp	.L31
 .L69:
 	.loc 1 243 8 view .LVU319
@@ -1437,72 +1434,72 @@ main:
 	cmpl	$2, %eax
 	ja	.L77
 	.loc 1 244 9 is_stmt 1 view .LVU322
-	leaq	.LC50(%rip), %rcx
+	leaq	.LC51(%rip), %rcx
 	call	puts
-.LVL137:
+.LVL135:
 	jmp	.L31
 .L77:
 	.loc 1 247 9 view .LVU323
-	leaq	.LC51(%rip), %rcx
+	leaq	.LC52(%rip), %rcx
 	call	puts
-.LVL138:
+.LVL136:
 	jmp	.L31
 .L68:
 	.loc 1 250 15 view .LVU324
-	leaq	.LC52(%rip), %rcx
+	leaq	.LC53(%rip), %rcx
 	call	puts
-.LVL139:
+.LVL137:
 	.loc 1 250 49 view .LVU325
 	.loc 1 250 7 is_stmt 0 view .LVU326
 	jmp	.L31
 .L67:
 	.loc 1 251 16 is_stmt 1 view .LVU327
-	leaq	.LC53(%rip), %rcx
+	leaq	.LC54(%rip), %rcx
 	call	puts
-.LVL140:
+.LVL138:
 	.loc 1 251 51 view .LVU328
 	.loc 1 251 7 is_stmt 0 view .LVU329
 	jmp	.L31
 .L66:
 	.loc 1 252 16 is_stmt 1 view .LVU330
-	leaq	.LC54(%rip), %rcx
+	leaq	.LC55(%rip), %rcx
 	call	puts
-.LVL141:
+.LVL139:
 	.loc 1 252 51 view .LVU331
 	.loc 1 252 7 is_stmt 0 view .LVU332
 	jmp	.L31
 .L64:
 	.loc 1 253 16 is_stmt 1 view .LVU333
-	leaq	.LC55(%rip), %rcx
+	leaq	.LC56(%rip), %rcx
 	call	puts
-.LVL142:
+.LVL140:
 	.loc 1 253 51 view .LVU334
 	.loc 1 253 7 is_stmt 0 view .LVU335
 	jmp	.L31
 .L63:
 	.loc 1 254 16 is_stmt 1 view .LVU336
-	leaq	.LC56(%rip), %rcx
-	call	puts
-.LVL143:
-	jmp	.L31
-.L105:
-	.loc 1 258 6 view .LVU337
 	leaq	.LC57(%rip), %rcx
+	call	puts
+.LVL141:
+	jmp	.L31
+.L103:
+	.loc 1 258 6 view .LVU337
+	leaq	.LC58(%rip), %rcx
 	call	printf
-.LVL144:
+.LVL142:
 	.loc 1 259 6 view .LVU338
 	.loc 1 259 16 is_stmt 0 view .LVU339
 	movq	%rbx, %rcx
 	call	atoi
-.LVL145:
+.LVL143:
 	.loc 1 259 14 view .LVU340
 	movl	%eax, ramSize(%rip)
 	.loc 1 260 6 is_stmt 1 view .LVU341
 	cmpl	$4, %eax
 	ja	.L79
 	movl	%eax, %eax
-	movslq	(%rsi,%rax,4), %rax
-	addq	%rsi, %rax
+	movslq	(%rdi,%rax,4), %rax
+	addq	%rdi, %rax
 	jmp	*%rax
 	.section .rdata,"dr"
 	.align 4
@@ -1517,278 +1514,273 @@ main:
 	.loc 1 262 8 view .LVU342
 	.loc 1 262 11 is_stmt 0 view .LVU343
 	cmpl	$6, cartridgeType(%rip)
-	je	.L107
+	je	.L105
 	.loc 1 266 9 is_stmt 1 view .LVU344
+	leaq	.LC60(%rip), %rcx
+	call	puts
+.LVL144:
+	jmp	.L31
+.L105:
+	.loc 1 263 9 view .LVU345
 	leaq	.LC59(%rip), %rcx
 	call	puts
-.LVL146:
-	jmp	.L31
-.L107:
-	.loc 1 263 9 view .LVU345
-	leaq	.LC58(%rip), %rcx
-	call	puts
-.LVL147:
+.LVL145:
 	jmp	.L31
 .L84:
 	.loc 1 269 15 view .LVU346
-	leaq	.LC60(%rip), %rcx
+	leaq	.LC61(%rip), %rcx
 	call	puts
-.LVL148:
+.LVL146:
 	.loc 1 269 38 view .LVU347
 	.loc 1 269 7 is_stmt 0 view .LVU348
 	jmp	.L31
 .L83:
 	.loc 1 270 15 is_stmt 1 view .LVU349
-	leaq	.LC61(%rip), %rcx
+	leaq	.LC62(%rip), %rcx
 	call	puts
-.LVL149:
+.LVL147:
 	.loc 1 270 38 view .LVU350
 	.loc 1 270 7 is_stmt 0 view .LVU351
 	jmp	.L31
 .L82:
 	.loc 1 271 15 is_stmt 1 view .LVU352
-	leaq	.LC62(%rip), %rcx
+	leaq	.LC63(%rip), %rcx
 	call	puts
-.LVL150:
+.LVL148:
 	.loc 1 271 61 view .LVU353
 	.loc 1 271 7 is_stmt 0 view .LVU354
 	jmp	.L31
 .L80:
 	.loc 1 272 15 is_stmt 1 view .LVU355
-	leaq	.LC63(%rip), %rcx
+	leaq	.LC64(%rip), %rcx
 	call	puts
-.LVL151:
+.LVL149:
 	.loc 1 272 63 view .LVU356
 	.loc 1 272 7 is_stmt 0 view .LVU357
 	jmp	.L31
 .L79:
 	.loc 1 273 16 is_stmt 1 view .LVU358
-	leaq	.LC56(%rip), %rcx
+	leaq	.LC57(%rip), %rcx
 	call	puts
-.LVL152:
+.LVL150:
 	jmp	.L31
-.L106:
+.L104:
 	.loc 1 277 6 view .LVU359
-	leaq	.LC64(%rip), %rcx
+	leaq	.LC65(%rip), %rcx
 	call	printf
-.LVL153:
+.LVL151:
 	.loc 1 278 6 view .LVU360
 	.loc 1 278 18 is_stmt 0 view .LVU361
 	movq	%rbx, %rcx
 	call	atoi
-.LVL154:
+.LVL152:
 	.loc 1 278 16 view .LVU362
 	movl	%eax, logoCheck(%rip)
 	.loc 1 279 6 is_stmt 1 view .LVU363
 	.loc 1 279 9 is_stmt 0 view .LVU364
 	cmpl	$1, %eax
-	je	.L108
+	je	.L106
 	.loc 1 283 7 is_stmt 1 view .LVU365
+	leaq	.LC67(%rip), %rcx
+	call	puts
+.LVL153:
+	jmp	.L31
+.L106:
+	.loc 1 280 7 view .LVU366
 	leaq	.LC66(%rip), %rcx
 	call	puts
+.LVL154:
+	jmp	.L31
 .LVL155:
-	jmp	.L31
 .L108:
-	.loc 1 280 7 view .LVU366
-	leaq	.LC65(%rip), %rcx
-	call	puts
-.LVL156:
-	jmp	.L31
-.L101:
-	.loc 1 293 4 view .LVU367
-	leaq	.LC69(%rip), %rcx
-	call	puts
-.LVL157:
-	.loc 1 294 4 view .LVU368
-	.loc 1 294 12 is_stmt 0 view .LVU369
-	call	__getreent
-.LVL158:
-	.loc 1 294 4 view .LVU370
-	movq	16(%rax), %rcx
-	call	fflush
-.LVL159:
+	.loc 1 280 7 is_stmt 0 view .LVU367
 .LBE2:
-	jmp	.L90
-.LVL160:
-.L110:
-	.loc 1 297 4 is_stmt 1 view .LVU371
+	.loc 1 297 4 is_stmt 1 view .LVU368
 	leaq	gametitle(%rip), %rdx
 	leaq	.LC70(%rip), %rcx
 	call	printf
-.LVL161:
-	.loc 1 298 4 view .LVU372
+.LVL156:
+	.loc 1 298 4 view .LVU369
 	movl	$20, %r8d
 	leaq	gametitle(%rip), %rdx
 	leaq	filename(%rip), %rcx
 	call	strncpy
-.LVL162:
-	.loc 1 299 4 view .LVU373
+.LVL157:
+	.loc 1 299 4 view .LVU370
 	leaq	filename(%rip), %rcx
 	call	strlen
-.LVL163:
+.LVL158:
 	leaq	filename(%rip), %rcx
 	movl	$6448942, (%rcx,%rax)
-	.loc 1 300 4 view .LVU374
+	.loc 1 300 4 view .LVU371
 	movl	$32, %r8d
 	leaq	.LC71(%rip), %rdx
 	call	write_to_file
-.LVL164:
-	.loc 1 301 4 view .LVU375
+.LVL159:
+	.loc 1 301 4 view .LVU372
 	leaq	.LC72(%rip), %rcx
 	call	puts
-.LVL165:
-.L90:
-	.loc 1 334 2 view .LVU376
-	leaq	.LC83(%rip), %rcx
+.LVL160:
+.L91:
+	.loc 1 336 2 view .LVU373
+	leaq	.LC84(%rip), %rcx
 	call	puts
-.LVL166:
-	.loc 1 153 8 view .LVU377
+.LVL161:
+	.loc 1 153 8 view .LVU374
 .L96:
-	.loc 1 153 2 view .LVU378
-	.loc 1 154 3 view .LVU379
-	leaq	.LC10(%rip), %rcx
+	.loc 1 153 2 view .LVU375
+	.loc 1 154 3 view .LVU376
+	movq	%rsi, %rcx
 	call	puts
-.LVL167:
-	.loc 1 155 3 view .LVU380
-	movl	$62, %ecx
-	call	putchar
-.LVL168:
-	.loc 1 156 3 view .LVU381
-	.loc 1 156 15 is_stmt 0 view .LVU382
+.LVL162:
+	.loc 1 155 3 view .LVU377
+	movq	%rbx, %rcx
+	call	printf
+.LVL163:
+	.loc 1 156 3 view .LVU378
+	.loc 1 156 15 is_stmt 0 view .LVU379
 	call	read_one_letter
-.LVL169:
-	.loc 1 157 3 is_stmt 1 view .LVU383
-	.loc 1 157 6 is_stmt 0 view .LVU384
+.LVL164:
+	.loc 1 157 3 is_stmt 1 view .LVU380
+	.loc 1 157 6 is_stmt 0 view .LVU381
 	cmpb	$48, %al
-	je	.L109
-	.loc 1 296 8 is_stmt 1 view .LVU385
-	.loc 1 296 11 is_stmt 0 view .LVU386
+	je	.L107
+	.loc 1 296 8 is_stmt 1 view .LVU382
+	.loc 1 296 11 is_stmt 0 view .LVU383
 	cmpb	$49, %al
-	je	.L110
-	.loc 1 303 8 is_stmt 1 view .LVU387
-	.loc 1 303 11 is_stmt 0 view .LVU388
+	je	.L108
+	.loc 1 303 8 is_stmt 1 view .LVU384
+	.loc 1 303 11 is_stmt 0 view .LVU385
 	cmpb	$50, %al
-	je	.L111
-	.loc 1 310 8 is_stmt 1 view .LVU389
-	.loc 1 310 11 is_stmt 0 view .LVU390
+	je	.L109
+	.loc 1 310 8 is_stmt 1 view .LVU386
+	.loc 1 310 11 is_stmt 0 view .LVU387
 	cmpb	$51, %al
-	je	.L112
-	.loc 1 327 8 is_stmt 1 view .LVU391
-	.loc 1 327 11 is_stmt 0 view .LVU392
+	je	.L110
+	.loc 1 327 8 is_stmt 1 view .LVU388
+	.loc 1 327 11 is_stmt 0 view .LVU389
 	cmpb	$52, %al
-	je	.L113
-	.loc 1 332 4 is_stmt 1 view .LVU393
-	leaq	.LC82(%rip), %rcx
+	je	.L111
+	.loc 1 334 4 is_stmt 1 view .LVU390
+	movq	%rdi, %rcx
 	call	puts
-.LVL170:
-	.loc 1 332 4 is_stmt 0 view .LVU394
-	jmp	.L90
-.LVL171:
-.L111:
-	.loc 1 304 4 is_stmt 1 view .LVU395
+.LVL165:
+	.loc 1 334 4 is_stmt 0 view .LVU391
+	jmp	.L91
+.LVL166:
+.L109:
+	.loc 1 304 4 is_stmt 1 view .LVU392
 	leaq	gametitle(%rip), %rdx
 	leaq	.LC73(%rip), %rcx
 	call	printf
-.LVL172:
-	.loc 1 305 4 view .LVU396
+.LVL167:
+	.loc 1 305 4 view .LVU393
 	movl	$20, %r8d
 	leaq	gametitle(%rip), %rdx
 	leaq	filename(%rip), %rcx
 	call	strncpy
-.LVL173:
-	.loc 1 306 4 view .LVU397
+.LVL168:
+	.loc 1 306 4 view .LVU394
 	leaq	filename(%rip), %rcx
 	call	strlen
-.LVL174:
+.LVL169:
 	leaq	filename(%rip), %rcx
 	addq	%rcx, %rax
 	movl	$1986097966, (%rax)
 	movb	$0, 4(%rax)
-	.loc 1 307 4 view .LVU398
+	.loc 1 307 4 view .LVU395
 	movl	$1, %r8d
 	leaq	.LC74(%rip), %rdx
 	call	write_to_file
-.LVL175:
-	.loc 1 308 4 view .LVU399
+.LVL170:
+	.loc 1 308 4 view .LVU396
 	leaq	.LC72(%rip), %rcx
 	call	puts
-.LVL176:
-	jmp	.L90
-.LVL177:
-.L112:
+.LVL171:
+	jmp	.L91
+.LVL172:
+.L110:
 .LBB3:
-	.loc 1 311 4 view .LVU400
+	.loc 1 311 4 view .LVU397
 	leaq	gametitle(%rip), %rdx
 	leaq	.LC75(%rip), %rcx
 	call	printf
-.LVL178:
-	.loc 1 312 4 view .LVU401
+.LVL173:
+	.loc 1 312 4 view .LVU398
 	leaq	.LC76(%rip), %rcx
-	call	printf
-.LVL179:
-	.loc 1 313 4 view .LVU402
+	call	puts
+.LVL174:
+	.loc 1 313 4 view .LVU399
 	leaq	.LC77(%rip), %rcx
+	call	puts
+.LVL175:
+	.loc 1 314 4 view .LVU400
+	movq	%rbx, %rcx
 	call	printf
-.LVL180:
-	.loc 1 314 4 view .LVU403
+.LVL176:
+	.loc 1 315 4 view .LVU401
+	.loc 1 315 28 is_stmt 0 view .LVU402
+	call	read_one_letter
+.LVL177:
+	.loc 1 316 4 is_stmt 1 view .LVU403
+	.loc 1 316 7 is_stmt 0 view .LVU404
+	cmpb	$121, %al
+	je	.L112
+	.loc 1 324 5 is_stmt 1 view .LVU405
+	leaq	.LC80(%rip), %rcx
+	call	puts
+.LVL178:
+	.loc 1 324 5 is_stmt 0 view .LVU406
+	jmp	.L91
+.LVL179:
+.L112:
+	.loc 1 317 5 is_stmt 1 view .LVU407
+	leaq	gametitle(%rip), %rdx
 	leaq	.LC78(%rip), %rcx
 	call	printf
-.LVL181:
-	.loc 1 315 4 view .LVU404
-	.loc 1 315 28 is_stmt 0 view .LVU405
-	call	read_one_letter
-.LVL182:
-	.loc 1 316 4 is_stmt 1 view .LVU406
-	.loc 1 316 7 is_stmt 0 view .LVU407
-	cmpb	$121, %al
-	je	.L114
-	.loc 1 324 5 is_stmt 1 view .LVU408
-	leaq	.LC81(%rip), %rcx
-	call	puts
-.LVL183:
-	.loc 1 324 5 is_stmt 0 view .LVU409
-	jmp	.L90
-.LVL184:
-.L114:
-	.loc 1 317 5 is_stmt 1 view .LVU410
-	leaq	gametitle(%rip), %rdx
-	leaq	.LC79(%rip), %rcx
-	call	printf
-.LVL185:
-	.loc 1 318 5 view .LVU411
-	movl	$20, %r8d
+.LVL180:
+	.loc 1 318 5 view .LVU408
+	movl	$30, %r8d
 	leaq	gametitle(%rip), %rdx
 	leaq	filename(%rip), %rcx
 	call	strncpy
-.LVL186:
-	.loc 1 319 5 view .LVU412
+.LVL181:
+	.loc 1 319 5 view .LVU409
 	leaq	filename(%rip), %rcx
 	call	strlen
-.LVL187:
+.LVL182:
 	leaq	filename(%rip), %rcx
 	addq	%rcx, %rax
 	movl	$1986097966, (%rax)
 	movb	$0, 4(%rax)
-	.loc 1 320 5 view .LVU413
-	leaq	.LC80(%rip), %rdx
+	.loc 1 320 5 view .LVU410
+	leaq	.LC79(%rip), %rdx
 	call	read_from_file
-.LVL188:
-	.loc 1 321 5 view .LVU414
+.LVL183:
+	.loc 1 321 5 view .LVU411
 	leaq	.LC72(%rip), %rcx
 	call	puts
-.LVL189:
-	jmp	.L90
-.LVL190:
-.L113:
-	.loc 1 321 5 is_stmt 0 view .LVU415
+.LVL184:
+	jmp	.L91
+.LVL185:
+.L111:
+	.loc 1 321 5 is_stmt 0 view .LVU412
 .LBE3:
-	.loc 1 328 4 is_stmt 1 view .LVU416
+	.loc 1 328 4 is_stmt 1 view .LVU413
 	movl	cport_nr(%rip), %ecx
 	call	RS232_CloseComport
-.LVL191:
-	.loc 1 329 4 view .LVU417
-.L98:
-	.loc 1 338 1 is_stmt 0 view .LVU418
+.LVL186:
+	.loc 1 329 4 view .LVU414
+	leaq	.LC81(%rip), %rcx
+	call	puts
+.LVL187:
+	.loc 1 330 4 view .LVU415
+	leaq	.LC82(%rip), %rcx
+	call	puts
+.LVL188:
+	.loc 1 331 4 view .LVU416
+.L97:
+	.loc 1 340 1 is_stmt 0 view .LVU417
 	movl	$0, %eax
 	addq	$4136, %rsp
 	.cfi_def_cfa_offset 40
@@ -1847,7 +1839,7 @@ firstStart:
 	.globl	bdrate
 	.align 4
 bdrate:
-	.long	9600
+	.long	19200
 	.globl	cport_nr
 	.align 4
 cport_nr:
@@ -1868,7 +1860,7 @@ cport_nr:
 	.file 13 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x25a7
+	.long	0x256b
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -3368,7 +3360,7 @@ cport_nr:
 	.quad	.LFE5691-.LFB5691
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1e56
+	.long	0x1e1a
 	.uleb128 0x27
 	.ascii "userInput\0"
 	.byte	0x1
@@ -3380,13 +3372,13 @@ cport_nr:
 	.uleb128 0x28
 	.quad	.LBB2
 	.quad	.LBE2-.LBB2
-	.long	0x19bf
+	.long	0x195e
 	.uleb128 0x29
 	.ascii "buffer\0"
 	.byte	0x1
 	.byte	0xa0
 	.byte	0x12
-	.long	0x1e56
+	.long	0x1e1a
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -4144
@@ -3416,24 +3408,24 @@ cport_nr:
 	.secrel32	.LVUS19
 	.uleb128 0x2a
 	.quad	.LVL77
-	.long	0x2413
+	.long	0x23d7
 	.long	0x114d
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x9
 	.byte	0x3
-	.quad	.LC11
+	.quad	.LC12
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL79
-	.long	0x241f
+	.long	0x23e3
 	.long	0x116c
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x51
 	.uleb128 0x2
-	.byte	0x76
+	.byte	0x74
 	.sleb128 0
 	.uleb128 0x2b
 	.uleb128 0x1
@@ -3444,7 +3436,7 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL83
-	.long	0x242b
+	.long	0x23ef
 	.long	0x1185
 	.uleb128 0x2b
 	.uleb128 0x1
@@ -3455,13 +3447,13 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2c
 	.quad	.LVL85
-	.long	0x243d
+	.long	0x2401
 	.uleb128 0x2c
 	.quad	.LVL86
-	.long	0x244a
+	.long	0x240e
 	.uleb128 0x2a
 	.quad	.LVL87
-	.long	0x245c
+	.long	0x2420
 	.long	0x11c5
 	.uleb128 0x2b
 	.uleb128 0x1
@@ -3474,29 +3466,29 @@ cport_nr:
 	.byte	0x51
 	.uleb128 0x9
 	.byte	0x3
-	.quad	.LC12
+	.quad	.LC13
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL91
-	.long	0x246e
+	.long	0x2432
 	.long	0x11e4
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x9
 	.byte	0x3
-	.quad	.LC13
+	.quad	.LC14
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL93
-	.long	0x2485
+	.long	0x2449
 	.long	0x1209
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x9
 	.byte	0x3
-	.quad	.LC14
+	.quad	.LC15
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x51
@@ -3506,7 +3498,7 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL94
-	.long	0x2497
+	.long	0x245b
 	.long	0x1233
 	.uleb128 0x2b
 	.uleb128 0x1
@@ -3528,63 +3520,47 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL95
-	.long	0x245c
-	.long	0x1257
+	.long	0x2449
+	.long	0x1258
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
-	.uleb128 0x1
-	.byte	0x30
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC69
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x51
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC12
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL97
-	.long	0x2485
-	.long	0x127c
+	.quad	.LVL96
+	.long	0x2432
+	.long	0x1277
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x9
 	.byte	0x3
 	.quad	.LC68
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL97
+	.long	0x2449
+	.long	0x1296
 	.uleb128 0x2b
 	.uleb128 0x1
-	.byte	0x51
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC16
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL98
-	.long	0x246e
-	.long	0x129b
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC67
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL99
-	.long	0x2485
-	.long	0x12ba
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC15
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL100
-	.long	0x24ab
-	.long	0x12d2
+	.long	0x246f
+	.long	0x12ae
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3593,295 +3569,9 @@ cport_nr:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL101
-	.long	0x246e
-	.long	0x12f1
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC40
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL102
-	.long	0x246e
-	.long	0x1310
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC16
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL103
-	.long	0x246e
-	.long	0x132f
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC17
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL104
-	.long	0x246e
-	.long	0x134e
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC18
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL105
-	.long	0x246e
-	.long	0x136d
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC19
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL106
-	.long	0x246e
-	.long	0x138c
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC20
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL107
-	.long	0x246e
-	.long	0x13ab
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC21
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL108
-	.long	0x246e
-	.long	0x13ca
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC22
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL109
-	.long	0x246e
-	.long	0x13e9
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC16
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL110
-	.long	0x246e
-	.long	0x1408
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC23
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL111
-	.long	0x246e
-	.long	0x1427
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC24
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL112
-	.long	0x246e
-	.long	0x1446
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC25
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL113
-	.long	0x246e
-	.long	0x1465
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC26
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL114
-	.long	0x246e
-	.long	0x1484
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC27
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL115
-	.long	0x246e
-	.long	0x14a3
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC28
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL116
-	.long	0x246e
-	.long	0x14c2
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC29
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL117
-	.long	0x246e
-	.long	0x14e1
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC30
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL118
-	.long	0x246e
-	.long	0x1500
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC31
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL119
-	.long	0x246e
-	.long	0x151f
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC32
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL120
-	.long	0x246e
-	.long	0x153e
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC33
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL121
-	.long	0x246e
-	.long	0x155d
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC34
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL122
-	.long	0x246e
-	.long	0x157c
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC35
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL123
-	.long	0x246e
-	.long	0x159b
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC36
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL124
-	.long	0x246e
-	.long	0x15ba
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC37
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL125
-	.long	0x246e
-	.long	0x15d9
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC38
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL126
-	.long	0x246e
-	.long	0x15f8
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC39
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL127
-	.long	0x246e
-	.long	0x1617
+	.quad	.LVL99
+	.long	0x2432
+	.long	0x12cd
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3890,9 +3580,284 @@ cport_nr:
 	.quad	.LC41
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL128
-	.long	0x2485
-	.long	0x1636
+	.quad	.LVL100
+	.long	0x2432
+	.long	0x12ec
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC17
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL101
+	.long	0x2432
+	.long	0x130b
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC18
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL102
+	.long	0x2432
+	.long	0x132a
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC19
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL103
+	.long	0x2432
+	.long	0x1349
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC20
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL104
+	.long	0x2432
+	.long	0x1368
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC21
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL105
+	.long	0x2432
+	.long	0x1387
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC22
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL106
+	.long	0x2432
+	.long	0x13a6
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC23
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL107
+	.long	0x2432
+	.long	0x13c5
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC17
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL108
+	.long	0x2432
+	.long	0x13e4
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC24
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL109
+	.long	0x2432
+	.long	0x1403
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC25
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL110
+	.long	0x2432
+	.long	0x1422
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC26
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL111
+	.long	0x2432
+	.long	0x1441
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC27
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL112
+	.long	0x2432
+	.long	0x1460
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC28
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL113
+	.long	0x2432
+	.long	0x147f
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC29
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL114
+	.long	0x2432
+	.long	0x149e
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC30
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL115
+	.long	0x2432
+	.long	0x14bd
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC31
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL116
+	.long	0x2432
+	.long	0x14dc
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC32
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL117
+	.long	0x2432
+	.long	0x14fb
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC33
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL118
+	.long	0x2432
+	.long	0x151a
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC34
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL119
+	.long	0x2432
+	.long	0x1539
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC35
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL120
+	.long	0x2432
+	.long	0x1558
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC36
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL121
+	.long	0x2432
+	.long	0x1577
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC37
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL122
+	.long	0x2432
+	.long	0x1596
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC38
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL123
+	.long	0x2432
+	.long	0x15b5
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC39
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL124
+	.long	0x2432
+	.long	0x15d4
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC40
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL125
+	.long	0x2432
+	.long	0x15f3
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3901,20 +3866,9 @@ cport_nr:
 	.quad	.LC42
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL129
-	.long	0x24ab
-	.long	0x164e
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL130
-	.long	0x246e
-	.long	0x166d
+	.quad	.LVL126
+	.long	0x2449
+	.long	0x1612
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3923,9 +3877,20 @@ cport_nr:
 	.quad	.LC43
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL131
-	.long	0x246e
-	.long	0x168c
+	.quad	.LVL127
+	.long	0x246f
+	.long	0x162a
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL128
+	.long	0x2432
+	.long	0x1649
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3934,9 +3899,9 @@ cport_nr:
 	.quad	.LC44
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL132
-	.long	0x246e
-	.long	0x16ab
+	.quad	.LVL129
+	.long	0x2432
+	.long	0x1668
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3945,9 +3910,9 @@ cport_nr:
 	.quad	.LC45
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL133
-	.long	0x246e
-	.long	0x16ca
+	.quad	.LVL130
+	.long	0x2432
+	.long	0x1687
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3956,9 +3921,9 @@ cport_nr:
 	.quad	.LC46
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL134
-	.long	0x246e
-	.long	0x16e9
+	.quad	.LVL131
+	.long	0x2432
+	.long	0x16a6
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3967,9 +3932,9 @@ cport_nr:
 	.quad	.LC47
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL135
-	.long	0x246e
-	.long	0x1708
+	.quad	.LVL132
+	.long	0x2432
+	.long	0x16c5
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3978,9 +3943,9 @@ cport_nr:
 	.quad	.LC48
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL136
-	.long	0x246e
-	.long	0x1727
+	.quad	.LVL133
+	.long	0x2432
+	.long	0x16e4
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -3989,9 +3954,9 @@ cport_nr:
 	.quad	.LC49
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL137
-	.long	0x246e
-	.long	0x1746
+	.quad	.LVL134
+	.long	0x2432
+	.long	0x1703
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4000,9 +3965,9 @@ cport_nr:
 	.quad	.LC50
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL138
-	.long	0x246e
-	.long	0x1765
+	.quad	.LVL135
+	.long	0x2432
+	.long	0x1722
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4011,9 +3976,9 @@ cport_nr:
 	.quad	.LC51
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL139
-	.long	0x246e
-	.long	0x1784
+	.quad	.LVL136
+	.long	0x2432
+	.long	0x1741
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4022,9 +3987,9 @@ cport_nr:
 	.quad	.LC52
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL140
-	.long	0x246e
-	.long	0x17a3
+	.quad	.LVL137
+	.long	0x2432
+	.long	0x1760
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4033,9 +3998,9 @@ cport_nr:
 	.quad	.LC53
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL141
-	.long	0x246e
-	.long	0x17c2
+	.quad	.LVL138
+	.long	0x2432
+	.long	0x177f
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4044,9 +4009,9 @@ cport_nr:
 	.quad	.LC54
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL142
-	.long	0x246e
-	.long	0x17e1
+	.quad	.LVL139
+	.long	0x2432
+	.long	0x179e
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4055,9 +4020,9 @@ cport_nr:
 	.quad	.LC55
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL143
-	.long	0x246e
-	.long	0x1800
+	.quad	.LVL140
+	.long	0x2432
+	.long	0x17bd
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4066,9 +4031,9 @@ cport_nr:
 	.quad	.LC56
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL144
-	.long	0x2485
-	.long	0x181f
+	.quad	.LVL141
+	.long	0x2432
+	.long	0x17dc
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4077,31 +4042,9 @@ cport_nr:
 	.quad	.LC57
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL145
-	.long	0x24ab
-	.long	0x1837
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL146
-	.long	0x246e
-	.long	0x1856
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC59
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL147
-	.long	0x246e
-	.long	0x1875
+	.quad	.LVL142
+	.long	0x2449
+	.long	0x17fb
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4110,75 +4053,9 @@ cport_nr:
 	.quad	.LC58
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL148
-	.long	0x246e
-	.long	0x1894
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC60
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL149
-	.long	0x246e
-	.long	0x18b3
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC61
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL150
-	.long	0x246e
-	.long	0x18d2
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC62
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL151
-	.long	0x246e
-	.long	0x18f1
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC63
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL152
-	.long	0x246e
-	.long	0x1910
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC56
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL153
-	.long	0x2485
-	.long	0x192f
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC64
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL154
-	.long	0x24ab
-	.long	0x1947
+	.quad	.LVL143
+	.long	0x246f
+	.long	0x1813
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4187,20 +4064,86 @@ cport_nr:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL155
-	.long	0x246e
-	.long	0x1966
+	.quad	.LVL144
+	.long	0x2432
+	.long	0x1832
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x9
 	.byte	0x3
-	.quad	.LC66
+	.quad	.LC60
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL156
-	.long	0x246e
-	.long	0x1985
+	.quad	.LVL145
+	.long	0x2432
+	.long	0x1851
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC59
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL146
+	.long	0x2432
+	.long	0x1870
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC61
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL147
+	.long	0x2432
+	.long	0x188f
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC62
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL148
+	.long	0x2432
+	.long	0x18ae
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC63
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL149
+	.long	0x2432
+	.long	0x18cd
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC64
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL150
+	.long	0x2432
+	.long	0x18ec
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC57
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL151
+	.long	0x2449
+	.long	0x190b
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4209,28 +4152,43 @@ cport_nr:
 	.quad	.LC65
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL157
-	.long	0x246e
-	.long	0x19a4
+	.quad	.LVL152
+	.long	0x246f
+	.long	0x1923
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL153
+	.long	0x2432
+	.long	0x1942
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x9
 	.byte	0x3
-	.quad	.LC69
+	.quad	.LC67
 	.byte	0
-	.uleb128 0x2c
-	.quad	.LVL158
-	.long	0x243d
-	.uleb128 0x2c
-	.quad	.LVL159
-	.long	0x244a
+	.uleb128 0x2d
+	.quad	.LVL154
+	.long	0x2432
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC66
+	.byte	0
 	.byte	0
 	.uleb128 0x28
 	.quad	.LBB3
 	.quad	.LBE3-.LBB3
-	.long	0x1b6f
-	.uleb128 0x2d
+	.long	0x1b07
+	.uleb128 0x2e
 	.ascii "userInputConfirm\0"
 	.byte	0x1
 	.word	0x13b
@@ -4239,9 +4197,9 @@ cport_nr:
 	.secrel32	.LLST20
 	.secrel32	.LVUS20
 	.uleb128 0x2a
-	.quad	.LVL178
-	.long	0x2485
-	.long	0x1a22
+	.quad	.LVL173
+	.long	0x2449
+	.long	0x19c1
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4256,9 +4214,9 @@ cport_nr:
 	.quad	gametitle
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL179
-	.long	0x2485
-	.long	0x1a41
+	.quad	.LVL174
+	.long	0x2432
+	.long	0x19e0
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4267,9 +4225,9 @@ cport_nr:
 	.quad	.LC76
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL180
-	.long	0x2485
-	.long	0x1a60
+	.quad	.LVL175
+	.long	0x2432
+	.long	0x19ff
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4278,40 +4236,40 @@ cport_nr:
 	.quad	.LC77
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL181
-	.long	0x2485
-	.long	0x1a7f
+	.quad	.LVL176
+	.long	0x2449
+	.long	0x1a17
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.byte	0
+	.uleb128 0x2c
+	.quad	.LVL177
+	.long	0x2208
+	.uleb128 0x2a
+	.quad	.LVL178
+	.long	0x2432
+	.long	0x1a43
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC80
+	.byte	0
+	.uleb128 0x2a
+	.quad	.LVL180
+	.long	0x2449
+	.long	0x1a6f
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x9
 	.byte	0x3
 	.quad	.LC78
-	.byte	0
-	.uleb128 0x2c
-	.quad	.LVL182
-	.long	0x2244
-	.uleb128 0x2a
-	.quad	.LVL183
-	.long	0x246e
-	.long	0x1aab
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC81
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL185
-	.long	0x2485
-	.long	0x1ad7
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC79
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x51
@@ -4320,9 +4278,9 @@ cport_nr:
 	.quad	gametitle
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL186
-	.long	0x2497
-	.long	0x1b08
+	.quad	.LVL181
+	.long	0x245b
+	.long	0x1aa0
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4339,12 +4297,12 @@ cport_nr:
 	.uleb128 0x1
 	.byte	0x58
 	.uleb128 0x1
-	.byte	0x44
+	.byte	0x4e
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL187
-	.long	0x24b9
-	.long	0x1b27
+	.quad	.LVL182
+	.long	0x247d
+	.long	0x1abf
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4353,9 +4311,9 @@ cport_nr:
 	.quad	filename
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL188
-	.long	0x1e67
-	.long	0x1b53
+	.quad	.LVL183
+	.long	0x1e2b
+	.long	0x1aeb
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4367,11 +4325,11 @@ cport_nr:
 	.byte	0x51
 	.uleb128 0x9
 	.byte	0x3
-	.quad	.LC80
+	.quad	.LC79
 	.byte	0
-	.uleb128 0x2e
-	.quad	.LVL189
-	.long	0x246e
+	.uleb128 0x2d
+	.quad	.LVL184
+	.long	0x2432
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4382,14 +4340,14 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2c
 	.quad	.LVL68
-	.long	0x24d4
+	.long	0x2498
 	.uleb128 0x2c
 	.quad	.LVL69
-	.long	0x22ac
+	.long	0x2270
 	.uleb128 0x2a
 	.quad	.LVL70
-	.long	0x246e
-	.long	0x1ba8
+	.long	0x2432
+	.long	0x1b40
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4399,8 +4357,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL71
-	.long	0x246e
-	.long	0x1bc7
+	.long	0x2432
+	.long	0x1b5f
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4410,8 +4368,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL72
-	.long	0x2485
-	.long	0x1be6
+	.long	0x2449
+	.long	0x1b7e
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4421,11 +4379,11 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2c
 	.quad	.LVL73
-	.long	0x24e3
+	.long	0x24a7
 	.uleb128 0x2a
 	.quad	.LVL74
-	.long	0x246e
-	.long	0x1c12
+	.long	0x2432
+	.long	0x1baa
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4435,8 +4393,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL75
-	.long	0x242b
-	.long	0x1c2d
+	.long	0x23ef
+	.long	0x1bc5
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4445,9 +4403,9 @@ cport_nr:
 	.long	0xf4240
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL161
-	.long	0x2485
-	.long	0x1c59
+	.quad	.LVL156
+	.long	0x2449
+	.long	0x1bf1
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4462,9 +4420,9 @@ cport_nr:
 	.quad	gametitle
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL162
-	.long	0x2497
-	.long	0x1c8a
+	.quad	.LVL157
+	.long	0x245b
+	.long	0x1c22
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4484,9 +4442,9 @@ cport_nr:
 	.byte	0x44
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL163
-	.long	0x24b9
-	.long	0x1ca9
+	.quad	.LVL158
+	.long	0x247d
+	.long	0x1c41
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4495,9 +4453,9 @@ cport_nr:
 	.quad	filename
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL164
-	.long	0x203e
-	.long	0x1cdb
+	.quad	.LVL159
+	.long	0x2002
+	.long	0x1c73
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4518,9 +4476,9 @@ cport_nr:
 	.byte	0x20
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL165
-	.long	0x246e
-	.long	0x1cfa
+	.quad	.LVL160
+	.long	0x2432
+	.long	0x1c92
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4529,56 +4487,56 @@ cport_nr:
 	.quad	.LC72
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL166
-	.long	0x246e
-	.long	0x1d19
+	.quad	.LVL161
+	.long	0x2432
+	.long	0x1cb1
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x9
 	.byte	0x3
-	.quad	.LC83
+	.quad	.LC84
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL167
-	.long	0x246e
-	.long	0x1d38
-	.uleb128 0x2b
-	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC10
-	.byte	0
-	.uleb128 0x2a
-	.quad	.LVL168
-	.long	0x24ef
-	.long	0x1d50
+	.quad	.LVL162
+	.long	0x2432
+	.long	0x1cc9
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x2
-	.byte	0x8
-	.byte	0x3e
+	.byte	0x74
+	.sleb128 0
 	.byte	0
-	.uleb128 0x2c
-	.quad	.LVL169
-	.long	0x2244
 	.uleb128 0x2a
-	.quad	.LVL170
-	.long	0x246e
-	.long	0x1d7c
+	.quad	.LVL163
+	.long	0x2449
+	.long	0x1ce1
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
-	.uleb128 0x9
-	.byte	0x3
-	.quad	.LC82
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.byte	0
+	.uleb128 0x2c
+	.quad	.LVL164
+	.long	0x2208
+	.uleb128 0x2a
+	.quad	.LVL165
+	.long	0x2432
+	.long	0x1d06
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x2
+	.byte	0x75
+	.sleb128 0
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL172
-	.long	0x2485
-	.long	0x1da8
+	.quad	.LVL167
+	.long	0x2449
+	.long	0x1d32
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4593,9 +4551,9 @@ cport_nr:
 	.quad	gametitle
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL173
-	.long	0x2497
-	.long	0x1dd9
+	.quad	.LVL168
+	.long	0x245b
+	.long	0x1d63
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4615,9 +4573,9 @@ cport_nr:
 	.byte	0x44
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL174
-	.long	0x24b9
-	.long	0x1df8
+	.quad	.LVL169
+	.long	0x247d
+	.long	0x1d82
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4626,9 +4584,9 @@ cport_nr:
 	.quad	filename
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL175
-	.long	0x203e
-	.long	0x1e29
+	.quad	.LVL170
+	.long	0x2002
+	.long	0x1db3
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4648,9 +4606,9 @@ cport_nr:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x2a
-	.quad	.LVL176
-	.long	0x246e
-	.long	0x1e48
+	.quad	.LVL171
+	.long	0x2432
+	.long	0x1dd2
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4659,12 +4617,33 @@ cport_nr:
 	.quad	.LC72
 	.byte	0
 	.uleb128 0x2c
-	.quad	.LVL191
-	.long	0x250c
+	.quad	.LVL186
+	.long	0x24b3
+	.uleb128 0x2a
+	.quad	.LVL187
+	.long	0x2432
+	.long	0x1dfe
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC81
+	.byte	0
+	.uleb128 0x2d
+	.quad	.LVL188
+	.long	0x2432
+	.uleb128 0x2b
+	.uleb128 0x1
+	.byte	0x52
+	.uleb128 0x9
+	.byte	0x3
+	.quad	.LC82
+	.byte	0
 	.byte	0
 	.uleb128 0x7
 	.long	0x144
-	.long	0x1e67
+	.long	0x1e2b
 	.uleb128 0x2f
 	.long	0xbe
 	.word	0xfff
@@ -4678,7 +4657,7 @@ cport_nr:
 	.quad	.LFE5690-.LFB5690
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2028
+	.long	0x1fec
 	.uleb128 0x31
 	.secrel32	.LASF1
 	.byte	0x1
@@ -4700,7 +4679,7 @@ cport_nr:
 	.byte	0x1
 	.byte	0x68
 	.byte	0x8
-	.long	0x2028
+	.long	0x1fec
 	.secrel32	.LLST13
 	.secrel32	.LVUS13
 	.uleb128 0x33
@@ -4724,14 +4703,14 @@ cport_nr:
 	.byte	0x1
 	.byte	0x72
 	.byte	0x10
-	.long	0x202e
+	.long	0x1ff2
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -160
 	.uleb128 0x2a
 	.quad	.LVL48
-	.long	0x2518
-	.long	0x1f30
+	.long	0x24bf
+	.long	0x1ef4
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4748,8 +4727,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL50
-	.long	0x2413
-	.long	0x1f48
+	.long	0x23d7
+	.long	0x1f0c
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x51
@@ -4759,8 +4738,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL51
-	.long	0x242b
-	.long	0x1f63
+	.long	0x23ef
+	.long	0x1f27
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4770,14 +4749,14 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2c
 	.quad	.LVL54
-	.long	0x243d
+	.long	0x2401
 	.uleb128 0x2c
 	.quad	.LVL55
-	.long	0x244a
+	.long	0x240e
 	.uleb128 0x2a
 	.quad	.LVL56
-	.long	0x242b
-	.long	0x1f96
+	.long	0x23ef
+	.long	0x1f5a
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4787,8 +4766,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL57
-	.long	0x2528
-	.long	0x1fbf
+	.long	0x24cf
+	.long	0x1f83
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4815,8 +4794,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL58
-	.long	0x2538
-	.long	0x1fdd
+	.long	0x24df
+	.long	0x1fa1
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x51
@@ -4832,8 +4811,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL59
-	.long	0x24ef
-	.long	0x1ff5
+	.long	0x24eb
+	.long	0x1fb9
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4843,8 +4822,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL61
-	.long	0x2485
-	.long	0x2013
+	.long	0x2449
+	.long	0x1fd7
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4858,9 +4837,9 @@ cport_nr:
 	.byte	0x75
 	.sleb128 0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.quad	.LVL63
-	.long	0x2544
+	.long	0x2508
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4874,7 +4853,7 @@ cport_nr:
 	.long	0xc68
 	.uleb128 0x7
 	.long	0x144
-	.long	0x203e
+	.long	0x2002
 	.uleb128 0x8
 	.long	0xbe
 	.byte	0x63
@@ -4888,7 +4867,7 @@ cport_nr:
 	.quad	.LFE5689-.LFB5689
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2244
+	.long	0x2208
 	.uleb128 0x31
 	.secrel32	.LASF1
 	.byte	0x1
@@ -4918,7 +4897,7 @@ cport_nr:
 	.byte	0x1
 	.byte	0x3a
 	.byte	0x8
-	.long	0x2028
+	.long	0x1fec
 	.secrel32	.LLST6
 	.secrel32	.LVUS6
 	.uleb128 0x33
@@ -4942,7 +4921,7 @@ cport_nr:
 	.byte	0x1
 	.byte	0x3e
 	.byte	0x10
-	.long	0x1e56
+	.long	0x1e1a
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -4176
@@ -4964,8 +4943,8 @@ cport_nr:
 	.secrel32	.LVUS10
 	.uleb128 0x2a
 	.quad	.LVL20
-	.long	0x2518
-	.long	0x2146
+	.long	0x24bf
+	.long	0x210a
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -4982,8 +4961,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL22
-	.long	0x2413
-	.long	0x215e
+	.long	0x23d7
+	.long	0x2122
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x51
@@ -4993,8 +4972,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL24
-	.long	0x2556
-	.long	0x218d
+	.long	0x251a
+	.long	0x2151
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5027,8 +5006,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL25
-	.long	0x24ef
-	.long	0x21a5
+	.long	0x24eb
+	.long	0x2169
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5038,14 +5017,14 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2c
 	.quad	.LVL27
-	.long	0x243d
+	.long	0x2401
 	.uleb128 0x2c
 	.quad	.LVL28
-	.long	0x244a
+	.long	0x240e
 	.uleb128 0x2a
 	.quad	.LVL30
-	.long	0x241f
-	.long	0x21de
+	.long	0x23e3
+	.long	0x21a2
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x51
@@ -5061,8 +5040,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL33
-	.long	0x242b
-	.long	0x21f7
+	.long	0x23ef
+	.long	0x21bb
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5072,8 +5051,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL34
-	.long	0x2485
-	.long	0x2217
+	.long	0x2449
+	.long	0x21db
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5091,8 +5070,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL36
-	.long	0x2485
-	.long	0x222f
+	.long	0x2449
+	.long	0x21f3
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5100,9 +5079,9 @@ cport_nr:
 	.byte	0x7f
 	.sleb128 0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.quad	.LVL39
-	.long	0x2544
+	.long	0x2508
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5121,7 +5100,7 @@ cport_nr:
 	.quad	.LFE5688-.LFB5688
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x22ac
+	.long	0x2270
 	.uleb128 0x27
 	.ascii "c\0"
 	.byte	0x1
@@ -5132,13 +5111,13 @@ cport_nr:
 	.secrel32	.LVUS2
 	.uleb128 0x2c
 	.quad	.LVL13
-	.long	0x2568
+	.long	0x252c
 	.uleb128 0x2c
 	.quad	.LVL15
-	.long	0x2568
+	.long	0x252c
 	.uleb128 0x2c
 	.quad	.LVL16
-	.long	0x2568
+	.long	0x252c
 	.byte	0
 	.uleb128 0x30
 	.ascii "read_config\0"
@@ -5149,13 +5128,13 @@ cport_nr:
 	.quad	.LFE5687-.LFB5687
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2413
+	.long	0x23d7
 	.uleb128 0x27
 	.ascii "configfile\0"
 	.byte	0x1
 	.byte	0x1f
 	.byte	0x8
-	.long	0x2028
+	.long	0x1fec
 	.secrel32	.LLST0
 	.secrel32	.LVUS0
 	.uleb128 0x27
@@ -5168,8 +5147,8 @@ cport_nr:
 	.secrel32	.LVUS1
 	.uleb128 0x2a
 	.quad	.LVL0
-	.long	0x2518
-	.long	0x2330
+	.long	0x24bf
+	.long	0x22f4
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5185,8 +5164,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL2
-	.long	0x257c
-	.long	0x2347
+	.long	0x2540
+	.long	0x230b
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5195,8 +5174,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL4
-	.long	0x2528
-	.long	0x236f
+	.long	0x24cf
+	.long	0x2333
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5222,8 +5201,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL5
-	.long	0x24ab
-	.long	0x2387
+	.long	0x246f
+	.long	0x234b
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5233,8 +5212,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL6
-	.long	0x2528
-	.long	0x23af
+	.long	0x24cf
+	.long	0x2373
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5260,8 +5239,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL7
-	.long	0x258e
-	.long	0x23c7
+	.long	0x2552
+	.long	0x238b
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5271,8 +5250,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL8
-	.long	0x2544
-	.long	0x23df
+	.long	0x2508
+	.long	0x23a3
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5282,8 +5261,8 @@ cport_nr:
 	.byte	0
 	.uleb128 0x2a
 	.quad	.LVL9
-	.long	0x259c
-	.long	0x23f7
+	.long	0x2560
+	.long	0x23bb
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5291,9 +5270,9 @@ cport_nr:
 	.byte	0x74
 	.sleb128 0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2d
 	.quad	.LVL12
-	.long	0x246e
+	.long	0x2432
 	.uleb128 0x2b
 	.uleb128 0x1
 	.byte	0x52
@@ -5375,11 +5354,6 @@ cport_nr:
 	.byte	0x9
 	.byte	0x3f
 	.byte	0x5
-	.uleb128 0x38
-	.ascii "putchar\0"
-	.ascii "__builtin_putchar\0"
-	.byte	0xd
-	.byte	0
 	.uleb128 0x35
 	.secrel32	.LASF8
 	.secrel32	.LASF8
@@ -5404,6 +5378,11 @@ cport_nr:
 	.byte	0x9
 	.byte	0x42
 	.byte	0x5
+	.uleb128 0x38
+	.ascii "putchar\0"
+	.ascii "__builtin_putchar\0"
+	.byte	0xd
+	.byte	0
 	.uleb128 0x36
 	.ascii "fclose\0"
 	.ascii "fclose\0"
@@ -6066,6 +6045,15 @@ cport_nr:
 	.byte	0
 	.byte	0
 	.uleb128 0x2d
+	.uleb128 0x4109
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x2e
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -6082,15 +6070,6 @@ cport_nr:
 	.uleb128 0x17
 	.uleb128 0x2137
 	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x2e
-	.uleb128 0x4109
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x2f
@@ -6307,19 +6286,19 @@ cport_nr:
 .Ldebug_loc0:
 .LVUS16:
 	.uleb128 .LVU154
-	.uleb128 .LVU155
-	.uleb128 .LVU155
-	.uleb128 .LVU158
-	.uleb128 .LVU371
-	.uleb128 .LVU372
-	.uleb128 .LVU383
-	.uleb128 .LVU394
-	.uleb128 .LVU395
-	.uleb128 .LVU396
-	.uleb128 .LVU400
-	.uleb128 .LVU401
-	.uleb128 .LVU415
-	.uleb128 .LVU417
+	.uleb128 .LVU157
+	.uleb128 .LVU157
+	.uleb128 .LVU160
+	.uleb128 .LVU367
+	.uleb128 .LVU369
+	.uleb128 .LVU380
+	.uleb128 .LVU391
+	.uleb128 .LVU392
+	.uleb128 .LVU393
+	.uleb128 .LVU397
+	.uleb128 .LVU398
+	.uleb128 .LVU412
+	.uleb128 .LVU414
 .LLST16:
 	.quad	.LVL75-.Ltext0
 	.quad	.LVL76-.Ltext0
@@ -6331,35 +6310,35 @@ cport_nr:
 	.quad	.LVL77-1-.Ltext0
 	.word	0x1
 	.byte	0x50
-	.quad	.LVL160-.Ltext0
-	.quad	.LVL161-1-.Ltext0
+	.quad	.LVL155-.Ltext0
+	.quad	.LVL156-1-.Ltext0
 	.word	0x1
 	.byte	0x50
-	.quad	.LVL169-.Ltext0
-	.quad	.LVL170-1-.Ltext0
+	.quad	.LVL164-.Ltext0
+	.quad	.LVL165-1-.Ltext0
 	.word	0x1
 	.byte	0x50
-	.quad	.LVL171-.Ltext0
-	.quad	.LVL172-1-.Ltext0
+	.quad	.LVL166-.Ltext0
+	.quad	.LVL167-1-.Ltext0
 	.word	0x1
 	.byte	0x50
-	.quad	.LVL177-.Ltext0
-	.quad	.LVL178-1-.Ltext0
+	.quad	.LVL172-.Ltext0
+	.quad	.LVL173-1-.Ltext0
 	.word	0x1
 	.byte	0x50
-	.quad	.LVL190-.Ltext0
-	.quad	.LVL191-1-.Ltext0
+	.quad	.LVL185-.Ltext0
+	.quad	.LVL186-1-.Ltext0
 	.word	0x1
 	.byte	0x50
 	.quad	0
 	.quad	0
 .LVUS17:
-	.uleb128 .LVU160
-	.uleb128 .LVU163
-	.uleb128 .LVU166
-	.uleb128 .LVU173
+	.uleb128 .LVU162
+	.uleb128 .LVU165
+	.uleb128 .LVU168
 	.uleb128 .LVU175
-	.uleb128 .LVU180
+	.uleb128 .LVU177
+	.uleb128 .LVU182
 .LLST17:
 	.quad	.LVL77-.Ltext0
 	.quad	.LVL78-.Ltext0
@@ -6377,18 +6356,18 @@ cport_nr:
 	.quad	0
 	.quad	0
 .LVUS18:
-	.uleb128 .LVU161
 	.uleb128 .LVU163
-	.uleb128 .LVU163
-	.uleb128 .LVU169
-	.uleb128 .LVU169
+	.uleb128 .LVU165
+	.uleb128 .LVU165
 	.uleb128 .LVU171
 	.uleb128 .LVU171
-	.uleb128 .LVU172
-	.uleb128 .LVU172
-	.uleb128 .LVU175
-	.uleb128 .LVU175
-	.uleb128 .LVU182
+	.uleb128 .LVU173
+	.uleb128 .LVU173
+	.uleb128 .LVU174
+	.uleb128 .LVU174
+	.uleb128 .LVU177
+	.uleb128 .LVU177
+	.uleb128 .LVU184
 .LLST18:
 	.quad	.LVL77-.Ltext0
 	.quad	.LVL78-.Ltext0
@@ -6443,22 +6422,18 @@ cport_nr:
 	.quad	0
 	.quad	0
 .LVUS19:
-	.uleb128 .LVU184
 	.uleb128 .LVU186
-	.uleb128 .LVU186
-	.uleb128 .LVU187
-	.uleb128 .LVU187
 	.uleb128 .LVU188
 	.uleb128 .LVU188
 	.uleb128 .LVU189
 	.uleb128 .LVU189
 	.uleb128 .LVU190
 	.uleb128 .LVU190
-	.uleb128 .LVU194
-	.uleb128 .LVU194
-	.uleb128 .LVU195
-	.uleb128 .LVU195
-	.uleb128 .LVU371
+	.uleb128 .LVU191
+	.uleb128 .LVU191
+	.uleb128 .LVU192
+	.uleb128 .LVU192
+	.uleb128 .LVU367
 .LLST19:
 	.quad	.LVL88-.Ltext0
 	.quad	.LVL89-.Ltext0
@@ -6483,31 +6458,23 @@ cport_nr:
 	.quad	.LC5
 	.byte	0x9f
 	.quad	.LVL92-.Ltext0
-	.quad	.LVL96-.Ltext0
-	.word	0x1
-	.byte	0x53
-	.quad	.LVL96-.Ltext0
-	.quad	.LVL97-1-.Ltext0
-	.word	0x1
-	.byte	0x50
-	.quad	.LVL97-1-.Ltext0
-	.quad	.LVL160-.Ltext0
+	.quad	.LVL155-.Ltext0
 	.word	0x1
 	.byte	0x53
 	.quad	0
 	.quad	0
 .LVUS20:
+	.uleb128 .LVU403
 	.uleb128 .LVU406
-	.uleb128 .LVU409
-	.uleb128 .LVU410
-	.uleb128 .LVU411
+	.uleb128 .LVU407
+	.uleb128 .LVU408
 .LLST20:
-	.quad	.LVL182-.Ltext0
-	.quad	.LVL183-1-.Ltext0
+	.quad	.LVL177-.Ltext0
+	.quad	.LVL178-1-.Ltext0
 	.word	0x1
 	.byte	0x50
-	.quad	.LVL184-.Ltext0
-	.quad	.LVL185-1-.Ltext0
+	.quad	.LVL179-.Ltext0
+	.quad	.LVL180-1-.Ltext0
 	.word	0x1
 	.byte	0x50
 	.quad	0
