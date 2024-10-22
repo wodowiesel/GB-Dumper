@@ -121,7 +121,7 @@ while (waitInput == 1):
             print('not found or unknown\n')
 
         romSize = ascii(ser.readline())
-        romSize = romSize[2:(len(romSize)-5)] #int()
+        romSize = int(romSize[2:(len(romSize)-5)])
         print ('ROM type: '+romSize+'\n')
         #sys.stdout.write('ROM size: ')
         print('ROM size: ')
@@ -155,7 +155,7 @@ while (waitInput == 1):
             print('not found or unknown\n')
 
         ramSize = ascii(ser.readline())
-        ramSize = ramSize[2:(len(ramSize)-5)]
+        ramSize = int(ramSize[2:(len(ramSize)-5)])
         print ('RAM type: '+ramSize+'\n')
         #sys.stdout.write('RAM size: ')
         print('RAM size: ')
@@ -177,7 +177,7 @@ while (waitInput == 1):
         #sys.stdout.write('Logo Check: ')
         print('Logo Check: ')
         logoCheck = ascii(ser.readline())
-        logoCheck = logoCheck[2:(len(logoCheck)-5)]
+        logoCheck = int(logoCheck[2:(len(logoCheck)-5)])
         #print (logoCheck)
         if (logoCheck == 1):
             print ('1 OK\n')
