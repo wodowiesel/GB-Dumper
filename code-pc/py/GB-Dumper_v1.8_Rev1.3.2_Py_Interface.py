@@ -12,8 +12,6 @@ import serial
 import atexit
 import signal
 
-#sys.stdout.write('\nGB-Dumperv1.8 Rev1.3.2 by wodowiesel\n')
-#sys.stdout.write('###################################\n')
 print('\nGB-Dumper v1.8 Rev1.3.2 by wodowiesel\n')
 print('###################################\n')
 sys.stdout.flush()
@@ -27,19 +25,18 @@ print('Serial connection on: '+port+' with baudrate', baudrate)
 time.sleep(1)
 waitInput = 1
 userInput = '0'
+gameTitle= ''
 data = bytes(b'')
 
 try:
     ser = serial.Serial(port, baudrate, timeout=1) # /dev/ttyACM0 (old) or ttyS0 (newer via usb) for linux-based systems
 except:
-    print('\nSerial error')
+    print('\nSerial error\n')
     exit()
 
 while (waitInput == 1):
-    #sys.stdout.write('\nSelect an option below\n0. Read Header\n1. Dump ROM\n2. Save RAM\n3. Write RAM\n4. Exit\n')
     print('\nSelect an option below\n0. Read Header\n1. Dump ROM\n2. Save RAM\n3. Write RAM\n4. Exit\n')
-    #sys.stdout.write('>')
-    print('> ')
+    print('>')
     sys.stdout.flush()
     userInput = input()
 
@@ -51,19 +48,21 @@ while (waitInput == 1):
 
         gameTitle = ascii(ser.readline())
         gameTitle = gameTitle[2:(len(gameTitle)-5)]
-       #sys.stdout.write('\ngametitle: ')
-        print('\nGametitle: ')
-        print (gameTitle)
         if (gameTitle != None):
+            print('\nGametitle: ')
             print (gameTitle)
         else:
-            print ('not found or none, using "unknown"\n')
             gameTitle = 'unknown'
+            print ('Gametitle not found or none, using "unknown"\n')
 
         cartridgeType = ascii(ser.readline())
-        cartridgeType = int(cartridgeType[2:(len(cartridgeType)-5)])
-        print ('\nCartridge type: '+cartridgeType+'\n')
-        #sys.stdout.write('MBC type: ')
+        try:
+            cartridgeType = int(cartridgeType[2:(len(cartridgeType)-5)])
+            print ('\nCartridge type: '+cartridgeType+'\n')
+        except ValueError:
+            print ('Cartridge type is None\n')
+            cartridgeType = None
+
         print('MBC type: ')
         if (cartridgeType == 0):
             print ('ROM ONLY\n')
@@ -118,14 +117,19 @@ while (waitInput == 1):
         elif (cartridgeType == 99):
             print ('WISDOM TREE MAPPER\n')
         elif (cartridgeType == 252):
-            print ('Gameboy Camera\n')
+            print ('MBC Gameboy Camera\n')
+        elif (cartridgeType == None):
+            print ('is None\n')
         else:
             print('not found or unknown\n')
 
         romSize = ascii(ser.readline())
-        romSize = int(romSize[2:(len(romSize)-5)])
-        print ('ROM type: '+romSize+'\n')
-        #sys.stdout.write('ROM size: ')
+        try:
+            romSize = int(romSize[2:(len(romSize)-5)])
+            print ('ROM type: '+romSize+'\n')
+        except ValueError:
+            print ('ROM size is None\n')
+            romSize = None
         print('ROM size: ')
         if (romSize == 0):
             print ('32 KByte (no ROM banking)\n')
@@ -157,9 +161,13 @@ while (waitInput == 1):
             print('not found or unknown\n')
 
         ramSize = ascii(ser.readline())
-        ramSize = int(ramSize[2:(len(ramSize)-5)])
-        print ('RAM type: '+ramSize+'\n')
-        #sys.stdout.write('RAM size: ')
+        try:
+            ramSize = int(ramSize[2:(len(ramSize)-5)])
+            print ('RAM type: '+ramSize+'\n')
+        except ValueError:
+            print ('RAM size is None\n')
+            ramSize = None
+        
         print('RAM size: ')
         if (ramSize == 0 and cartridgeType == 6):
             print ('512 bytes (nibbles)\n')
@@ -176,11 +184,14 @@ while (waitInput == 1):
         else:
             print('not found or unknown\n')
 
-        #sys.stdout.write('Logo Check: ')
-        print('Logo Check: ')
         logoCheck = ascii(ser.readline())
-        logoCheck = int(logoCheck[2:(len(logoCheck)-5)])
-        #print (logoCheck)
+        try:
+            logoCheck = int(logoCheck[2:(len(logoCheck)-5)])
+        except ValueError:
+            print ('Logo is None\n')
+            logoCheck = None
+
+        print('Logo Check: ')
         if (logoCheck == 1):
             print ('1 OK\n')
         elif (logoCheck == 0):
@@ -189,7 +200,6 @@ while (waitInput == 1):
             print('not found or unknown\n')
 
     elif (userInput == '1'):
-        #sys.stdout.write('\nDumping ROM to ' + gameTitle + '.gb')
         print('\nDumping ROM (game) to ' + gameTitle + '.gb\n')
         readBytes = 0
         inRead = 1
@@ -205,23 +215,19 @@ while (waitInput == 1):
                 readBytes += 64
                 f.write(line)
             if readBytes % 1024 == 0 and readBytes != 0:
-                #sys.stdout.write('#')
                 print('#')
                 sys.stdout.flush()
             if readBytes % 32768 == 0 and readBytes != 0:
                 Kbytesread = Kbytesread + 1
                 Kbytesprint = Kbytesread * 32
-                #sys.stdout.write('%sK' % Kbytesprint)
                 print('%sK' % Kbytesprint)
                 sys.stdout.flush()
         #maybe put  flush back here?
         f.close()
-        #sys.stdout.write('\nFinished\n')
         print('\nFinished\n')
         sys.stdout.flush()
 
     elif (userInput == '2'):
-       #sys.stdout.write('\nDumping RAM to ' + gameTitle + '.sav\n')
         print('\nDumping RAM (save) to ' + gameTitle + '.sav\n')
         readBytes = 0
         inRead = 1
@@ -237,31 +243,23 @@ while (waitInput == 1):
                 readBytes += 64
                 f.write(line)
             if readBytes % 256 == 0 and readBytes != 0:
-                #sys.stdout.write('#')
                 print('#')
                 sys.stdout.flush()
             if readBytes % 1024 == 0 and readBytes != 0:
                 Kbytesread = Kbytesread + 1
-                #sys.stdout.write('%sK' % Kbytesread)
                 print('%sK' % Kbytesread)
                 sys.stdout.flush()
         f.close()
-        #sys.stdout.write('\nFinished\n')
         print('\nFinished\n')
         sys.stdout.flush()
 
     elif (userInput == '3'):
-        #sys.stdout.write('\nGoing to write to RAM from ' + gameTitle + '.sav\n')
-        #sys.stdout.write('*** This will erase the save game from your Gameboy Cartridge ***\n')
-        #sys.stdout.write('Press y to continue or any other key to abort\n')
-
         print('\nGoing to write to RAM (save) from ' + gameTitle + '.sav\n')
         print('*** This will erase the save game from your Gameboy Cartridge ***\n')
         print('Press y to continue or any other key to abort\n')
         userInput2 = input()
 
         if (userInput2 == 'y'):
-            #sys.stdout.write('\nWriting to RAM from ' + gameTitle + '.sav')
             print('\nWriting to RAM from ' + gameTitle + '.sav\n')
             fileExists = 1
             doExit = 0
@@ -270,7 +268,6 @@ while (waitInput == 1):
             try:
                 f = open(gameTitle+'.sav', 'rb')
             except IOError:
-                #sys.stdout.write('\nNo save file found, aborted\n')
                 print('\nNo save file found, aborted\n')
                 fileExists = 0
             if (fileExists == 1):
@@ -278,12 +275,10 @@ while (waitInput == 1):
                 time.sleep(1); # Wait for Arduino to setup
                 while 1:
                     if printHash % 4 == 0 and printHash != 0: # 256 / 64 = 4
-                        #sys.stdout.write('#')
                         print('#')
                         sys.stdout.flush()
                     if printHash % 16 == 0 and printHash != 0:
                         Kbyteswrite = Kbyteswrite + 1
-                        #sys.stdout.write('%sK' % Kbyteswrite)
                         print('%sK' % Kbyteswrite)
                         sys.stdout.flush()
                     printHash += 1
@@ -295,13 +290,12 @@ while (waitInput == 1):
                     time.sleep (0.005); # Wait 5ms for Arduino to process the 64 bytes
 
             f.close()
-            #sys.stdout.write('\nFinished\n')
             print('\nFinished\n')
             sys.stdout.flush()
 
         else:
-            #sys.stdout.write('\nAborted! binary decode....\n')
-            print('\nAborted! binary decode....\n')
+
+            print('\n n=Aborted! binary decode....\n')
             data += byte
             dc = data.decode()
             print(dc)
@@ -312,11 +306,9 @@ while (waitInput == 1):
 
     else:
         print('\nOption not recognised, please try again\n')
-        #ys.stdout.write('\nOption not recognised, please try again\n')
 
 print('\nSerial closed \n')
 ser.close()
 print('\nExiting.... \n')
 exit()
-
 #EOF
