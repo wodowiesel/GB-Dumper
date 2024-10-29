@@ -4583,7 +4583,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 113.03) (xy 69.85 119.38)
+			(xy 63.5 113.03) (xy 63.5 119.38)
 		)
 		(stroke
 			(width 0)
@@ -5033,7 +5033,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 113.03) (xy 86.36 113.03)
+			(xy 63.5 113.03) (xy 86.36 113.03)
 		)
 		(stroke
 			(width 0)
@@ -6274,7 +6274,7 @@
 		)
 		(uuid "a0afff06-3cd0-4192-8b31-8a0d8de6450e")
 	)
-	(text "VIN(analog A1-5th sound-ch GB)=IRQ(D12 GBA)"
+	(text "VIN/AUD(analog A1-5th sound-ch GB)=IRQ(D12 GBA)"
 		(exclude_from_sim no)
 		(at 229.87 115.57 0)
 		(effects
@@ -6287,7 +6287,7 @@
 	)
 	(text "I2C(RTC/Disp)"
 		(exclude_from_sim no)
-		(at 75.438 120.142 90)
+		(at 70.866 116.332 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6421,7 +6421,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 69.85 119.38 180)
+		(at 63.5 119.38 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6429,7 +6429,7 @@
 		(dnp no)
 		(uuid "0f2504e5-afd9-4fa8-9faa-15c57bb5ed05")
 		(property "Reference" "TP1"
-			(at 69.85 120.904 0)
+			(at 62.484 121.412 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6438,7 +6438,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 68.834 118.872 0)
+			(at 72.644 121.412 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6447,7 +6447,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_2.5x2.5mm_Drill1.2mm"
-			(at 61.976 147.32 90)
+			(at 55.626 147.32 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6456,7 +6456,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 64.77 119.38 0)
+			(at 58.42 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6465,7 +6465,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 69.85 119.38 0)
+			(at 63.5 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6719,6 +6719,115 @@
 			(project "GB-Dumper"
 				(path "/20f6159f-fd4e-4dc1-b76c-f4f6e70e964a"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "SN74HC595_sorted:74HC595_sorted")
+		(at 123.19 62.23 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f522f33-a10b-4b86-ae2d-0cd07ba9a9af")
+		(property "Reference" "U2"
+			(at 132.588 73.406 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SN74HC595_sorted"
+			(at 123.19 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Gameboy_THT:SN74HC595"
+			(at 123.19 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
+			(at 93.98 71.12 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "6b98b7c2-dd49-4b8f-a950-96c3209b6469")
+		)
+		(pin "5"
+			(uuid "b73a3d27-7674-4b0d-82af-c171ec80193b")
+		)
+		(pin "10"
+			(uuid "297712ab-595c-4005-9700-7d672dc9fb9e")
+		)
+		(pin "14"
+			(uuid "6d268ac7-f205-4bae-ab4e-1908d7ee2fcf")
+		)
+		(pin "4"
+			(uuid "20644f77-04d8-42e0-995f-343d7e284cb2")
+		)
+		(pin "15"
+			(uuid "792eccae-f082-4e1b-a528-4f28ab105118")
+		)
+		(pin "16"
+			(uuid "08595cae-25a9-4d9e-b2af-7ce2cf50b218")
+		)
+		(pin "8"
+			(uuid "c819894d-3b1d-475b-8d83-ca21b14f2c04")
+		)
+		(pin "11"
+			(uuid "104ded7a-592e-4cf7-b786-a3fa0f05e2a1")
+		)
+		(pin "2"
+			(uuid "a22d1b13-bf5d-4cbc-9c62-47d95ab05898")
+		)
+		(pin "6"
+			(uuid "d60c1673-c0fd-40da-bb9c-ce220385f331")
+		)
+		(pin "12"
+			(uuid "517d8f1e-ed20-48fc-a80b-e41c64cdb8cc")
+		)
+		(pin "13"
+			(uuid "06262b0d-53c1-44e9-942d-50e3532b53ad")
+		)
+		(pin "3"
+			(uuid "a9a19ab0-3282-49b6-a47c-70557631730f")
+		)
+		(pin "1"
+			(uuid "2b981027-696f-49df-b9e2-759cce76fc80")
+		)
+		(pin "9"
+			(uuid "961b3c4f-7784-4de8-952d-a14356a554a5")
+		)
+		(instances
+			(project "GB-Dumper"
+				(path "/20f6159f-fd4e-4dc1-b76c-f4f6e70e964a"
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -7162,115 +7271,6 @@
 			(project "GB-Dumper"
 				(path "/20f6159f-fd4e-4dc1-b76c-f4f6e70e964a"
 					(reference "#FLG0101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "SN74HC595_sorted:74HC595_sorted")
-		(at 123.19 59.69 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "66eebfd1-5acd-4e68-a459-6174b5a64050")
-		(property "Reference" "U2"
-			(at 113.792 48.514 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SN74HC595_sorted"
-			(at 123.19 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Gameboy_THT:SN74HC595"
-			(at 123.19 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf"
-			(at 152.4 50.8 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 123.19 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "1a687ae7-800a-4ff5-ae3a-6a9762dd0392")
-		)
-		(pin "5"
-			(uuid "384c8e7f-d9d9-4fa5-bed8-fbc424dbc5a1")
-		)
-		(pin "10"
-			(uuid "dc3c887a-8576-49c9-949c-eae8fdf999db")
-		)
-		(pin "14"
-			(uuid "7bc6180e-f8c8-40d3-aa83-67fb275abd7e")
-		)
-		(pin "4"
-			(uuid "c9a04589-d299-45e4-a667-51ed569d3aae")
-		)
-		(pin "15"
-			(uuid "f28a1d72-74c4-41db-8a05-1a764132296d")
-		)
-		(pin "16"
-			(uuid "d63bcf3f-a5ae-4803-ab24-8a0eadfd6db2")
-		)
-		(pin "8"
-			(uuid "46a48300-7ef1-4b2a-bc8b-7f1bf57507f5")
-		)
-		(pin "11"
-			(uuid "f9375808-b8a1-4b09-9f34-4b3d45bcc841")
-		)
-		(pin "2"
-			(uuid "aed7c6a5-459e-4b93-912e-11818896185e")
-		)
-		(pin "6"
-			(uuid "907f32dc-0b83-42cc-82af-dc797f862aed")
-		)
-		(pin "12"
-			(uuid "ef8536b4-b861-41d2-96ca-dd3be37d2309")
-		)
-		(pin "13"
-			(uuid "087e476c-21e8-447d-8ef7-a30eac6f1dfb")
-		)
-		(pin "3"
-			(uuid "a872a22d-e6c6-4995-b858-23e1620f0885")
-		)
-		(pin "1"
-			(uuid "258db849-42d0-4aa1-982f-0b10b3f11b0a")
-		)
-		(pin "9"
-			(uuid "264d4f8a-7077-4366-b430-01968ac2bda8")
-		)
-		(instances
-			(project "GB-Dumper"
-				(path "/20f6159f-fd4e-4dc1-b76c-f4f6e70e964a"
-					(reference "U2")
 					(unit 1)
 				)
 			)
