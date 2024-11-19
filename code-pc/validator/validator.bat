@@ -2,7 +2,7 @@
 @echo off
 cd C:\github\GB-Dumper\code-pc\validator\
 echo ***ROM (game) VALIDATOR***
-set /p gameTitle="Input game title (no spaces) with extention [.gb]:"
+set /p gameTitle="Input game title (no spaces) with extention [.gb]: "
 call xgbfix.exe -v -p -d %gameTitle%
 ::motorgbfix v1.0.0 (part of ASMotor 0.1.0)
 ::https://github.com/asmotor/asmotor/
@@ -18,4 +18,5 @@ call xgbfix.exe -v -p -d %gameTitle%
 ::                                  - ROM type (0x0147)
 ::                                  - ROM size (0x0148)
 ::                                  - Checksums (0x014D-0x014F)
+echo ***done***
 PAUSE
