@@ -42,27 +42,27 @@ Compatibility list:
 
   - GB:
 
-:heavy_check_mark: Reading full header on PC/Serial
+    :heavy_check_mark: Reading full header on PC/Serial
 
-:heavy_check_mark: Dump ROM on PC
+    :heavy_check_mark: Dump ROM on PC
 
-:heavy_check_mark: Dump RAM on PC
+    :heavy_check_mark: Dump RAM on PC
 
-:heavy_check_mark: Write RAM
+    :heavy_check_mark: Write RAM
 
-:white_circle: Dump ROM/RAM on SD
+    :white_circle: Dump ROM/RAM on SD
 
   - GBA:
 
-:white_circle: Reading full header on PC/Serial
+    :white_circle: Reading full header on PC/Serial
 
-:white_circle: Dump ROM on PC
+    :white_circle: Dump ROM on PC
 
-:white_circle: Dump RAM on PC
+    :white_circle: Dump RAM on PC
 
-:white_circle: Write RAM
+    :white_circle: Write RAM
 
-:white_circle: Dump ROM/RAM on SD
+    :white_circle: Dump ROM/RAM on SD
 
 # DISCLAIMERS
 
