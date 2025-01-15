@@ -1,3 +1,4 @@
+
 # GB-Dumper - Gameboy Cartridge Dumper
 
 The GB-Dumper is a **PCB** project for Gameboy cartridge dumps/backups via Arduino __Nano__
@@ -10,17 +11,17 @@ The new configured software and custom PCB is compatible with +5V (mostly USB) A
 
 Compatibility list:
 
-- Gameboys:
+- Gameboys (Revisions):
 
-:heavy_check_mark: Classic/Original (DMG)
+:heavy_check_mark: Classic & Original (DMG0 & DMG)
 
-:heavy_check_mark: Color
+:heavy_check_mark: Color (CGB0 & CGB)
 
-:heavy_check_mark: Pocket/Lite
+:heavy_check_mark: Pocket/Lite (MGB)
 
-:heavy_check_mark: Micro
+:heavy_check_mark: Micro (MGB)
 
-:heavy_check_mark: Advance/SP
+:heavy_check_mark: Advance & SP (AGB0 & AGB)
 
 - Cartridges:
 
@@ -32,8 +33,36 @@ Compatibility list:
 
 :heavy_check_mark: Class D (Advance GBA) -> 3.3V Logic, manual switch
 
+:white_circle: Class X (special)
+
 :heavy_check_mark: compatibility jumpers for pin 30 /RES + /CS2 & pin 31 VIN/AUDIO + IRQ
                   (functions wip!)
+
+- Functions:
+
+* GB:
+
+:heavy_check_mark: Reading full header on PC/Serial
+
+:heavy_check_mark: Dump ROM on PC
+
+:heavy_check_mark: Dump RAM on PC
+
+:heavy_check_mark: Write RAM
+
+:white_circle: Dump ROM/RAM on SD
+
+* GBA:
+
+:white_circle: Reading full header on PC/Serial
+
+:white_circle: Dump ROM on PC
+
+:white_circle: Dump RAM on PC
+
+:white_circle: Write RAM
+
+:white_circle: Dump ROM/RAM on SD
 
 # DISCLAIMERS
 
@@ -172,6 +201,7 @@ Have fun and save the retro world :)
    For further technical infos and datasheets take a good look into the Documentation folder!!
 
 2. GB audio pin (VIN analog) / IRQ (digital) base function is already built-in (wip!), but needs changes for rare games!          :construction:
+
    The /RST and /CS2 pins got own compatibility functions thanks to [joaopauloap](https://github.com/joaopauloap/arduino-gba-dumper).
 
 3. Formatting
@@ -203,6 +233,8 @@ Have fun and save the retro world :)
    or executable [xgbfix.exe](/code-pc/validator/xgbfix.exe).
 
 6. Memory
+
+  A memory IO-map on the standard GB can be found in the docs [here](gb-memory-maps).
 
    The file [WisdomTree](/docs/Wisdom_Tree.txt) contains memory address informations and exceptions.
 
