@@ -40,7 +40,7 @@ Compatibility list:
 
 - Functions:
 
- - GB:
+  - GB:
 
 :heavy_check_mark: Reading full header on PC/Serial
 
@@ -52,7 +52,7 @@ Compatibility list:
 
 :white_circle: Dump ROM/RAM on SD
 
- - GBA:
+  - GBA:
 
 :white_circle: Reading full header on PC/Serial
 
