@@ -234,7 +234,7 @@ Have fun and save the retro world :)
 
 6. Memory
 
-  A memory IO-map on the standard GB can be found in the docs [here](gb-memory-maps).
+  A memory IO-map on the standard GB can be found in the docs [here](/docs/gb-memory-maps.png).
 
    The file [WisdomTree](/docs/Wisdom_Tree.txt) contains memory address informations and exceptions.
 
