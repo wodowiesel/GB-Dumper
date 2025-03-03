@@ -197,18 +197,20 @@ Have fun and save the retro world :)
 ## SPECIALS, CHECKSUMS & MEMORY
 
 1. There are some cartridges which don't quite conform to cartridge header standards or require something out of the ordinary.
-
+   
+   For example the EVERDRIVE cartridges uses .srm instead of the more common .sav format and consumes less power than the EZ-Flash.
+   
    For further technical infos and datasheets take a good look into the Documentation folder!!
 
-2. GB audio pin (VIN analog) / IRQ (digital) base function is already built-in (wip!), but needs changes for rare games!          :construction:
+3. GB audio pin (VIN analog) / IRQ (digital) base function is already built-in (wip!), but needs changes for rare games! :construction:
 
    The /RST and /CS2 pins got own compatibility functions thanks to [joaopauloap](https://github.com/joaopauloap/arduino-gba-dumper).
 
-3. Formatting
+4. Formatting
 
    If you're on Linux or Mac make sure the Windows style line endings (CRLF) don't get removed and write a shell script.
 
-4. CRC/Verification/Validation
+5. CRC/Verification/Validation
 
    This file [GB/C](/docs/gb.txt) stores the ROM names and the CRC32 checksums of the complete ROM and are used only for
 
