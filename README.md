@@ -358,7 +358,9 @@ v1.0 (19 March 2011)
 
  (https://github.com/theBrutzler/ & https://www.twitch.com/theBrutzler/)
 
- The new optimized PCB was designed with free KiCAD software (https://www.kicad.org/)
+ There is a secondary project for the retro brutzelboy-dumper adapter software (https://github.com/wodowiesel/brutzelboy-dumper)
+
+ The new optimized PCB was designed with free KiCAD 8.x software (https://www.kicad.org/)
 
  :heavy_exclamation_mark: The PCB should be produced at a manufacturer
 
