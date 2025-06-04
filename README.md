@@ -37,7 +37,7 @@ Compatibility list:
 
 :heavy_check_mark: Class D (Advance GBA) -> 3.3V Logic, manual switch
 
-:white_circle: Class X (special)
+:heavy_check_mark: Class X (special)
 
 :heavy_check_mark: compatibility jumpers for pin 30 /RES + /CS2 
                    & pin 31 VIN/AUDIO + IRQ (functions wip!)
