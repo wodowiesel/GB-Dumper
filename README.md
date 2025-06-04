@@ -17,11 +17,15 @@ Compatibility list:
 
 :heavy_check_mark: Color (CGB0 & CGB)
 
-:heavy_check_mark: Pocket/Lite (MGB)
+:heavy_check_mark: Pocket & Lite (PGB & LGB)
 
 :heavy_check_mark: Micro (MGB)
 
 :heavy_check_mark: Advance & SP (AGB0 & AGB)
+
+:white_circle: DS Lite (LDS)
+
+[ :heavy_check_mark: BrutzelBoy (BB) custom ]
 
 - Cartridges:
 
@@ -35,8 +39,8 @@ Compatibility list:
 
 :white_circle: Class X (special)
 
-:heavy_check_mark: compatibility jumpers for pin 30 /RES + /CS2 & pin 31 VIN/AUDIO + IRQ
-                  (functions wip!)
+:heavy_check_mark: compatibility jumpers for pin 30 /RES + /CS2 
+                   & pin 31 VIN/AUDIO + IRQ (functions wip!)
 
 - Functions:
 
@@ -48,19 +52,19 @@ Compatibility list:
 
     :heavy_check_mark: Dump RAM on PC
 
-    :heavy_check_mark: Write RAM
+    :heavy_check_mark: Write RAM on Cartridge
 
     :white_circle: Dump ROM/RAM on SD
 
   - GBA:
 
-    :white_circle: Reading full header on PC/Serial
+    :heavy_check_mark: Reading full header on PC/Serial
 
     :white_circle: Dump ROM on PC
 
     :white_circle: Dump RAM on PC
 
-    :white_circle: Write RAM
+    :white_circle: Write RAM on Cartridge
 
     :white_circle: Dump ROM/RAM on SD
 
@@ -358,7 +362,7 @@ v1.0 (19 March 2011)
 
  (https://github.com/theBrutzler/ & https://www.twitch.com/theBrutzler/)
 
- There is a secondary project for the retro brutzelboy-dumper adapter software (https://github.com/wodowiesel/brutzelboy-dumper)
+ => For secondary project for the retro brutzelboy-dumper adapter (https://github.com/wodowiesel/brutzelboy-dumper)
 
  The new optimized PCB was designed with free KiCAD 8.x software (https://www.kicad.org/)
 
