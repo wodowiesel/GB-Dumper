@@ -23,9 +23,7 @@ Compatibility list:
 
 :heavy_check_mark: Advance & SP (AGB0 & AGB)
 
-:white_circle: DS Lite (LDS)
-
-[ :heavy_check_mark: BrutzelBoy (BB) custom ]
+[:heavy_check_mark: BrutzelBoy (BB) custom]
 
 - Cartridges:
 
