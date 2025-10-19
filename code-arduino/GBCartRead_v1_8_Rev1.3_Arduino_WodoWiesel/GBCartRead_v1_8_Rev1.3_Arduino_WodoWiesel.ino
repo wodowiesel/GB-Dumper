@@ -128,7 +128,7 @@ void setup() {
   
   //serial settings https://www.arduino.cc/reference/tr/language/functions/communication/serial/begin/
   Serial.begin(baud, SERIAL_8N1); // for 4/16 MHz clock, default bit mode
-  //Serial.println("\nInit done \n");
+  //Serial.println(F("\nInit done \n"));
 }
 
 //----------- main
@@ -357,7 +357,7 @@ void loop() {
     }
     
       rd_wr_mreq_off();
-    ///Serial.println("Loop done \n");
+    ///Serial.println(F("Loop done \n"));
 }
 //--- End loop!
 
@@ -433,15 +433,14 @@ void loop() {
   void (*resetFunc)(void) = 0; // create a standard reset function
 
   void soft_reset(void) {
-    //Serial.println("Button Reset check \n");
+    //Serial.println(F("Soft-Reset check \n"));
     resetFunc();
     //digitalWrite(gb30Pin, LOW); // deactivate /RST
     //digitalWrite(gb30Pin, HIGH); // activate /RST (method without button / soft reset)
   }
 
   void reset_button(void) { // active-low jumper on board should be set!
-    //Serial.println("Reset button check \n");
-    // Serial.println("Reset pressed \n");
+    //Serial.println(F("Hard-Reset button check \n"));
     // https://forums.nesdev.org/viewtopic.php?t=15689
      gb30Pin_low;  // is open-drain, 100h-00h /CS2+/RST addr
     // gb30Pin_high;
@@ -450,7 +449,7 @@ void loop() {
   // --------------experimental!!! if ready it will be built-in to the upper code!!!
   // joaopauloap suggestions https://github.com/joaopauloap/arduino-gba-dumper
   unsigned int readDataBus() {
-    Serial.println("CS2 read databus \n");
+    Serial.println(F("CS2 read databus \n"));
     unsigned int s = ((PINB & 0b00000011) << 6) | ((PIND & 0b11111100) >> 2); // 0b00000011 = hex&dez 3, 11111100 = 0xFC = 252 dez
     return (s);
   }
@@ -463,7 +462,7 @@ void loop() {
   }
 
   void cs2_dumpsave() { // digital active-low
-    Serial.println("Dumping GBA Save \n");
+    Serial.println(F("Dumping GBA Save \n"));
     //digitalWrite(mreqPin, HIGH);  // CS Disable ROM
     digitalWrite(gb30cPin, LOW);
     for (unsigned long addr = 0; addr < 0x1FFF; addr++) {
@@ -476,7 +475,7 @@ void loop() {
     }
 
     digitalWrite(gb30cPin, HIGH);
-    Serial.println("CS2 dump done \n");
+    Serial.println(F("CS2 dump done \n"));
     // may need adaption in C/Py code on pc app!
     // -> not sure what data is exatly transfered ? need more info from pdf !!
   }
@@ -484,11 +483,11 @@ void loop() {
 
 
   ISR(gb31iPin_vect) { // alternative for attached pin
-    Serial.println("ISR check \n");
+    Serial.println(F("ISR check \n"));
   }
 
   void IRQ_handler(void) {
-    Serial.println("IRQ check \n");
+    Serial.println(F("IRQ check \n"));
     pinMode(gb31iPin, INPUT);  // INPUT_PULLUP Set the pin as input with pull-up resistor, not sure normally no resistor needed , std output
     gb31iPin_high;
     attachInterrupt(digitalPinToInterrupt(gb31iPin), IRQ_GBA, RISING);
@@ -500,11 +499,11 @@ void loop() {
   }
 
     void IRQ_GBA(void) {
-    Serial.println("attach check \n");
+    Serial.println(F("Attach check \n"));
   }
 
   void AUDIO_GB(void) {
-    Serial.println("AUDIO check \n");
+    Serial.println(F("AUDIO check \n"));
     //may need PORTB activation above! wip but no priority
     /*
       VIN/AUDIO can output up to 0.6V and total stays less than 3V (5 x 0.6V = 3V).
@@ -518,7 +517,7 @@ void loop() {
 
   // sd card via spi
   void sd_card_action(void) {
-    Serial.println("sd_card_action check \n");
+    Serial.println(F("sd_card_action check \n"));
     //add later with thebrutzler
   }
 
