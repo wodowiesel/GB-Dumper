@@ -90,7 +90,7 @@ Have fun and save the retro world :)
 
 - 2x SN-74HC595 Shift-Registers from Texas Instruments
 
-- 5x 470 (or 330) Ohm Resistors – pull-ups on active low & impedance matching
+- 5x 4,70 kOhm Resistors – pull-ups on active low & impedance matching
 
 - 1x 2-position (3-pin) switch SPDT
 
