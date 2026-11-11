@@ -5,6 +5,9 @@ on:
 
   pull_request:
 
+permissions:
+  contents: read
+
 env:
   ARDUINO_LIBRARY_ENABLE_UNSAFE_INSTALL: true
 
